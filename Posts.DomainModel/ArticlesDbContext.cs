@@ -5,16 +5,20 @@ namespace Articles.DomainModel
 {
     public class ArticlesDbContext:BaseDbContext<ArticlesDbContext>
     {
+        public ArticlesDbContext()
+        {
+            
+        }
+
+
         public DbSet<Post> Posts { get; set; }
 
         public DbSet<Category> Categories { get; set; }
+
+        public DbSet<UserRefrence> UserRefrences { get; set; }
     }
 
-    public class Category
-    {
-    }
+    
 
-    public class Post
-    {
-    }
+    
 }
