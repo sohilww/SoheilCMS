@@ -54,6 +54,10 @@
     <Compile Include="Category.cs" />
     <Compile Include="Mapping\CategoryMap.cs" />
     <Compile Include="Mapping\UserRefrenceMap.cs" />
+    <Compile Include="Migrations\201606112118205_InitialArticlesBundded.cs" />
+    <Compile Include="Migrations\201606112118205_InitialArticlesBundded.Designer.cs">
+      <DependentUpon>201606112118205_InitialArticlesBundded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Post.cs" />
     <Compile Include="Mapping\PostMap.cs" />
@@ -73,6 +77,11 @@
       <Project>{6F929DCD-48D9-45ED-A9BD-AFAAF14E87E9}</Project>
       <Name>FrameWork.Domain.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201606112118205_InitialArticlesBundded.resx">
+      <DependentUpon>201606112118205_InitialArticlesBundded.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
