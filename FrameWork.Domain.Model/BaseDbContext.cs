@@ -15,7 +15,7 @@ namespace FrameWork.Domain.Model
             Database.SetInitializer<TContext>(null);
         }
         protected BaseDbContext()
-            :base("Name=CMSConnectionString")
+            :base(nameOrConnectionString: "Data Source=.;Initial Catalog=CMSDataBase;Integrated Security=True;MultipleActiveResultSets=True")
         {
             
         }
