@@ -7,6 +7,10 @@ namespace Articles.DomainModel
 {
     public class Category:EntityBase<int>,IAggregateRoot
     {
+        protected Category()
+        {
+            
+        }
         public Category(string name, string slug,
             bool isParent, string lineAge)
         {

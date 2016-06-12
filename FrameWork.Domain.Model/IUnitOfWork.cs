@@ -8,7 +8,7 @@ namespace FrameWork.Domain.Model
     {
         EntityAction SaveChanges();
 
-        TContext Context { get; set; }
+        TContext Context { get;  }
 
         void BeginTransAction();
 

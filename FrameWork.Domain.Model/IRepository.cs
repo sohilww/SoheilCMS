@@ -4,7 +4,7 @@ using FrameWork.Application;
 
 namespace FrameWork.Domain.Model
 {
-    public interface IRepository
+    public interface IRepository:IDisposable
     {
 
     }
@@ -27,7 +27,7 @@ namespace FrameWork.Domain.Model
 
         EntityAction Update(T entity);
 
-        EntityAction Delete(T entity);
+        EntityAction Delete(TKey id);
 
         IEnumerable<T> Where(System.Linq.Expressions.Expression<Func<T, bool>> predicate);
     }
