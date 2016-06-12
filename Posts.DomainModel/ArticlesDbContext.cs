@@ -18,17 +18,22 @@ namespace Articles.DomainModel
 
         public DbSet<AuthorRefrence> UserRefrences { get; set; }
 
+        public DbSet<PostTag> PostTags { get; set; }
+
+        public DbSet<Tag> Tags { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new PostMap());
             modelBuilder.Configurations.Add(new CategoryMap());
             modelBuilder.Configurations.Add(new UserRefrenceMap());
+
+            modelBuilder.Configurations.Add(new TagMap());
+            modelBuilder.Configurations.Add(new PostTagMap());
             base.OnModelCreating(modelBuilder);
         }
     }
-
-    
 
     
 }

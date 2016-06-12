@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using FrameWork.Application;
 using FrameWork.Domain.Model;
 
@@ -46,6 +47,12 @@ namespace Articles.DomainModel
         public AuthorRefrence Author { get; private set; }
 
         public Category Category { get; private set; }
+
+
+        
+
+
+        public virtual ICollection<PostTag> PostTag { get; set; }
 
 
         public void Update(string title,

@@ -53,16 +53,24 @@
     <Compile Include="ArticlesDbContext.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="Mapping\CategoryMap.cs" />
+    <Compile Include="Mapping\PostTagMap.cs" />
+    <Compile Include="Mapping\TagMap.cs" />
     <Compile Include="Mapping\UserRefrenceMap.cs" />
     <Compile Include="Migrations\201606112118205_InitialArticlesBundded.cs" />
     <Compile Include="Migrations\201606112118205_InitialArticlesBundded.Designer.cs">
       <DependentUpon>201606112118205_InitialArticlesBundded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606121936200_AddPostAndTagRelations.cs" />
+    <Compile Include="Migrations\201606121936200_AddPostAndTagRelations.Designer.cs">
+      <DependentUpon>201606121936200_AddPostAndTagRelations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Post.cs" />
     <Compile Include="Mapping\PostMap.cs" />
+    <Compile Include="PostTag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AuthorRefrence.cs" />
+    <Compile Include="Tag.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -81,6 +89,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201606112118205_InitialArticlesBundded.resx">
       <DependentUpon>201606112118205_InitialArticlesBundded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606121936200_AddPostAndTagRelations.resx">
+      <DependentUpon>201606121936200_AddPostAndTagRelations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

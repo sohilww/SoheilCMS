@@ -2,7 +2,7 @@
 
 namespace Articles.DomainModel.Mapping
 {
-    public class PostMap:EntityTypeConfiguration<Post>
+    public class PostMap : EntityTypeConfiguration<Post>
     {
         public PostMap()
         {
@@ -47,18 +47,18 @@ namespace Articles.DomainModel.Mapping
 
 
 
-            
+
 
             HasRequired(a => a.Author)
-                .WithMany(a=>a.Posts)
+                .WithMany(a => a.Posts)
                 .HasForeignKey(a => a.AuthorId);
 
 
 
-            
+
 
             HasRequired(a => a.Category)
-                .WithMany(a=>a.Posts)
+                .WithMany(a => a.Posts)
                 .HasForeignKey(a => a.CategoryId);
 
 
