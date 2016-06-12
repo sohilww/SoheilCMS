@@ -78,11 +78,11 @@ namespace Articles.DomainModel
             throw new NullReferenceException("Send Date Cannot Be Null");
 
 
-            if (string.IsNullOrWhiteSpace(Content))
+            if (string.IsNullOrWhiteSpace(content))
                 throw new NullReferenceException("Content Be null");
 
 
-            if (string.IsNullOrWhiteSpace(Description))
+            if (string.IsNullOrWhiteSpace(description))
                 throw new NullReferenceException("Description Be null");
 
             if (string.IsNullOrWhiteSpace(slug))

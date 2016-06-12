@@ -16,8 +16,10 @@ namespace Articles.Data.DataRepository
         public void Dispose()
         {
 
-            if (db != null)
-                db.Dispose();
+
+            //Todo:Write Correct Object Dispose
+            //if (db != null)
+            //    db.Dispose();
 
         }
 

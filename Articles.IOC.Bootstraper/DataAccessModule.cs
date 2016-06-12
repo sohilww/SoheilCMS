@@ -21,7 +21,9 @@ namespace Articles.IOC.Bootstraper
         private void LoadDbContext()
         {
             Bind<IArticlesUnitofWork>().To<ArticlesUnitofWork>()
+                .InSingletonScope()
                 .WithConstructorArgument("ArticlesDbContext", new ArticlesDbContext());
+
         }
     }
 }

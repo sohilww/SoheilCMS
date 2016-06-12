@@ -71,10 +71,10 @@ namespace Articles.Data.DataAccess
 
         public void Dispose()
         {
-            if (rep != null)
-                rep.Dispose();
-            if (unit != null)
-                unit.Dispose();
+            //if (rep != null)
+            //    rep.Dispose();
+            //if (unit != null)
+            //    unit.Dispose();
         }
     }
 }

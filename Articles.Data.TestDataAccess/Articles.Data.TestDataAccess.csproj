@@ -65,6 +65,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Articles_Data_Post_Test.cs" />
     <Compile Include="Articles_Data_Tag_Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Articles_Data_Category_Test.cs" />
