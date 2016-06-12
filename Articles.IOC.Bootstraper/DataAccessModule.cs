@@ -2,7 +2,7 @@
 using Articles.Data.DataRepository;
 using Articles.DomainModel;
 using Ninject.Modules;
-
+using Ninject.Extensions.Conventions;
 namespace Articles.IOC.Bootstraper
 {
     public class DataAccessModule:NinjectModule
@@ -16,6 +16,10 @@ namespace Articles.IOC.Bootstraper
             Bind<ICategoryRepository>().To<CategoryRepository>();
 
             Bind<ITagRepository>().To<TagRepository>();
+
+            //Todo:Using Ninject Extensions
+            //Bind(a=>a.)
+            
         }
 
         private void LoadDbContext()
