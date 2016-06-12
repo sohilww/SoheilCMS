@@ -14,6 +14,8 @@ namespace Articles.IOC.Bootstraper
             Bind<IPostRepository>().To<PostRepository>();
 
             Bind<ICategoryRepository>().To<CategoryRepository>();
+
+            Bind<ITagRepository>().To<TagRepository>();
         }
 
         private void LoadDbContext()

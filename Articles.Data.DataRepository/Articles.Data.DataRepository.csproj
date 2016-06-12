@@ -52,6 +52,7 @@
     <Compile Include="ArticlesUnitofWork.cs" />
     <Compile Include="IArticlesUnitofWork.cs" />
     <Compile Include="ICategoryRepository.cs" />
+    <Compile Include="ITagRepository.cs" />
     <Compile Include="IPostRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
