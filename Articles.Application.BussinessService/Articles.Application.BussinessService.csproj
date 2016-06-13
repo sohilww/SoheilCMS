@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ICategoryService.cs" />
+    <Compile Include="ITagService.cs" />
     <Compile Include="IPostService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

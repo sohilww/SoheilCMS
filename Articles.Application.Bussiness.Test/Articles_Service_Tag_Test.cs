@@ -10,17 +10,17 @@ using Moq;
 namespace Articles.Application.Bussiness.Test
 {
     [TestClass]
-    public class Articles_Service_Category_Test
+    public class Articles_Service_Tag_Test
     {
         [TestMethod]
-        public void Articles_Service_Category_Create_Test()
+        public void Articles_Service_Tag_Create_Test()
         {
-            Mock<ICategoryRepository> rep = new Mock<ICategoryRepository>();
+            Mock<ITagRepository> rep = new Mock<ITagRepository>();
 
             rep.Setup(a => a.GetNextId()).Returns(1);
 
 
-            Category model = new Category("Test","Test",true,"");
+            Tag model = new Tag("Test");
             model.Id = rep.Object.GetNextId();
 
            
@@ -28,7 +28,7 @@ namespace Articles.Application.Bussiness.Test
 
 
 
-            ICategoryService service = new CategoryService(rep.Object);
+            ITagService service = new TagService(rep.Object);
 
             var result = service.Create(model);
 
@@ -36,19 +36,19 @@ namespace Articles.Application.Bussiness.Test
             Assert.AreEqual(result, EntityAction.Added);
         }
         [TestMethod]
-        public void Articles_Service_Category_Update_Test()
+        public void Articles_Service_Tag_Update_Test()
         {
-            Mock<ICategoryRepository> rep = new Mock<ICategoryRepository>();
+            Mock<ITagRepository> rep = new Mock<ITagRepository>();
 
 
 
-           Category model = new Category("Test","Test",true,"");
+            Tag model = new Tag("Test");
             model.Id = rep.Object.GetNextId();
             rep.Setup(a => a.Update(model)).Returns(EntityAction.Updated);
 
 
 
-            ICategoryService service = new CategoryService(rep.Object);
+            ITagService service = new TagService(rep.Object);
 
             var result = service.Update(model);
 
@@ -57,20 +57,20 @@ namespace Articles.Application.Bussiness.Test
         }
 
         [TestMethod]
-        public void Articles_Service_Category_Get_Test()
+        public void Articles_Service_Tag_Get_Test()
         {
-            Mock<ICategoryRepository> rep = new Mock<ICategoryRepository>();
+            Mock<ITagRepository> rep = new Mock<ITagRepository>();
 
             rep.Setup(a => a.GetNextId()).Returns(1);
 
 
-           Category model = new Category("Test","Test",true,"");
+            Tag model = new Tag("Test");
             model.Id = rep.Object.GetNextId();
             rep.Setup(a => a.Get(1)).Returns(model);
 
 
 
-            ICategoryService service = new CategoryService(rep.Object);
+            ITagService service = new TagService(rep.Object);
 
             var result = service.Get(1);
 
@@ -80,38 +80,38 @@ namespace Articles.Application.Bussiness.Test
 
 
         [TestMethod]
-        public void Articles_Service_Category_Where_Test()
+        public void Articles_Service_Tag_Where_Test()
         {
-            Mock<ICategoryRepository> rep = new Mock<ICategoryRepository>();
+            Mock<ITagRepository> rep = new Mock<ITagRepository>();
 
             rep.Setup(a => a.GetNextId()).Returns(1);
 
 
-           Category model = new Category("Test","Test",true,"");
+            Tag model = new Tag("Test");
             model.Id = rep.Object.GetNextId();
-            IList<Category> value = new List<Category>();
+            IList<Tag> value = new List<Tag>();
             value.Add(model);
                 
                 rep.Setup(a => a.Where(b=>b.Id==1)).Returns(value);
 
 
 
-            ICategoryService service = new CategoryService(rep.Object);
+            ITagService service = new TagService(rep.Object);
 
-            var result =(List<Category>) service.Where(a => a.Id == 1);
+            var result =(List<Tag>) service.Where(a => a.Id == 1);
 
 
             Assert.IsTrue(result.Count > 0);
         }
         [TestMethod]
-        public void Articles_Service_Category_Delete_Test()
+        public void Articles_Service_Tag_Delete_Test()
         {
-            Mock<ICategoryRepository> rep = new Mock<ICategoryRepository>();
+            Mock<ITagRepository> rep = new Mock<ITagRepository>();
 
             rep.Setup(a => a.Delete(1)).Returns(EntityAction.Deleted);
       
       
-            ICategoryService service = new CategoryService(rep.Object);
+            ITagService service = new TagService(rep.Object);
 
             var result =service.Delete(1);
 
