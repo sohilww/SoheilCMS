@@ -1,0 +1,52 @@
+﻿
+/* Generic styes for the page, NOT for the Page Panel */
+
+
+body {margin:0;padding:0;font:normal 14px Arial;}
+h1 {padding-top:60px;margin-bottom:30px;margin-top:0;}
+header {font-size:0;display:block;background:white; line-height:60px; height:60px;text-align:right;position:relative;border:1px solid #000;}
+a.logo {
+    float:left;
+    margin-left:70px;
+    letter-spacing:2px;
+    font-size:17px;
+    border:none;
+    padding:0 30px;
+    font-weight:bold;
+}
+
+header a {
+    font-size: 10px;
+    line-height:60px;
+    display:inline-block;
+    text-align: center;
+    color: #333;
+    text-decoration:none;
+    transition: all 0.4s;
+    padding-left:10px;
+    padding-right:10px;
+    border-right: solid 1px #ccc;
+}
+header a.active, header a:hover {
+    color: #fff;
+    background-color:#314f60;
+}
+#top-nav a:first-child{
+    border-left:1px solid #ccc;
+}
+
+#vertical-nav a {
+    display:block;
+    text-align:center;
+    font:bold 20px/50px Tahoma, Geneva, sans-serif;
+    text-decoration:none;
+    color:#666;
+    -webkit-transition:color 0.2s;
+    transition:color 0.22s;
+}
+
+#vertical-nav a.active,  #vertical-nav a:hover {
+    color:#BBB;
+}
+
+a {color: #1155CC;}

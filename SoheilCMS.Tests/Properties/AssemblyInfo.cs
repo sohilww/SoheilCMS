@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SoheilCMS")]
+[assembly: AssemblyTitle("SoheilCMS.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SoheilCMS")]
+[assembly: AssemblyProduct("SoheilCMS.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d54111cc-213d-4423-94c9-bcbb327e0609")]
+[assembly: Guid("c728cf1e-329b-4bd3-80bd-a1de7d8b6cef")]
 
 // Version information for an assembly consists of the following four values:
 //

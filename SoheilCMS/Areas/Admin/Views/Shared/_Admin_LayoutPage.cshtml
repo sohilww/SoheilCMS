@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Menu")
+</head>
+<body>
+    <div>
+        <div class="container-fulid">
+            <div class="row">
+                <div class="col-md-12">
+                    <header id="header"></header>
+                </div>
+                <div class="col-xs-4 col-md-4 col-md-push-8">
+                    <nav >
+                        @{ Html.RenderAction("Menu"); }
+                    </nav>
+                </div>
+                <div class="col-xs-8 col-md-8 col-md-pull-4">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/Menu")
+    @RenderSection("script", false)
+</body>
+</html>
+

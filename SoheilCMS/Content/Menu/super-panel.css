@@ -1,0 +1,82 @@
+﻿/* Super Panel: www.menucool.com/ui/super-panel */
+
+/*---- panel ----*/
+#panel1 {
+    
+    z-index:9000;
+    top:0;
+    right:0;
+    background:#222;
+    height:auto;
+    padding:0;
+    box-sizing:border-box;
+    visibility:hidden;
+    direction: rtl;
+}
+
+
+/*---- transparent layer ---- Available when the option transparentLayer is true in pane-panel.js */
+.transparent-layer {
+    display:none;
+}
+
+
+
+/*---- panel button ----*/
+.panel-button{
+    -ms-user-select:none;
+    -mos-user-select:none;
+    -webkit-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}
+
+
+.panel-button   
+{
+    /*position:fixed; margin:12px 0 0 12px; top:0; left:0;*/
+    display:block;float:right;position:relative;margin:10px 30px 0;
+    
+    background-color:white;
+
+    height:3px;
+    width:24px;
+    border-style:solid;
+    border-color:black;
+    border-top-width:18px;
+    border-bottom-width:18px;
+    border-left-width:8px;
+    border-right-width:8px;
+	cursor: pointer;
+    box-sizing:content-box;
+}
+
+.panel-button:before, .panel-button:after {
+    background-color:white;
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 24px;
+    height: 3px;
+    display:block;
+    transition:all .2s linear;
+}
+.panel-button:after {
+    top: 8px;
+}
+
+    
+.panel-button.active {
+    background-color:black;
+}
+.panel-button.active:before {
+    transform: rotate(45deg);
+    top:0;
+}
+.panel-button.active:after {
+    transform: rotate(-45deg);
+    top:0;
+}
+
+
