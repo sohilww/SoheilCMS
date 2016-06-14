@@ -15,7 +15,7 @@ namespace Articles.Application.BussinessService
 
         EntityAction Delete(int id);
 
-        IEnumerable<Post> Where(System.Linq.Expressions.Expression<Func<Post,bool>> perdicate);
+        List<Post> Where(System.Linq.Expressions.Expression<Func<Post,bool>> perdicate);
 
     }
 }

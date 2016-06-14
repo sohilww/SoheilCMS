@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using Articles.Application.BussinessService;
 using Articles.Data.DataRepository;
@@ -46,9 +47,9 @@ namespace Articles.Application.Bussiness
             return result;
         }
 
-        public IEnumerable<Post> Where(Expression<Func<Post, bool>> perdicate)
+        public List<Post> Where(Expression<Func<Post, bool>> perdicate)
         {
-            var result = rep.Where(perdicate);
+            var result = rep.Where(perdicate).ToList();
             return result;
         }
     }

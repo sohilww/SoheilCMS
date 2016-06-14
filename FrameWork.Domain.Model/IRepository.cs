@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 using FrameWork.Application;
 
 namespace FrameWork.Domain.Model
@@ -29,6 +31,12 @@ namespace FrameWork.Domain.Model
 
         EntityAction Delete(TKey id);
 
-        IEnumerable<T> Where(System.Linq.Expressions.Expression<Func<T, bool>> predicate);
+        IQueryable<T> Where(System.Linq.Expressions.Expression<Func<T, bool>> predicate);
+
+
+        IQueryable<T> SelectAll();
+
+        IQueryable<TResult> Select<TResult>(Expression<Func<T, TResult>> predicate);
+
     }
 }

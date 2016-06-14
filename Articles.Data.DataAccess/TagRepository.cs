@@ -63,11 +63,25 @@ namespace Articles.Data.DataAccess
 
         }
 
-        public IEnumerable<Tag> Where(Expression<Func<Tag, bool>> predicate)
+        public IQueryable<Tag> Where(Expression<Func<Tag, bool>> predicate)
         {
             var model = unit.Context.Tags.Where(predicate).AsQueryable();
             return model;
         }
+
+        public IQueryable<Tag> SelectAll()
+        {
+            var model = unit.Context.Tags.AsQueryable();
+            return model;
+        }
+
+        public IQueryable<TResult> Select<TResult>(Expression<Func<Tag, TResult>> predicate)
+        {
+            var model = unit.Context.Tags.Select(predicate);
+            return model;
+        }
+
+       
 
         public void Dispose()
         {

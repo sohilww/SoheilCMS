@@ -43,6 +43,10 @@
       <HintPath>..\packages\Moq.4.5.9\lib\net45\Moq.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Ninject, Version=2.3.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Mono.3.0.1.13\lib\net40\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -80,6 +84,10 @@
     <ProjectReference Include="..\Articles.Data.DataRepository\Articles.Data.DataRepository.csproj">
       <Project>{E33FBB74-E026-444D-965F-75D888A5D5DD}</Project>
       <Name>Articles.Data.DataRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Articles.IOC.Bootstraper\Articles.IOC.Bootstraper.csproj">
+      <Project>{13D45AA9-6B59-4AC9-8FF2-22B8BB4A1D1B}</Project>
+      <Name>Articles.IOC.Bootstraper</Name>
     </ProjectReference>
     <ProjectReference Include="..\FrameWork.Application\FrameWork.Application.csproj">
       <Project>{3bd8a41d-50a9-4624-9920-503924093ae4}</Project>

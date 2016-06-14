@@ -63,12 +63,23 @@ namespace Articles.Data.DataAccess
 
         }
 
-        public IEnumerable<Post> Where(Expression<Func<Post, bool>> predicate)
+        public IQueryable<Post> Where(Expression<Func<Post, bool>> predicate)
         {
             var model = unit.Context.Posts.Where(predicate).AsQueryable();
             return model;
         }
 
+        public IQueryable<Post> SelectAll()
+        {
+            var model = unit.Context.Posts.AsQueryable();
+            return model;
+        }
+
+        public IQueryable<TResult> Select<TResult>(Expression<Func<Post, TResult>> predicate)
+        {
+            var model = unit.Context.Posts.Select(predicate);
+            return model;
+        }
         public void Dispose()
         {
             if (rep != null)

@@ -63,9 +63,21 @@ namespace Articles.Data.DataAccess
 
         }
 
-        public IEnumerable<Category> Where(Expression<Func<Category, bool>> predicate)
+        public IQueryable<Category> Where(Expression<Func<Category, bool>> predicate)
         {
             var model = unit.Context.Categories.Where(predicate).AsQueryable();
+            return model;
+        }
+
+        public IQueryable<Category> SelectAll()
+        {
+            var model = unit.Context.Categories.AsQueryable();
+            return model;
+        }
+
+        public IQueryable<TResult> Select<TResult>(Expression<Func<Category, TResult>> predicate)
+        {
+            var model = unit.Context.Categories.Select(predicate);
             return model;
         }
 

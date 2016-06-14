@@ -3,15 +3,28 @@ using System.Collections.Generic;
 using Articles.Application.BussinessService;
 using Articles.Data.DataRepository;
 using Articles.DomainModel;
+using Articles.IOC.Bootstraper;
 using FrameWork.Application;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using Ninject;
 
 namespace Articles.Application.Bussiness.Test
 {
     [TestClass]
     public class Articles_Service_Tag_Test
     {
+        ITagService serviceMain;
+        [TestInitialize]
+        public void Initialize()
+        {
+            using (var kernel = new StandardKernel(new DataAccessModule(), new ArticleServiceModule()))
+            {
+                serviceMain = kernel.Get<ITagService>();
+            }
+        }
+
+
         [TestMethod]
         public void Articles_Service_Tag_Create_Test()
         {
@@ -82,23 +95,9 @@ namespace Articles.Application.Bussiness.Test
         [TestMethod]
         public void Articles_Service_Tag_Where_Test()
         {
-            Mock<ITagRepository> rep = new Mock<ITagRepository>();
+          
 
-            rep.Setup(a => a.GetNextId()).Returns(1);
-
-
-            Tag model = new Tag("Test");
-            model.Id = rep.Object.GetNextId();
-            IList<Tag> value = new List<Tag>();
-            value.Add(model);
-                
-                rep.Setup(a => a.Where(b=>b.Id==1)).Returns(value);
-
-
-
-            ITagService service = new TagService(rep.Object);
-
-            var result =(List<Tag>) service.Where(a => a.Id == 1);
+            var result = serviceMain.Where(a => a.Id == 1);
 
 
             Assert.IsTrue(result.Count > 0);

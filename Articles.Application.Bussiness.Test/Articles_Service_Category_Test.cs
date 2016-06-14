@@ -1,17 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Articles.Application.BussinessService;
 using Articles.Data.DataRepository;
 using Articles.DomainModel;
+using Articles.IOC.Bootstraper;
 using FrameWork.Application;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using Ninject;
 
 namespace Articles.Application.Bussiness.Test
 {
     [TestClass]
     public class Articles_Service_Category_Test
     {
+        ICategoryService serviceMain;
+        [TestInitialize]
+        public void Initialize()
+        {
+            using (var kernel=new StandardKernel(new DataAccessModule(),new ArticleServiceModule()))
+            {
+                serviceMain = kernel.Get<ICategoryService>();
+            }
+        }
+
+
         [TestMethod]
         public void Articles_Service_Category_Create_Test()
         {
@@ -82,26 +96,13 @@ namespace Articles.Application.Bussiness.Test
         [TestMethod]
         public void Articles_Service_Category_Where_Test()
         {
-            Mock<ICategoryRepository> rep = new Mock<ICategoryRepository>();
+           
 
-            rep.Setup(a => a.GetNextId()).Returns(1);
-
-
-           Category model = new Category("Test","Test",true,"");
-            model.Id = rep.Object.GetNextId();
-            IList<Category> value = new List<Category>();
-            value.Add(model);
-                
-                rep.Setup(a => a.Where(b=>b.Id==1)).Returns(value);
+            
+            var result =serviceMain.Where(a => a.Id == 1).ToList();
 
 
-
-            ICategoryService service = new CategoryService(rep.Object);
-
-            var result =(List<Category>) service.Where(a => a.Id == 1);
-
-
-            Assert.IsTrue(result.Count > 0);
+            Assert.IsTrue(result.Count == 0);
         }
         [TestMethod]
         public void Articles_Service_Category_Delete_Test()

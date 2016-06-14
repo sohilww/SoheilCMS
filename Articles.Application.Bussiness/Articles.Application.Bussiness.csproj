@@ -50,6 +50,10 @@
       <Project>{48d7e7a2-4870-46a1-9d6e-a32feb6624b0}</Project>
       <Name>Articles.Application.BussinessService</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Articles.Contracts\Articles.Contracts.csproj">
+      <Project>{e60949a9-b014-40d7-b89c-35b9f9e4f89e}</Project>
+      <Name>Articles.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Articles.Data.DataRepository\Articles.Data.DataRepository.csproj">
       <Project>{e33fbb74-e026-444d-965f-75d888a5d5dd}</Project>
       <Name>Articles.Data.DataRepository</Name>

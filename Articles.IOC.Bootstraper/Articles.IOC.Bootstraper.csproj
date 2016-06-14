@@ -42,8 +42,8 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Ninject, Version=2.3.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.Mono.3.0.1.13\lib\net40\Ninject.dll</HintPath>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ninject.Extensions.ChildKernel, Version=3.0.0.9, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArticleServiceModule.cs" />
     <Compile Include="DataAccessModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -77,6 +78,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Articles.Application.BussinessService\Articles.Application.BussinessService.csproj">
+      <Project>{48D7E7A2-4870-46A1-9D6E-A32FEB6624B0}</Project>
+      <Name>Articles.Application.BussinessService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Articles.Application.Bussiness\Articles.Application.Bussiness.csproj">
+      <Project>{96C57E0A-B36E-444C-96BE-CF778D6AB427}</Project>
+      <Name>Articles.Application.Bussiness</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Articles.Data.DataAccess\Articles.Data.DataAccess.csproj">
       <Project>{d6bc3e85-4ebe-43c9-bf61-cde73fcc46cc}</Project>
       <Name>Articles.Data.DataAccess</Name>
@@ -84,6 +93,10 @@
     <ProjectReference Include="..\Articles.Data.DataRepository\Articles.Data.DataRepository.csproj">
       <Project>{e33fbb74-e026-444d-965f-75d888a5d5dd}</Project>
       <Name>Articles.Data.DataRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrameWork.Core\FrameWork.Core.csproj">
+      <Project>{264AD558-A980-4E12-9AED-6558170C656E}</Project>
+      <Name>FrameWork.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\FrameWork.Domain.Model\FrameWork.Domain.Model.csproj">
       <Project>{6F929DCD-48D9-45ED-A9BD-AFAAF14E87E9}</Project>
