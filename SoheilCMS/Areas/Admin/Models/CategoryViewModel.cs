@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SoheilCMS.Areas.Admin.Models
 {
-    public class CategoryViewModel:CategoryModel
+    public class CategoryViewModel : CategoryModel
     {
         [ScaffoldColumn(false)]
         public override int Id
@@ -21,6 +21,7 @@ namespace SoheilCMS.Areas.Admin.Models
             }
         }
         [DisplayName("پدر")]
+        [Display(Name = "پدر")]
         public override bool IsParent
         {
             get
@@ -47,6 +48,7 @@ namespace SoheilCMS.Areas.Admin.Models
             }
         }
         [DisplayName("نام")]
+        [Display(Name = "نام")]
         public override string Name
         {
             get
@@ -85,6 +87,22 @@ namespace SoheilCMS.Areas.Admin.Models
                 base.Slug = value;
             }
         }
+
+        
+        public CategoryModel ToCategoryModel()
+        {
+            return new CategoryModel()
+            {
+                Id = this.Id,
+                IsParent = this.IsParent,
+                LineAge = this.LineAge,
+                Name = this.Name,
+                PostCount = this.PostCount,
+                Slug = this.Slug,
+                ParentId = this.ParentId
+            };
+        }
+
     }
 
     public class CategoryShowAndListViewModel
@@ -94,5 +112,5 @@ namespace SoheilCMS.Areas.Admin.Models
 
         public List<CategoryViewModel> Lists { get; set; }
     }
-    
+
 }

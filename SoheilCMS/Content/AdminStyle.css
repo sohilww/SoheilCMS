@@ -1,4 +1,17 @@
-﻿.container-fulid .row {
+﻿@font-face {
+    font-family: 'yekan';
+    src: url('../fonts/BYekan.eot');
+    src: url('../fonts/BYekan.eot#iefix') format('embedded-opentype'),
+         url('../fonts/BYekan.woff') format('woff'),
+         url('../fonts/BYekan.ttf') format('truetype'),
+         url('../fonts/BYekan.svg#CartoGothicStdBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: yekan !important;
+}
+.container-fulid .row {
     margin-left: 0 !important;
     margin-right: 0 !important;
 }
@@ -9,4 +22,20 @@
 #header {
     min-height: 90px;
     background-color:red;
+}
+.table {
+    direction: rtl !important;
+    
+}
+.tdCenter td,.tdCenter th {
+    text-align: center;
+}
+.tdRight td,.tdRight th {
+    text-align: right;
+}
+#contentBody {
+    padding:20px 5px 0 10px
+}
+.form-group {
+    direction: rtl !important;
 }

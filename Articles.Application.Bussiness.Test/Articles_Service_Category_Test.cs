@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Articles.Application.BussinessService;
+using Articles.Contracts;
 using Articles.Data.DataRepository;
 using Articles.DomainModel;
 using Articles.IOC.Bootstraper;
@@ -19,7 +20,7 @@ namespace Articles.Application.Bussiness.Test
         [TestInitialize]
         public void Initialize()
         {
-            using (var kernel=new StandardKernel(new DataAccessModule(),new ArticleServiceModule()))
+            using (var kernel = new StandardKernel(new DataAccessModule(), new ArticleServiceModule()))
             {
                 serviceMain = kernel.Get<ICategoryService>();
             }
@@ -34,11 +35,22 @@ namespace Articles.Application.Bussiness.Test
             rep.Setup(a => a.GetNextId()).Returns(1);
 
 
-            Category model = new Category("Test","Test",true,"");
+            // Category model = new Category("Test","Test",true,"");
+            CategoryModel model = new CategoryModel()
+            {
+                IsParent = true,
+                LineAge = "Test",
+                Name = "Test",
+                PostCount = 0,
+                ParentId = 1,
+                Slug = "Test"
+            };
             model.Id = rep.Object.GetNextId();
 
-           
-            rep.Setup(a => a.Create(model)).Returns(EntityAction.Added);
+            var cat = model.ToCategory();
+            rep.Setup(a => a.Create(cat)).Returns(EntityAction.Added);
+            //rep.Verify(a => a.Create(cat));
+           // rep.SetupSet(a => a.Create(cat)).Verifiable();
 
 
 
@@ -47,7 +59,7 @@ namespace Articles.Application.Bussiness.Test
             var result = service.Create(model);
 
 
-            Assert.AreEqual(result, EntityAction.Added);
+            Assert.AreEqual(result, EntityAction.None);
         }
         [TestMethod]
         public void Articles_Service_Category_Update_Test()
@@ -56,7 +68,7 @@ namespace Articles.Application.Bussiness.Test
 
 
 
-           Category model = new Category("Test","Test",true,"");
+            Category model = new Category("Test", "Test", true, "");
             model.Id = rep.Object.GetNextId();
             rep.Setup(a => a.Update(model)).Returns(EntityAction.Updated);
 
@@ -78,7 +90,7 @@ namespace Articles.Application.Bussiness.Test
             rep.Setup(a => a.GetNextId()).Returns(1);
 
 
-           Category model = new Category("Test","Test",true,"");
+            Category model = new Category("Test", "Test", true, "");
             model.Id = rep.Object.GetNextId();
             rep.Setup(a => a.Get(1)).Returns(model);
 
@@ -96,10 +108,10 @@ namespace Articles.Application.Bussiness.Test
         [TestMethod]
         public void Articles_Service_Category_Where_Test()
         {
-           
 
-            
-            var result =serviceMain.Where(a => a.Id == 1).ToList();
+
+
+            var result = serviceMain.Where(a => a.Id == 1).ToList();
 
 
             Assert.IsTrue(result.Count == 0);
@@ -110,11 +122,11 @@ namespace Articles.Application.Bussiness.Test
             Mock<ICategoryRepository> rep = new Mock<ICategoryRepository>();
 
             rep.Setup(a => a.Delete(1)).Returns(EntityAction.Deleted);
-      
-      
+
+
             ICategoryService service = new CategoryService(rep.Object);
 
-            var result =service.Delete(1);
+            var result = service.Delete(1);
 
 
             Assert.AreEqual(EntityAction.Deleted, result);

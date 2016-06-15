@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Articles.Application.BussinessService;
+using FrameWork.Application;
 using SoheilCMS.Areas.Admin.Models;
 
 namespace SoheilCMS.Areas.Admin.Controllers
@@ -21,12 +22,25 @@ namespace SoheilCMS.Areas.Admin.Controllers
         // GET: Admin/Category
         public ActionResult Index()
         {
-            var model = new CategoryShowAndListViewModel()
-            {
-                Model = new CategoryViewModel(),
+            var model = new CategoryViewModel();
+           
+           return View(model);
+        }
 
-            };
-            model.Lists = rep.Select().Select(a => new CategoryViewModel()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Index(CategoryViewModel model)
+        {
+            var current = model.ToCategoryModel();
+
+            var result = rep.Create(current);
+
+            return View(model);
+        }
+
+        public PartialViewResult CategoryList()
+        {
+            var model=rep.Select().Select(a => new CategoryViewModel()
             {
                 Id = a.Id,
                 IsParent = a.IsParent,
@@ -37,8 +51,23 @@ namespace SoheilCMS.Areas.Admin.Controllers
 
             }).ToList();
 
+            return PartialView(model);
+        }
 
-            return View(model);
+        public JsonResult CategorySelect()
+        {
+            var model = rep.Select().Select(a => new CategoryViewModel()
+            {
+                Id = a.Id,
+                IsParent = a.IsParent,
+                LineAge = a.LineAge,
+                Name = a.Name,
+                PostCount = a.PostCount,
+                Slug = a.Slug
+
+            }).ToList();
+
+            return Json(model,JsonRequestBehavior.AllowGet);
         }
     }
 }

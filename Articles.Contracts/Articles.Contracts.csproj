@@ -43,6 +43,16 @@
     <Compile Include="CategoryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FrameWork.Domain.Model\FrameWork.Domain.Model.csproj">
+      <Project>{6F929DCD-48D9-45ED-A9BD-AFAAF14E87E9}</Project>
+      <Name>FrameWork.Domain.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Posts.DomainModel\Articles.DomainModel.csproj">
+      <Project>{49F420CE-AF11-4E98-8B48-4CCE5336DECF}</Project>
+      <Name>Articles.DomainModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -10,7 +10,7 @@ namespace Articles.Application.BussinessService
     public interface ICategoryService:IService
     {
         Category Get(int id);
-        EntityAction Create(Category entity);
+        EntityAction Create(CategoryModel entity);
 
         EntityAction Update(Category entity);
 

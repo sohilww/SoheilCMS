@@ -198,6 +198,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\AdminStyle.css" />
+    <Content Include="Scripts\sendAjaxScript.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -210,6 +211,10 @@
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Menu.cshtml" />
     <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\CategoryList.cshtml" />
+    <Content Include="fonts\BYekan.eot" />
+    <Content Include="fonts\BYekan.ttf" />
+    <Content Include="fonts\BYekan.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -264,6 +269,10 @@
     <ProjectReference Include="..\Articles.IOC.Bootstraper\Articles.IOC.Bootstraper.csproj">
       <Project>{13D45AA9-6B59-4AC9-8FF2-22B8BB4A1D1B}</Project>
       <Name>Articles.IOC.Bootstraper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrameWork.Application\FrameWork.Application.csproj">
+      <Project>{3BD8A41D-50A9-4624-9920-503924093AE4}</Project>
+      <Name>FrameWork.Application</Name>
     </ProjectReference>
     <ProjectReference Include="..\FrameWork.Core\FrameWork.Core.csproj">
       <Project>{264ad558-a980-4e12-9aed-6558170c656e}</Project>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using Articles.Application.BussinessService;
 using Articles.Contracts;
@@ -28,10 +29,22 @@ namespace Articles.Application.Bussiness
             return result;
         }
 
-        public EntityAction Create(Category entity)
+        public EntityAction Create(CategoryModel entity)
         {
+            //  var model = entity.ToCategory();
             entity.Id = rep.GetNextId();
-            EntityAction result = rep.Create(entity);
+            if (!entity.IsParent)
+            {
+                var parent = rep.Get(entity.ParentId);
+                entity.LineAge = parent.LineAge + "," + entity.Id.ToString();
+            }
+            else
+            {
+                entity.LineAge = entity.Id.ToString();
+            }
+            var model = entity.ToCategory();
+            model.Id = rep.GetNextId();
+            EntityAction result = rep.Create(model);
             return result;
         }
 
@@ -55,7 +68,7 @@ namespace Articles.Application.Bussiness
 
         public List<CategoryModel> Select()
         {
-            var model =(List<CategoryModel>)rep.Select(a => new CategoryModel()
+            var model =rep.Select(a => new CategoryModel()
             {
                 Id = a.Id,
                 IsParent = a.IsParent,
@@ -63,7 +76,7 @@ namespace Articles.Application.Bussiness
                 Name = a.Name,
                 Slug = a.Slug,
                 PostCount = a.Posts.Count
-            });
+            }).ToList();
 
             return model;
         }

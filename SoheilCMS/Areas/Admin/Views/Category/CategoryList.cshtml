@@ -1,0 +1,39 @@
+﻿@model IEnumerable<SoheilCMS.Areas.Admin.Models.CategoryViewModel>
+
+
+<table class="table table-bordered table-responsive table-hover table-striped tdCenter" >
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Slug)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsParent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostCount)
+        </th>
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Slug)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsParent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostCount)
+        </td>
+      
+    </tr>
+}
+
+</table>
