@@ -2,7 +2,6 @@
 using Articles.Data.DataRepository;
 using Articles.DomainModel;
 using Ninject.Modules;
-using Ninject.Extensions.Conventions;
 namespace Articles.IOC.Bootstraper
 {
     public class DataAccessModule:NinjectModule

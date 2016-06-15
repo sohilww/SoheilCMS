@@ -8,6 +8,10 @@ namespace SoheilCMS.Areas.Admin.Controllers
 {
     public class ArticlesController : Controller
     {
+        public ArticlesController()
+        {
+            
+        }
         // GET: Admin/Articles
         public ActionResult Index()
         {

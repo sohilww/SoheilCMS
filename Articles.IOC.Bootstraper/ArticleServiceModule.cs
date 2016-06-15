@@ -4,7 +4,7 @@ using Articles.Data.DataAccess;
 using Articles.Data.DataRepository;
 using Articles.DomainModel;
 using Ninject.Modules;
-using Ninject.Extensions.Conventions;
+using Ninject.Extensions.ChildKernel;
 namespace Articles.IOC.Bootstraper
 {
     public class ArticleServiceModule:NinjectModule

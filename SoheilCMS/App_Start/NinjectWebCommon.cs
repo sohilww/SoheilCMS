@@ -1,7 +1,6 @@
-using System.Security;
-
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(SoheilCMS.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(SoheilCMS.App_Start.NinjectWebCommon), "Stop")]
+
 namespace SoheilCMS.App_Start
 {
     using System;
@@ -11,7 +10,7 @@ namespace SoheilCMS.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
-   
+
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
@@ -40,7 +39,7 @@ namespace SoheilCMS.App_Start
         /// <returns>The created kernel.</returns>
         private static IKernel CreateKernel()
         {
-             var kernel = new StandardKernel();
+            var kernel = new StandardKernel();
             try
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
