@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using Articles.Application.BussinessService;
+using Articles.Contracts;
 using Articles.Data.DataRepository;
 using Articles.DomainModel;
 using FrameWork.Application;
 
 namespace Articles.Application.Bussiness
 {
-    public class TagService:ITagService
+    public class TagService : ITagService
     {
         ITagRepository rep;
 
@@ -19,7 +20,7 @@ namespace Articles.Application.Bussiness
         }
         public void Dispose()
         {
-           // throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
 
         public Tag Get(int id)
@@ -50,6 +51,17 @@ namespace Articles.Application.Bussiness
         public List<Tag> Where(Expression<Func<Tag, bool>> perdicate)
         {
             var result = rep.Where(perdicate).ToList();
+            return result;
+        }
+
+        public List<TagModel> Select()
+        {
+            var result = rep.SelectAll().Select(a => new TagModel()
+            {
+                Id = a.Id,
+                Name = a.Name,
+                PostCount=a.PostTag.Count
+            }).ToList();
             return result;
         }
     }

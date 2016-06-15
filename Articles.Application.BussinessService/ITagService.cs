@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Articles.Contracts;
 using Articles.DomainModel;
 using FrameWork.Application;
 using FrameWork.Core;
@@ -17,5 +18,6 @@ namespace Articles.Application.BussinessService
 
         List<Tag> Where(System.Linq.Expressions.Expression<Func<Tag,bool>> perdicate);
 
+        List<TagModel> Select();
     }
 }

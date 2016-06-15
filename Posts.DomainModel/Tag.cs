@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using FrameWork.Domain.Model;
+using System;
 
 namespace Articles.DomainModel
 {
@@ -18,12 +19,17 @@ namespace Articles.DomainModel
         public string Name { get; private set; }
 
 
-
+        public void Update(string name)
+        {
+            SetProperty(name);
+        }
 
         public virtual ICollection<PostTag> PostTag { get; set; }
 
         private void SetProperty(string name)
         {
+            if (string.IsNullOrWhiteSpace(name))
+                throw new NullReferenceException("Name Cannot Be Null");
             Name = name;
         }
     }
