@@ -68,9 +68,11 @@ namespace Articles.Application.Bussiness.Test
 
 
 
-            Category model = new Category("Test", "Test", true, "");
+            CategoryModel model = new CategoryModel();
+            
             model.Id = rep.Object.GetNextId();
-            rep.Setup(a => a.Update(model)).Returns(EntityAction.Updated);
+            var current = model.ToCategory();
+            rep.Setup(a => a.Update(current)).Returns(EntityAction.Updated);
 
 
 
@@ -79,7 +81,7 @@ namespace Articles.Application.Bussiness.Test
             var result = service.Update(model);
 
 
-            Assert.AreEqual(result, EntityAction.Updated);
+            Assert.AreEqual(result, EntityAction.None);
         }
 
         [TestMethod]

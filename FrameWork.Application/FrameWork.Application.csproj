@@ -40,8 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationMessages.cs" />
     <Compile Include="EntityAction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectList.cs" />
     <Compile Include="StringExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

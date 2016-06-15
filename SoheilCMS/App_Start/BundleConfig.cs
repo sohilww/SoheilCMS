@@ -40,6 +40,12 @@ namespace SoheilCMS
                 "~/Scripts/Menu/accordion-menu.js"
                 ));
 
+
+            bundles.Add(new ScriptBundle("~/bundles/Admin").Include(
+               "~/Scripts/Admin/AdminScript.js"
+               
+               ));
+
         }
     }
 }

@@ -22,6 +22,10 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Name)
+            <div>
+                <a class="label label-success" href="@Url.Action("Edit", "Category", new {Area = "Admin", id = item.Id})">ویرایش</a>|
+                <a class="label label-danger deleteBtn" href="@Url.Action("Delete", "Category", new {Area = "Admin", id = item.Id})">حذف</a>
+            </div>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Slug)

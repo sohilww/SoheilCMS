@@ -2,92 +2,50 @@
 using System.ComponentModel;
 using Articles.Contracts;
 using System.ComponentModel.DataAnnotations;
+using Articles.DomainModel;
+using FrameWork.Application;
+using SoheilCMS.Models;
 
 namespace SoheilCMS.Areas.Admin.Models
 {
-    public class CategoryViewModel : CategoryModel
+    public class CategoryViewModel :BaseViewModel
     {
-        [ScaffoldColumn(false)]
-        public override int Id
-        {
-            get
-            {
-                return base.Id;
-            }
 
-            set
-            {
-                base.Id = value;
-            }
+        public CategoryViewModel()
+        {
+            
         }
+        public CategoryViewModel(Category current)
+        {
+            this.Id = current.Id;
+            this.IsParent = current.IsParent;
+            this.Name = current.Name;
+            this.LineAge = current.LineAge;
+            this.Slug = current.Slug;
+            
+        }
+        [ScaffoldColumn(false)]
+        public int Id { get; set; }
+
+        
         [DisplayName("پدر")]
         [Display(Name = "پدر")]
-        public override bool IsParent
-        {
-            get
-            {
-                return base.IsParent;
-            }
-
-            set
-            {
-                base.IsParent = value;
-            }
-        }
+        public bool IsParent { get; set; }
+        
         [ScaffoldColumn(false)]
-        public override string LineAge
-        {
-            get
-            {
-                return base.LineAge;
-            }
-
-            set
-            {
-                base.LineAge = value;
-            }
-        }
+        public string LineAge { get; set; }
         [DisplayName("نام")]
         [Display(Name = "نام")]
-        public override string Name
-        {
-            get
-            {
-                return base.Name;
-            }
-
-            set
-            {
-                base.Name = value;
-            }
-        }
+        [Required(ErrorMessage ="{0} را وارد نمایید")]
+        public string Name { get; set; }
+        
         [DisplayName("تعداد پست")]
-        public override int PostCount
-        {
-            get
-            {
-                return base.PostCount;
-            }
-
-            set
-            {
-                base.PostCount = value;
-            }
-        }
+        public int PostCount { get; set; }
         [DisplayName("آدرس")]
-        public override string Slug
-        {
-            get
-            {
-                return base.Slug;
-            }
+        [Required(ErrorMessage = "{0} را وارد نمایید")]
+        public string Slug { get; set; }
 
-            set
-            {
-                base.Slug = value;
-            }
-        }
-
+        public int ParentId { get; set; }
         
         public CategoryModel ToCategoryModel()
         {

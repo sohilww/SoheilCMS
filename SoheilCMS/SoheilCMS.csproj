@@ -186,6 +186,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BaseViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -198,6 +199,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\AdminStyle.css" />
+    <Content Include="Scripts\Admin\AdminScript.js" />
     <Content Include="Scripts\sendAjaxScript.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
@@ -247,7 +249,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Articles\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -278,9 +279,17 @@
       <Project>{264ad558-a980-4e12-9aed-6558170c656e}</Project>
       <Name>FrameWork.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FrameWork.Domain.Model\FrameWork.Domain.Model.csproj">
+      <Project>{6F929DCD-48D9-45ED-A9BD-AFAAF14E87E9}</Project>
+      <Name>FrameWork.Domain.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PluginBase\PluginBase.csproj">
       <Project>{202ffe0a-bc75-4e4d-87f6-37161108856b}</Project>
       <Name>PluginBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Posts.DomainModel\Articles.DomainModel.csproj">
+      <Project>{49F420CE-AF11-4E98-8B48-4CCE5336DECF}</Project>
+      <Name>Articles.DomainModel</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

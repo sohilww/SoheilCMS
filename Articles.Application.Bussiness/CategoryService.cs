@@ -43,19 +43,16 @@ namespace Articles.Application.Bussiness
                 entity.LineAge = entity.Id.ToString();
             }
             var model = entity.ToCategory();
-            model.Id = rep.GetNextId();
+            model.Id = entity.Id;
             EntityAction result = rep.Create(model);
             return result;
         }
 
-        public EntityAction Update(Category entity)
-        {
-            EntityAction result = rep.Update(entity);
-            return result;
-        }
+        
 
         public EntityAction Delete(int id)
         {
+            //Chheck Is Parent 
             EntityAction result = rep.Delete(id);
             return result;
         }
@@ -68,7 +65,7 @@ namespace Articles.Application.Bussiness
 
         public List<CategoryModel> Select()
         {
-            var model =rep.Select(a => new CategoryModel()
+            var model = rep.Select(a => new CategoryModel()
             {
                 Id = a.Id,
                 IsParent = a.IsParent,
@@ -79,6 +76,31 @@ namespace Articles.Application.Bussiness
             }).ToList();
 
             return model;
+        }
+
+        public List<SelectList> SelectList()
+        {
+            var model = rep.Select(a => new SelectList()
+            {
+                Id = a.Id,
+                Name = a.Name
+            }).ToList();
+            return model;
+        }
+
+        public EntityAction Update(CategoryModel model)
+        {
+            //Todo:Check IS Parent And Is Not Has Child
+            var current = rep.Get(model.Id);
+            if (current == null)
+                throw new NullReferenceException("Model Cannot Be Null");
+            current = model.ToCategory(current);
+            EntityAction result = rep.Update(current);
+
+
+            return result;
+
+
         }
     }
 }
