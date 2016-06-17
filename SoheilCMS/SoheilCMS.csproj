@@ -185,6 +185,7 @@
     <Compile Include="Areas\Admin\Controllers\ArticlesController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PostController.cs" />
     <Compile Include="Areas\Admin\Controllers\TagController.cs" />
     <Compile Include="Areas\Admin\Models\CategoryViewModel.cs" />
     <Compile Include="Areas\Admin\Models\TagViewModel.cs" />
@@ -264,6 +265,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Articles\" />
+    <Folder Include="Areas\Admin\Views\Post\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
