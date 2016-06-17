@@ -22,6 +22,8 @@ namespace Articles.DomainModel
 
         public DbSet<Tag> Tags { get; set; }
 
+        public DbSet<Comment> Comments { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -31,9 +33,9 @@ namespace Articles.DomainModel
 
             modelBuilder.Configurations.Add(new TagMap());
             modelBuilder.Configurations.Add(new PostTagMap());
+
+            modelBuilder.Configurations.Add(new CommentMap());
             base.OnModelCreating(modelBuilder);
         }
     }
-
-    
 }

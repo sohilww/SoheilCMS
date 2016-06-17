@@ -52,7 +52,9 @@
   <ItemGroup>
     <Compile Include="ArticlesDbContext.cs" />
     <Compile Include="Category.cs" />
+    <Compile Include="Comment.cs" />
     <Compile Include="Mapping\CategoryMap.cs" />
+    <Compile Include="Mapping\CommentMap.cs" />
     <Compile Include="Mapping\PostTagMap.cs" />
     <Compile Include="Mapping\TagMap.cs" />
     <Compile Include="Mapping\UserRefrenceMap.cs" />
@@ -63,6 +65,10 @@
     <Compile Include="Migrations\201606121936200_AddPostAndTagRelations.cs" />
     <Compile Include="Migrations\201606121936200_AddPostAndTagRelations.Designer.cs">
       <DependentUpon>201606121936200_AddPostAndTagRelations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606171707250_addCommentTable.cs" />
+    <Compile Include="Migrations\201606171707250_addCommentTable.Designer.cs">
+      <DependentUpon>201606171707250_addCommentTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Post.cs" />
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606121936200_AddPostAndTagRelations.resx">
       <DependentUpon>201606121936200_AddPostAndTagRelations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606171707250_addCommentTable.resx">
+      <DependentUpon>201606171707250_addCommentTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

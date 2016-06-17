@@ -54,6 +54,8 @@ namespace Articles.DomainModel
 
         public virtual ICollection<PostTag> PostTag { get; set; }
 
+        public virtual ICollection<Comment> Comments { get; set; }
+
 
         public void Update(string title,
             DateTime sendDate, DateTime? publishedDate, int visitCount,
