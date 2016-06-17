@@ -25,7 +25,37 @@ namespace SoheilCMS.Areas.Admin.Controllers
                 Name = a.Name,
                 PostCount = a.PostCount
             }).ToList();
-            return View(tags);
+            TagViewListModel model = new TagViewListModel()
+            {
+                TagViewModel = tags,
+                PageSize = 10,
+                CurrentPage = 1,
+                TotalItemCount = service.Count()
+            };
+
+
+            return View(model);
+        }
+
+        public PartialViewResult TagList(int page = 1)
+        {
+            int skip = ((page - 1)*10);
+            List<TagViewModel> tags = service.Select(skip,10).Select(a => new TagViewModel()
+            {
+                Id = a.Id,
+                Name = a.Name,
+                PostCount = a.PostCount
+            }).ToList();
+            TagViewListModel model = new TagViewListModel()
+            {
+                TagViewModel = tags,
+                PageSize = 10,
+                CurrentPage = page,
+                TotalItemCount = service.Count()
+            };
+
+
+            return PartialView(model);
         }
     }
 }

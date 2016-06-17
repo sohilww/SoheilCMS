@@ -81,6 +81,11 @@ namespace Articles.Data.DataAccess
             return model;
         }
 
+        public int Count()
+        {
+            return unit.Context.Categories.Count();
+        }
+
         public void Dispose()
         {
            

@@ -38,5 +38,7 @@ namespace FrameWork.Domain.Model
 
         IQueryable<TResult> Select<TResult>(Expression<Func<T, TResult>> predicate);
 
+        int Count();
+
     }
 }

@@ -39,3 +39,36 @@ body {
 .form-group {
     direction: rtl !important;
 }
+#pager {
+   display:flex;
+    align-items: center;
+}
+#ListPager {
+    margin: 0 auto;
+    margin-bottom:50px;
+}
+#pager a[disabled="disabled"] {
+    text-decoration: none;
+    color: gray;
+    cursor: not-allowed;
+}
+#pager span {
+    padding:5px;
+    display: inline-block;
+    background-color: blue;
+    color:#fff;
+    border-radius:3px;
+}
+#pager a {
+    padding:5px;
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #337ab7;
+    text-decoration: none;
+    border-radius:3px;
+}
+#pager a:hover {
+    background-color: #ddd;
+    border: 1px solid #fff;
+}

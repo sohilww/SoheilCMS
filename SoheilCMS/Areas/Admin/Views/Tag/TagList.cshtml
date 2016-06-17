@@ -1,0 +1,37 @@
+﻿@using MvcAjaxPager
+@using SoheilCMS.Models
+@model SoheilCMS.Areas.Admin.Models.TagViewListModel
+<div id="divtarget">
+    <table class="table table-bordered table-responsive table-hover table-striped tdCenter">
+        <tr>
+            <th>
+                نام
+            </th>
+            <th>
+                تعداد پست ها
+            </th>
+            <th>پست های تگ</th>
+
+        </tr>
+
+        @foreach (var item in Model.TagViewModel)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PostCount)
+                </td>
+                <td>
+                    @Html.ActionLink("PostList", "پست ها", new {id = item.Id})
+                </td>
+            </tr>
+        }
+
+    </table>
+    <div id="pager">
+        @Html.AjaxPager(Model.TotalItemCount, Model.PageSize, Model.CurrentPage, "tagList", "Tag", "Admin_Pagger",
+        CustomePagerOptions.CustomePageOptions(), new { Area = "Admin" }, null)
+    </div>
+</div>

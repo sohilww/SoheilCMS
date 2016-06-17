@@ -19,5 +19,8 @@ namespace Articles.Application.BussinessService
         List<Tag> Where(System.Linq.Expressions.Expression<Func<Tag,bool>> perdicate);
 
         List<TagModel> Select();
+
+        int Count();
+        List<TagModel> Select(int skip, int v);
     }
 }

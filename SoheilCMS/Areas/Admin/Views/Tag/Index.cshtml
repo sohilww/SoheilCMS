@@ -1,36 +1,16 @@
-﻿@model IEnumerable<SoheilCMS.Areas.Admin.Models.TagViewModel>
+﻿
+@model SoheilCMS.Areas.Admin.Models.TagViewListModel
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_Admin_LayoutPage.cshtml";
 }
 <div class="col-xs-12">
-    <table class="table table-bordered table-responsive table-hover table-striped tdCenter">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PostCount)
-            </th>
-            <th>پست های تگ</th>
-            
-        </tr>
-
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PostCount)
-                </td>
-                <td>
-                    @Html.ActionLink("PostList", "پست ها", new { id = item.Id }) 
-                 </td>
-            </tr>
-        }
-
-    </table>
+    @{ Html.RenderPartial("TagList", Model); }
 </div>
+
+
+
+@section script{
+    @Scripts.Render("~/bundles/Pager")  
+}

@@ -11,7 +11,7 @@ namespace Articles.Data.DataAccess
     public class PostRepository:IPostRepository
     {
         private readonly IPostRepository rep;
-        private readonly IArticlesUnitofWork unit;
+        private readonly IArticlesUnitofWork unit;   //No Variable Should Refrence To a Concrete class
         
         public PostRepository(IArticlesUnitofWork _unit)
         {
@@ -80,6 +80,12 @@ namespace Articles.Data.DataAccess
             var model = unit.Context.Posts.Select(predicate);
             return model;
         }
+
+        public int Count()
+        {
+            return unit.Context.Posts.Count();
+        }
+
         public void Dispose()
         {
             if (rep != null)

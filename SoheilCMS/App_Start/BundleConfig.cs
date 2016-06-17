@@ -46,6 +46,14 @@ namespace SoheilCMS
                
                ));
 
+
+            bundles.Add(new ScriptBundle("~/bundles/Pager").Include(
+             "~/Scripts/jquery.pager-1.0.2.min.js",
+             "~/Scripts/path.min.js",
+             "~/Scripts/AdminPager.js"
+
+             ));
+
         }
     }
 }

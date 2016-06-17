@@ -85,6 +85,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MvcAjaxPager, Version=1.0.2.41923, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvcAjaxPager.1.0.2\lib\net40\MvcAjaxPager.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
       <Private>True</Private>
@@ -189,6 +193,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BaseViewModel.cs" />
+    <Compile Include="Models\CustomPagerOptions.cs" />
+    <Compile Include="Models\IPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -201,7 +207,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\AdminStyle.css" />
+    <Content Include="Scripts\AdminPager.js" />
     <Content Include="Scripts\Admin\AdminScript.js" />
+    <Content Include="Scripts\jquery.pager-1.0.2.js" />
+    <Content Include="Scripts\jquery.pager-1.0.2.min.js" />
+    <Content Include="Scripts\path.js" />
+    <Content Include="Scripts\path.min.js" />
     <Content Include="Scripts\sendAjaxScript.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
@@ -220,6 +231,7 @@
     <Content Include="fonts\BYekan.ttf" />
     <Content Include="fonts\BYekan.woff" />
     <Content Include="Areas\Admin\Views\Tag\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Tag\TagList.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

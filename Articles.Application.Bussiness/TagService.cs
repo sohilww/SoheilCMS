@@ -64,5 +64,21 @@ namespace Articles.Application.Bussiness
             }).ToList();
             return result;
         }
+
+        public List<TagModel> Select(int skip, int take)
+        {
+            var result = rep.SelectAll().OrderBy(a=>a.Id).Skip(skip).Take(take)
+                .Select(a => new TagModel()
+                {
+                    Id = a.Id,
+                    Name = a.Name,
+                    PostCount = a.PostTag.Count
+                }).ToList();
+            return result;
+        }
+        public int Count()
+        {
+            return rep.Count();
+        }
     }
 }
