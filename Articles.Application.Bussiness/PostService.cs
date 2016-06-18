@@ -50,6 +50,8 @@ namespace Articles.Application.Bussiness
 
         public EntityAction Create(PostCreateModel entity)
         {
+            if (SlugExsits(entity.Slug))
+                return EntityAction.Exception;
             entity.PostId = rep.GetNextId();
             var post = entity.ToPost();
             EntityAction result = rep.Create(post);
@@ -68,6 +70,12 @@ namespace Articles.Application.Bussiness
             return result;
         }
 
+        private bool SlugExsits(string slug)
+        {
+            slug = slug.ToLower().CreateFreandlySlug();
+            return rep.SlugExsist(slug);
+
+        }
         public EntityAction Delete(int id)
         {
             EntityAction result = rep.Delete(id);

@@ -86,6 +86,11 @@ namespace Articles.Data.DataAccess
             return unit.Context.Posts.Count();
         }
 
+        public bool SlugExsist(string slug)
+        {
+            return unit.Context.Posts.Any(a => a.Slug == slug);
+        }
+
         public void Dispose()
         {
             if (rep != null)

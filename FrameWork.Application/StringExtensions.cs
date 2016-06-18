@@ -16,7 +16,7 @@ namespace FrameWork.Application
         /// <returns></returns>
         public static string CreateFreandlySlug(this string slug)
         {
-
+            slug = slug.ToLower();
             //\u0600-\u06FF\uFB8A\u067E\u0686\u06AF 
             //Chacking Persian Correcter
             slug = new Regex(@"[^0-9 a-z \u0600-\u06FF\uFB8A\u067E\u0686\u06AF -]").Replace(slug, string.Empty);
