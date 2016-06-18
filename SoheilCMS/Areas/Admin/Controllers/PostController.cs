@@ -62,7 +62,13 @@ namespace SoheilCMS.Areas.Admin.Controllers
         public ActionResult Create()
         {
             PostCreateViewModel model = new PostCreateViewModel();
-            model.SendDate = PersianDate.Now;
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(PostCreateViewModel current)
+        {
             return View();
         }
 

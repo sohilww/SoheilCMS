@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PostCreateModel.cs" />
     <Compile Include="PostListModel.cs" />
     <Compile Include="TagModel.cs" />
     <Compile Include="CategoryModel.cs" />

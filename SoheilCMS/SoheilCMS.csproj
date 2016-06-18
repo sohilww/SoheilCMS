@@ -237,6 +237,7 @@
     <Content Include="Areas\Admin\Views\Tag\TagList.cshtml" />
     <Content Include="Areas\Admin\Views\Post\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Post\PostList.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\Create.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
