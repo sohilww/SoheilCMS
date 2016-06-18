@@ -26,5 +26,10 @@ namespace Articles.DomainModel
         public string UserName { get; private set; }
 
         public ICollection<Post> Posts{ get; private set; }
+
+        public string GetNameAndLastName()
+        {
+            return this.Name + "  " + this.LastName;
+        }
     }
 }

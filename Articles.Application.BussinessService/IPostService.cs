@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Articles.Contracts;
 using Articles.DomainModel;
 using FrameWork.Application;
 using FrameWork.Core;
@@ -15,7 +16,12 @@ namespace Articles.Application.BussinessService
 
         EntityAction Delete(int id);
 
-        List<Post> Where(System.Linq.Expressions.Expression<Func<Post,bool>> perdicate);
+        List<PostListModel> Where(System.Linq.Expressions.Expression<Func<Post,bool>> perdicate);
 
+        List<PostListModel> Select(int skip, int take);
+
+        List<PostListModel> SelectAll();
+
+        int Count();
     }
 }

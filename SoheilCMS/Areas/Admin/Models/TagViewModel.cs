@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using PluginBase;
 using SoheilCMS.Models;
 
 namespace SoheilCMS.Areas.Admin.Models

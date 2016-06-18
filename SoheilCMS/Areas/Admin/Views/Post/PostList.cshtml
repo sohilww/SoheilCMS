@@ -1,0 +1,83 @@
+﻿@model SoheilCMS.Areas.Admin.Models.PostListViewModel
+
+@using MvcAjaxPager
+@using SoheilCMS.Models
+<div id="divtarget">
+    <table class="table table-bordered table-hover table-responsive table-striped tdCenter">
+        <tr>
+            <th>
+                موضوع
+            </th>
+            <th>
+                نام نویسنده
+            </th>
+            <th>
+                دسته بندی
+            </th>
+            <th>
+                بر چسب ها
+            </th>
+            <th>
+                تعداد کامنت ها
+            </th>
+            <th>
+                تعداد بازدید
+            </th>
+            <th>
+                نمایش
+            </th>
+            <th>
+                ویرایش
+            </th>
+            <th>
+                حذف
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model.PostList)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @item.Author.GetNameAndLastName()
+                </td>
+                <td>
+                    @item.Category.Name
+                </td>
+                <td>
+                    @foreach (var tag in item.PostTag)
+                    {
+                        <a href="@Url.Action("TagPost","Home",new {TagName=tag.Tag.Name})">@tag.Tag.Name</a> <span>|</span>
+                    }
+                </td>
+                <td>
+                    @item.Comments.Count
+                </td>
+                <td>
+                    @item.VisitCount
+                </td>
+                <td>
+                    <a class="label label-success" href="@Url.Action("Show","Post",new {id=item.PostId})">نمایش</a>
+                </td>
+                <td>
+                    <a class="label label-primary" href="@Url.Action("Edit","Post",new {id=item.PostId})">ویرایش</a>
+                </td>
+                <td>
+                    <a class="label label-danger deleteBtn" href="@Url.Action("Delete","Post",new {id=item.PostId})">حذف</a>
+                </td>
+
+            </tr>
+        }
+
+    </table>
+
+
+
+    <div id="pager">
+        @Html.AjaxPager(Model.TotalItemCount, Model.PageSize, Model.CurrentPage, "PostList", "Post", "Admin_Pagger",
+        CustomePagerOptions.CustomePageOptions(), new { Area = "Admin" }, null)
+    </div>
+</div>

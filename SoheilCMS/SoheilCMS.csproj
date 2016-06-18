@@ -188,6 +188,8 @@
     <Compile Include="Areas\Admin\Controllers\PostController.cs" />
     <Compile Include="Areas\Admin\Controllers\TagController.cs" />
     <Compile Include="Areas\Admin\Models\CategoryViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\PostCreateViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\PostListViewModel.cs" />
     <Compile Include="Areas\Admin\Models\TagViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -195,7 +197,7 @@
     </Compile>
     <Compile Include="Models\BaseViewModel.cs" />
     <Compile Include="Models\CustomPagerOptions.cs" />
-    <Compile Include="Models\IPageViewModel.cs" />
+    <Compile Include="Models\PagingAndBaseViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -233,6 +235,8 @@
     <Content Include="fonts\BYekan.woff" />
     <Content Include="Areas\Admin\Views\Tag\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Tag\TagList.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\PostList.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -265,7 +269,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Articles\" />
-    <Folder Include="Areas\Admin\Views\Post\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
