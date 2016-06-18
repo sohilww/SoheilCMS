@@ -7,54 +7,97 @@
 
 @using (Html.BeginForm())
 {
-    <div class="col-md-2">
+    <div class="col-md-3">
+        <div style="padding:25px">
+            <div class="panel panel-primary">
+                <div class="panel-heading text-right">دسته بندی</div>
+                <div class="panel-body">
+                    <div id="CategoryList">
 
-    </div>
-    <div class="col-md-10">
-        <div style="padding: 25px">
 
-            @Html.AntiForgeryToken()
-
-            <div class="form-group">
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                @Html.HiddenFor(model => model.PostId)
-
-                <div class="form-group">
-                    <div>
-                        @Html.LabelFor(model => model.Title)
-                        @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Content)
-                    @Html.EditorFor(model => model.Content, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
-                    <div class="col-md-10">
-
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Description)
-                    @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
-                </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Slug)
-                    @Html.EditorFor(model => model.Slug, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Slug, "", new { @class = "text-danger" })
-                </div>
-
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Create" class="btn btn-default" />
+                        @{ Html.RenderAction("CategoryRadioButton", "Category", new { Area = "Admin" });}
                     </div>
                 </div>
             </div>
 
+
+            <div id="tags">
+
+            </div>
         </div>
     </div>
+    <div class="col-md-9">
+        <div style="padding: 25px">
+            <div class="panel panel-primary">
+                <div class="panel-heading text-right">نوشته</div>
+                <div class="panel-body">
+                    <div>
+
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-group">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            @Html.HiddenFor(model => model.PostId)
+                            <input type="hidden" value="@Model.CategoryId" id="category"/>
+                            <div class="form-group">
+                                <div>
+                                    @Html.LabelFor(model => model.Title)
+                                    @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Content)
+                                @Html.EditorFor(model => model.Content, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+                                <div class="col-md-10">
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Description)
+                                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Slug)
+                                @Html.EditorFor(model => model.Slug, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Slug, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Create" class="btn btn-default" />
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+
+          
+
+        </div>
+    </div>
+                        }
+
+
+
+@section script{
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/CkEditorPart1")
+    @Scripts.Render("~/bundles/CkEditorPart2")
+    <script>
+        $(function() {
+            var cat = $("#category").val();
+
+            var elem = $("input[value=" + cat + "]").prop("checked",true);
+            console.log(elem);
+        });
+    </script>
 }
+

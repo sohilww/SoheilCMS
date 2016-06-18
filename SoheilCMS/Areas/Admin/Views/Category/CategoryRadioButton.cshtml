@@ -1,0 +1,10 @@
+﻿@model IEnumerable<FrameWork.Application.SelectList>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            @Html.RadioButton("CategoryId",item.Id) @item.Name
+        </li>
+    }
+</ul>

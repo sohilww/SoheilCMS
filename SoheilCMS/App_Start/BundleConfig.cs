@@ -43,7 +43,7 @@ namespace SoheilCMS
 
             bundles.Add(new ScriptBundle("~/bundles/Admin").Include(
                "~/Scripts/Admin/AdminScript.js"
-               
+
                ));
 
 
@@ -53,6 +53,16 @@ namespace SoheilCMS
              "~/Scripts/AdminPager.js"
 
              ));
+
+            bundles.Add(new ScriptBundle("~/bundles/CkEditorPart1").Include(
+             "~/Scripts/ckeditor/ckeditor.js"
+
+             ));
+
+            bundles.Add(new ScriptBundle("~/bundles/CkEditorPart2").Include(
+            "~/Scripts/ckeditor/adapters/jquery.js",
+            "~/Scripts/ckeditor/EnableCkEditor.js"
+            ));
 
         }
     }

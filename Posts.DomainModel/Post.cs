@@ -46,7 +46,7 @@ namespace Articles.DomainModel
 
         public AuthorRefrence Author { get; private set; }
 
-        public Category Category { get; private set; }
+        public Category Category { get; set; }
 
 
         

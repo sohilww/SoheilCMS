@@ -9,10 +9,10 @@ namespace Articles.Application.BussinessService
 {
     public interface IPostService:IService
     {
-        Post Get(int id);
-        EntityAction Create(Post entity);
+        PostCreateModel Get(int id);
+        EntityAction Create(PostCreateModel entity);
 
-        EntityAction Update(Post entity);
+        EntityAction Update(PostCreateModel entity);
 
         EntityAction Delete(int id);
 

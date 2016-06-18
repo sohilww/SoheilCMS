@@ -15,7 +15,7 @@ namespace SoheilCMS.Areas.Admin.Models
 
         public DateTime SendDate
         {
-            get { return PersianDate.Now; }
+            get; set;
         }
 
         public int PostId { get; set; }
@@ -56,6 +56,7 @@ namespace SoheilCMS.Areas.Admin.Models
         public int TagId { get; set; }
 
         [ScaffoldColumn(false)]
+        [Required(ErrorMessage = "{0} را وارد نمایید")]
         public int CategoryId { get; set; }
 
         public AuthorRefrence Author { get; set; }

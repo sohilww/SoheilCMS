@@ -23,22 +23,48 @@ namespace Articles.Application.Bussiness
             // throw new NotImplementedException();
         }
 
-        public Post Get(int id)
+        public PostCreateModel Get(int id)
         {
-            var result = rep.Get(id);
+            var tmp = rep.Get(id);
+            PostCreateModel result = new PostCreateModel()
+            {
+                Author = tmp.Author,
+                AuthorId = tmp.AuthorId,
+                Category = tmp.Category,
+                CategoryId = tmp.CategoryId,
+                Comments = tmp.Comments,
+                Content = tmp.Content,
+                Description = tmp.Description,
+                PostId = tmp.Id,
+                PostImage = tmp.PostImage,
+                PostTag = tmp.PostTag,
+                PublishedDate = tmp.PublishedDate,
+                SendDate = tmp.SendDate,
+                Slug = tmp.Slug,
+                TagId = tmp.TagId,
+                Title = tmp.Title,
+                VisitCount = tmp.VisitCount
+            };
             return result;
         }
 
-        public EntityAction Create(Post entity)
+        public EntityAction Create(PostCreateModel entity)
         {
-            entity.Id = rep.GetNextId();
-            EntityAction result = rep.Create(entity);
+            entity.PostId = rep.GetNextId();
+            var post = entity.ToPost();
+            EntityAction result = rep.Create(post);
             return result;
         }
 
-        public EntityAction Update(Post entity)
+        public EntityAction Update(PostCreateModel entity)
         {
-            EntityAction result = rep.Update(entity);
+
+            //Todo: The Slug Has Not Exsits 
+            var post = rep.Get(entity.PostId);
+            //post.CategoryId;
+            post.Category = null;
+            entity.ToPost(post);
+            EntityAction result = rep.Update(post);
             return result;
         }
 
@@ -52,7 +78,7 @@ namespace Articles.Application.Bussiness
 
         public List<PostListModel> Select(int skip, int take)
         {
-            var result=rep.SelectAll().OrderBy(a=>a.Id).Skip(skip).Take(take)
+            var result = rep.SelectAll().OrderBy(a => a.Id).Skip(skip).Take(take)
                 .Select(a => new PostListModel()
                 {
                     Author = a.Author,
@@ -74,7 +100,7 @@ namespace Articles.Application.Bussiness
 
         public List<PostListModel> SelectAll()
         {
-            var result=rep.SelectAll()
+            var result = rep.SelectAll()
                 .Select(a => new PostListModel()
                 {
                     Author = a.Author,

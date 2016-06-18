@@ -124,5 +124,11 @@ namespace SoheilCMS.Areas.Admin.Controllers
             }
             return View("index", model);
         }
+
+        public PartialViewResult CategoryRadioButton()
+        {
+            var model = rep.SelectList();
+            return PartialView(model);
+        }
     }
 }
