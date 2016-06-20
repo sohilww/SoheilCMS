@@ -73,6 +73,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Menu.Application.Bootstrap"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu.IOC.Bootstraper", "Menu.IOC.Bootstraper\Menu.IOC.Bootstraper.csproj", "{D4D00D26-5AFD-41B2-AAAF-BCCF030EC917}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WorkSample", "WorkSample", "{A2F7ED75-1E32-42D4-A813-C7DB9E33A0A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkSamplesPlugin", "WorkSamplesPlugin\WorkSamplesPlugin.csproj", "{8D7FD852-52FF-4439-BD59-02A4342E06EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -167,6 +171,10 @@ Global
 		{D4D00D26-5AFD-41B2-AAAF-BCCF030EC917}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4D00D26-5AFD-41B2-AAAF-BCCF030EC917}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4D00D26-5AFD-41B2-AAAF-BCCF030EC917}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D7FD852-52FF-4439-BD59-02A4342E06EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D7FD852-52FF-4439-BD59-02A4342E06EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D7FD852-52FF-4439-BD59-02A4342E06EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D7FD852-52FF-4439-BD59-02A4342E06EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -201,5 +209,6 @@ Global
 		{54C9B10A-A23B-49EB-818D-CAE5A59534E4} = {545BC861-FC71-4CE1-AA93-FF4FE2A35B47}
 		{6DEA1E94-7621-4ACB-888C-0B35DF9D103D} = {30416A1C-A7E2-47E1-9265-620A81AE1A8A}
 		{D4D00D26-5AFD-41B2-AAAF-BCCF030EC917} = {6DEA1E94-7621-4ACB-888C-0B35DF9D103D}
+		{8D7FD852-52FF-4439-BD59-02A4342E06EC} = {A2F7ED75-1E32-42D4-A813-C7DB9E33A0A8}
 	EndGlobalSection
 EndGlobal
