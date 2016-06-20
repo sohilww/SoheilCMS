@@ -23,6 +23,6 @@ namespace WorkSamples.DomainModel
         public WorkCategory Parent { get; set; }
 
 
-        public ICollection<WorkSample> WorkSamples { get; set; }
+        public ICollection<SampleWork> WorkSamples { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace WorkSamples.DomainModel.Mapping
 {
-    public class WorkSampleMap:EntityTypeConfiguration<WorkSample>
+    public class WorkSampleMap:EntityTypeConfiguration<SampleWork>
     {
         public WorkSampleMap()
         {

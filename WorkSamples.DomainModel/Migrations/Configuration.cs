@@ -5,14 +5,14 @@ namespace WorkSamples.DomainModel.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<WorkSamples.DomainModel.WorkSamplesDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<WorkSamples.DomainModel.WorkSampleDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(WorkSamples.DomainModel.WorkSamplesDbContext context)
+        protected override void Seed(WorkSamples.DomainModel.WorkSampleDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
