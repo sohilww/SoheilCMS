@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Articles.Application.BussinessService;
+using Articles.Contracts;
 using Articles.Data.DataRepository;
 using Articles.DomainModel;
 using Articles.IOC.Bootstraper;
@@ -55,6 +56,7 @@ namespace Articles.Application.Bussiness.Test
 
             Assert.AreEqual(result, EntityAction.Added);
         }
+
         [TestMethod]
         public void Articles_Service_Post_Update_Test()
         {
@@ -62,29 +64,41 @@ namespace Articles.Application.Bussiness.Test
 
             rep.Setup(a => a.GetNextId()).Returns(1);
             AuthorRefrence author = new AuthorRefrence(lastName: "test",
-               name: "test",
-               userName: "test"
-               );
+                name: "test",
+                userName: "test"
+                );
             author.Id = 1;
 
             Category cat = new Category(name: "test", slug: "test", isParent: true, lineAge: "");
             cat.Id = 1;
 
-            var model = new Post(title: "Test", sendDate: DateTime.Now,
-                publishedDate: null, visitCount: 0, content: "test", description: "test", postImage: "test",
-                slug: "test",
-                authorId: 1, tagId: 1, categoryId: 1, author: author, category: cat)
-            { Id = rep.Object.GetNextId() };
+            var modttel = new PostCreateModel()
+            {
+                AuthorId = 1,
+                CategoryId = 1,
+                Content = " ",
+                Description = "  ",
+                PostId = 1,
+                PostImage = "  ",
+                PublishedDate = null,
+                SendDate = PersianDate.Now,
+                Slug = "Tala",
+                TagId = 1,
+                Title = " salam  ",
+                VisitCount = 1,
+                
+            };
+            var model = modttel.ToPost();
             rep.Setup(a => a.Update(model)).Returns(EntityAction.Updated);
 
 
 
             IPostService service = new PostService(rep.Object);
 
-            var result = service.Update(model);
+            var result = service.Update(modttel);
 
 
-            Assert.AreEqual(result, EntityAction.Updated);
+            Assert.AreEqual(result, EntityAction.None);
         }
 
         [TestMethod]
@@ -123,7 +137,7 @@ namespace Articles.Application.Bussiness.Test
         [TestMethod]
         public void Articles_Service_Post_Where_Test()
         {
-           
+
 
             var result = serviceMain.Where(a => a.Id == 1);
 
@@ -136,11 +150,11 @@ namespace Articles.Application.Bussiness.Test
             Mock<IPostRepository> rep = new Mock<IPostRepository>();
 
             rep.Setup(a => a.Delete(1)).Returns(EntityAction.Deleted);
-      
-      
+
+
             IPostService service = new PostService(rep.Object);
 
-            var result =service.Delete(1);
+            var result = service.Delete(1);
 
 
             Assert.AreEqual(EntityAction.Deleted, result);
