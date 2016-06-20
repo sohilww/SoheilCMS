@@ -26,7 +26,7 @@ namespace WorkSamples.DomainModel.Mapping
                 .HasMaxLength(300);
 
 
-            Property(a => a.DoTime).HasColumnType("datetime2")
+            Property(a => a.DoTime).HasColumnType("DateTime2")
                 .IsOptional();
 
 
