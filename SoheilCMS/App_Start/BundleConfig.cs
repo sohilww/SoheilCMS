@@ -25,7 +25,8 @@ namespace SoheilCMS
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/AdminStyle.css"));
+                      "~/Content/AdminStyle.css",
+                      "~/Content/themes/base/all.css"));
 
 
 
@@ -59,9 +60,17 @@ namespace SoheilCMS
 
              ));
 
+
+
             bundles.Add(new ScriptBundle("~/bundles/CkEditorPart2").Include(
             "~/Scripts/ckeditor/adapters/jquery.js",
             "~/Scripts/ckeditor/EnableCkEditor.js"
+            ));
+
+
+            bundles.Add(new ScriptBundle("~/bundles/JqueryUi").Include(
+            "~/Scripts/jquery-ui-1.11.4.min.js"
+
             ));
 
         }

@@ -1,0 +1,58 @@
+﻿@model System.Collections.Generic.List<Menu.DomainModel.SiteMenu>
+
+@{
+    ViewBag.Title = "Menus";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin_LayoutPage.cshtml";
+}
+
+<div class="col-xs-12">
+    
+</div>
+<div class="col-xs-12">
+    
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title text-center">منو</h3>
+        </div>
+        <div class="panel-body">
+            <button class="btn btn-success right">اضافه کردن منوی جدید</button>
+
+            <div class="marginBottom10"></div>
+            <ul id="menu" class="menu">
+                @foreach (var item in Model.Where(a=>a.ParentId==null))
+                {
+                    <li class="ui-widget-header">
+                        @item.Title
+                        <a class="label label-info" href="@Url.Action("Edit", "Menu", new {id = item.Id})">ویرایش</a>
+
+                    </li>
+                    if (item.Children != null)
+                    {
+                        foreach (var child in item.Children)
+                        {
+                            <li >
+                                @child.Title
+                                <div>
+                                    <a class="label label-info" href="@Url.Action("Edit", "Menu", new {id = child.Id})">ویرایش</a>
+                                    <a class="label label-danger" href="@Url.Action("Delete", "Menu", new {id = child.Id})">حذف</a>
+                                </div>
+                            </li>
+                        }
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+@section script{
+    @Scripts.Render("~/bundles/JqueryUi")
+    <script>
+        $(function() {
+            $("#menu").menu({
+                items: "> :not(.ui-widget-header)"
+            });
+        })
+    </script>
+}

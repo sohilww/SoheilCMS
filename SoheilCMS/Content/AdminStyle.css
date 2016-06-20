@@ -79,3 +79,21 @@ body {
     list-style: none;
     padding:0;
 }
+
+#menu {
+    direction: rtl;
+    list-style: none;
+    font-family:yekan
+}
+.ui-widget-header {
+    padding:10px;
+}
+#menu div {
+    padding:5px 0;
+}
+.panel-body {
+    direction: rtl;
+}
+.marginBottom10 {
+    margin-bottom: 10px;
+}

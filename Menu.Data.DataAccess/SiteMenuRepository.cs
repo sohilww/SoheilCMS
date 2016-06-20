@@ -81,6 +81,12 @@ namespace Menu.Data.DataAccess
             return model;
         }
 
+        public List<SiteMenu> Select()
+        {
+            var model = unit.Context.Menus.ToList();
+            return model;
+        }
+
 
         public void Dispose()
         {

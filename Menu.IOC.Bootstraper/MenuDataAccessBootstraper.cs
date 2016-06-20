@@ -9,7 +9,7 @@ namespace Menu.IOC.Bootstraper
     {
         public override void Load()
         {
-
+            Bind<IMenuUnitofWork>().To<MenuUnitofWork>();
             Bind<ISiteMenuRepository>().To<SiteMenuRepository>();
         }
         private void LoadDbContext()

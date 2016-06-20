@@ -1,4 +1,6 @@
 using Articles.IOC.Bootstraper;
+using Menu.IOC.Bootstraper;
+
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(SoheilCMS.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(SoheilCMS.App_Start.NinjectWebCommon), "Stop")]
@@ -63,7 +65,11 @@ namespace SoheilCMS.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            //Article
             kernel.Load(new DataAccessModule(), new ArticleServiceModule());
+
+            //Menu
+            kernel.Load(new MenuDataAccessBootstraper(), new MenuServiceBootstraper());
         }        
     }
 }

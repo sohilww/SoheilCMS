@@ -23,6 +23,7 @@ namespace Menu.Application.BussinessService
         List<SiteMenu> SelectChildMenuOfParent(int Parentid);
 
         int Count();
-        
+
+        List<SiteMenu> Select();
     }
 }

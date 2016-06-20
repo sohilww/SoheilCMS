@@ -20,5 +20,6 @@ namespace Menu.Data.DataRepository
 
         List<SiteMenu> SelectAllParentSiteMenu();
         List<SiteMenu> SelectAllChildOfParentSiteMenu(int parentId);
+        List<SiteMenu> Select();
     }
 }

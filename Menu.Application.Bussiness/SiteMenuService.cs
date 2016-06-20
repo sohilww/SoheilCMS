@@ -66,5 +66,11 @@ namespace Menu.Application.Bussiness
         {
             return rep.Count();
         }
+
+        public List<SiteMenu> Select()
+        {
+            var model = rep.Select();
+            return model;
+        }
     }
 }
