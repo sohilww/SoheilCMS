@@ -9,10 +9,12 @@ namespace SoheilCMS.Areas.Admin.Controllers
 {
     public class HomeController : Controller
     {
-        public HomeController()
+        List<IPluginBase> plugins;
+        public HomeController(List<IPluginBase> plugins)
         {
-            
+            this.plugins = plugins;
         }
+
         // GET: Admin/Home
         public ActionResult Index()
         {
@@ -21,7 +23,7 @@ namespace SoheilCMS.Areas.Admin.Controllers
 
         public PartialViewResult Menu()
         {
-            List<IPluginBase> plugins = new List<IPluginBase>();
+            
             return PartialView(plugins);
         }
     }

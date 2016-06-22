@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<PluginBase.IPluginBase>
 
 <div id="panel1" style="width:100%;">
     <span data-panel="panel1" class="panel-button" style="margin:0 30px 0 auto;"></span>
@@ -10,18 +10,32 @@
             <li>
                 <div>نوشته ها</div>
                 <ul>
-                    <li><a href="@Url.Action("index","tag",new {Area="Admin"})">برچسب ها</a></li>
+                    <li><a href="@Url.Action("index", "tag", new {Area = "Admin"})">برچسب ها</a></li>
                     <li><a href="?12">test</a></li>
-                    <li><a href="@Url.Action("index","Category",new {Area="Admin"})">دسته ها</a></li>
+                    <li><a href="@Url.Action("index", "Category", new {Area = "Admin"})">دسته ها</a></li>
                     <li>
                         <div>دسته ها</div>
                         <ul>
                             <li><a href="#">test</a></li>
-                         
+
                         </ul>
                     </li>
                 </ul>
             </li>
+
+            @foreach (var item in Model)
+            {
+                <li>
+                    <div>@item.GetMenuItem(Request.RequestContext).Name</div>
+                    <ul>
+                        @foreach (var child in item.GetChildMenuItem(Request.RequestContext))
+                        {
+                            <li><a href="@child.Url">@child.Name</a></li>
+                           
+                        }
+                    </ul>
+                </li>
+            }
             <li>
                 <div>Quis Porttitor</div>
                 <ul>

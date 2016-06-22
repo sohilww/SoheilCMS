@@ -1,5 +1,8 @@
+using System.Web.Routing;
 using Articles.IOC.Bootstraper;
 using Menu.IOC.Bootstraper;
+using PluginBase;
+using PluginManager;
 
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(SoheilCMS.App_Start.NinjectWebCommon), "Start")]
@@ -14,6 +17,7 @@ namespace SoheilCMS.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using Ninject.Extensions.Conventions;
 
     public static class NinjectWebCommon 
     {
@@ -72,7 +76,21 @@ namespace SoheilCMS.App_Start
             kernel.Load(new MenuDataAccessBootstraper(), new MenuServiceBootstraper());
 
 
-            
+         //   kernel.Bind<RequestContext>().To<RequestContext>().InSingletonScope();
+
+            string path = HttpRuntime.AppDomainAppPath + "bin";
+            //kernel.Bind(a => a.FromAssembliesMatching("*")
+            //    .SelectAllClasses()
+            //    .InheritedFrom<IPluginBase>()
+            //    .BindAllInterfaces()
+
+            //    );
+
+
+            kernel.Load(new PluginMager());
+
+            //kernel.Bind<IPluginBase>()
+
         }        
     }
 }
