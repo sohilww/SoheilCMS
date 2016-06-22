@@ -10,6 +10,7 @@ namespace PluginBase
 
         List<MenuItem> GetChildMenuItem(RequestContext requestContext);
 
+        RequestContext RequestContextPlugin { set; }
 
         void RegisterBundles(BundleCollection bundles);
         void RegisterRoutes(RouteCollection routes);

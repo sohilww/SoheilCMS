@@ -97,12 +97,20 @@
       <HintPath>..\packages\Ninject.Extensions.ChildKernel.3.2.0.0\lib\net45-full\Ninject.Extensions.ChildKernel.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Ninject.Extensions.Conventions, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Conventions.3.2.0.0\lib\net45-full\Ninject.Extensions.Conventions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ninject.Web.Mvc, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.MVC5.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RazorGenerator.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorGenerator.Mvc.2.4.2\lib\net40\RazorGenerator.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -180,6 +188,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
+    <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\ArticlesController.cs" />
@@ -583,19 +592,39 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\Shared\_Admin_LayoutPage.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\Menu.cshtml" />
-    <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Category\CategoryList.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Admin_LayoutPage.cshtml">
+      <Generator>RazorGenerator</Generator>
+    </Content>
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+    </Content>
+    <Content Include="Areas\Admin\Views\Home\Menu.cshtml">
+      <Generator>RazorGenerator</Generator>
+    </Content>
+    <Content Include="Areas\Admin\Views\Category\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+    </Content>
+    <Content Include="Areas\Admin\Views\Category\CategoryList.cshtml">
+      <Generator>RazorGenerator</Generator>
+    </Content>
     <Content Include="fonts\BYekan.eot" />
     <Content Include="fonts\BYekan.ttf" />
     <Content Include="fonts\BYekan.woff" />
-    <Content Include="Areas\Admin\Views\Tag\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Tag\TagList.cshtml" />
-    <Content Include="Areas\Admin\Views\Post\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Post\PostList.cshtml" />
-    <Content Include="Areas\Admin\Views\Post\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Tag\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+    </Content>
+    <Content Include="Areas\Admin\Views\Tag\TagList.cshtml">
+      <Generator>RazorGenerator</Generator>
+    </Content>
+    <Content Include="Areas\Admin\Views\Post\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+    </Content>
+    <Content Include="Areas\Admin\Views\Post\PostList.cshtml">
+      <Generator>RazorGenerator</Generator>
+    </Content>
+    <Content Include="Areas\Admin\Views\Post\Create.cshtml">
+      <Generator>RazorGenerator</Generator>
+    </Content>
     <Content Include="Scripts\ckeditor\skins\moono\readme.md" />
     <Content Include="Scripts\ckeditor\README.md" />
     <Content Include="Scripts\ckeditor\plugins\wsc\README.md" />
@@ -606,8 +635,12 @@
     <Content Include="Scripts\ckeditor\package.json" />
     <Content Include="Scripts\ckeditor\LICENSE.md" />
     <Content Include="Scripts\ckeditor\CHANGES.md" />
-    <Content Include="Areas\Admin\Views\Category\CategoryRadioButton.cshtml" />
-    <Content Include="Areas\Admin\Views\Menu\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\CategoryRadioButton.cshtml">
+      <Generator>RazorGenerator</Generator>
+    </Content>
+    <Content Include="Areas\Admin\Views\Menu\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -630,13 +663,27 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\EditorTemplates\CkEditor.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml">
+      <Generator>RazorGenerator</Generator>
+    </Content>
+    <Content Include="Views\Shared\Error.cshtml">
+      <Generator>RazorGenerator</Generator>
+    </Content>
+    <Content Include="Views\Shared\_Layout.cshtml">
+      <Generator>RazorGenerator</Generator>
+    </Content>
+    <Content Include="Views\Home\About.cshtml">
+      <Generator>RazorGenerator</Generator>
+    </Content>
+    <Content Include="Views\Home\Contact.cshtml">
+      <Generator>RazorGenerator</Generator>
+    </Content>
+    <Content Include="Views\Home\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+    </Content>
+    <Content Include="Views\Shared\EditorTemplates\CkEditor.cshtml">
+      <Generator>RazorGenerator</Generator>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -690,6 +737,10 @@
     <ProjectReference Include="..\PluginBase\PluginBase.csproj">
       <Project>{202ffe0a-bc75-4e4d-87f6-37161108856b}</Project>
       <Name>PluginBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PluginManager\PluginManager.csproj">
+      <Project>{89A09A22-930E-4EC4-B7C6-653DC456540A}</Project>
+      <Name>PluginManager</Name>
     </ProjectReference>
     <ProjectReference Include="..\Posts.DomainModel\Articles.DomainModel.csproj">
       <Project>{49F420CE-AF11-4E98-8B48-4CCE5336DECF}</Project>
