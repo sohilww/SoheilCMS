@@ -70,6 +70,9 @@ namespace SoheilCMS.App_Start
 
             //Menu
             kernel.Load(new MenuDataAccessBootstraper(), new MenuServiceBootstraper());
+
+
+            
         }        
     }
 }
