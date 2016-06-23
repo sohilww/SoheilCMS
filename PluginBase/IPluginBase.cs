@@ -14,5 +14,9 @@ namespace PluginBase
 
         void RegisterBundles(BundleCollection bundles);
         void RegisterRoutes(RouteCollection routes);
+
+        object GetIoccBootstraper();
+
+        TIocc GetIoccBootstraper<TIocc>();
     }
 }
