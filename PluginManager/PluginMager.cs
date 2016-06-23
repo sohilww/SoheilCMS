@@ -12,6 +12,7 @@ namespace PluginManager
         {
             Bind<IPluginBase>().To<WorkSamplesPuginBase>();
             Kernel.Load(new WorkSampleDataAccessModule());
+            Kernel.Load(new WorkSampleServiceModule());
         }
     }
 }
