@@ -29,10 +29,10 @@ namespace ASP
     using WorkSamplesPlugin;
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
-    [System.Web.WebPages.PageVirtualPathAttribute("~/Areas/WorkSamples/Views/Home/Delete.cshtml")]
-    public partial class _Areas_WorkSamples_Views_Home_Delete_cshtml : System.Web.Mvc.WebViewPage<dynamic>
+    [System.Web.WebPages.PageVirtualPathAttribute("~/Areas/WorkSamples/Views/Home/Edit.cshtml")]
+    public partial class _Areas_WorkSamples_Views_Home_Edit_cshtml : System.Web.Mvc.WebViewPage<dynamic>
     {
-        public _Areas_WorkSamples_Views_Home_Delete_cshtml()
+        public _Areas_WorkSamples_Views_Home_Edit_cshtml()
         {
         }
         public override void Execute()
@@ -40,21 +40,15 @@ namespace ASP
 WriteLiteral("\r\n");
 
             
-            #line 2 "..\..\Areas\WorkSamples\Views\Home\Delete.cshtml"
+            #line 2 "..\..\Areas\WorkSamples\Views\Home\Edit.cshtml"
   
-    Layout = null;
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin_LayoutPage.cshtml";
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n<head>\r\n    <meta");
-
-WriteLiteral(" name=\"viewport\"");
-
-WriteLiteral(" content=\"width=device-width\"");
-
-WriteLiteral(" />\r\n    <title>Delete</title>\r\n</head>\r\n<body>\r\n<div>\r\n    Test Delete          " +
-"    \r\n</div>\r\n</body>\r\n</html>\r\n");
+WriteLiteral("\r\n\r\n<h2>Edit</h2>\r\n\r\nSalam  Khobi ?\r\n\r\n");
 
         }
     }

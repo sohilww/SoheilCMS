@@ -147,12 +147,17 @@
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
-    <Content Include="Areas\WorkSamples\Views\Home\Edit.cshtml">
-      <Generator>RazorGenerator</Generator>
-    </Content>
     <Content Include="Areas\WorkSamples\Views\Home\Delete.cshtml">
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>Delete.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\WorkSamples\Views\Home\Edit.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Edit.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\WorkSamples\Views\Home\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
     </Content>
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -164,9 +169,19 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\WorkSamples\Controllers\HomeController.cs" />
     <Compile Include="Areas\WorkSamples\Views\Home\Delete.generated.cs">
+      <DependentUpon>Delete.cshtml</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Delete.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\WorkSamples\Views\Home\Edit.generated.cs">
+      <DependentUpon>Edit.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Areas\WorkSamples\Views\Home\Index.generated.cs">
+      <DependentUpon>Index.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Areas\WorkSamples\WorkSamplesAreaRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -182,9 +197,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
-    <Content Include="Areas\WorkSamples\Views\Home\Index.cshtml">
-      <Generator>RazorGenerator</Generator>
-    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
