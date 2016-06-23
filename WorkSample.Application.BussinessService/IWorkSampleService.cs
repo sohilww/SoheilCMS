@@ -5,19 +5,19 @@ using WorkSamples.DomainModel;
 
 namespace WorkSample.Application.BussinessService
 {
-    public interface IWorkCategoryService:IService
+    public interface IWorkSampleService:IService
     {
-        WorkCategory Get(int id);
-        EntityAction Create(WorkCategory entity);
+        SampleWork Get(int id);
+        EntityAction Create(SampleWork entity);
 
-        EntityAction Update(WorkCategory entity);
+        EntityAction Update(SampleWork entity);
 
         EntityAction Delete(int id);
 
-
+        
 
         int Count();
 
-        List<WorkCategory> Select();
+        List<SampleWork> Select();
     }
 }

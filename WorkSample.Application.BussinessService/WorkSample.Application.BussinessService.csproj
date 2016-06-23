@@ -41,13 +41,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IWorkCategoryService.cs" />
-    <Compile Include="IWorkSample.cs" />
+    <Compile Include="IWorkSampleService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FrameWork.Application\FrameWork.Application.csproj">
+      <Project>{3BD8A41D-50A9-4624-9920-503924093AE4}</Project>
+      <Name>FrameWork.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FrameWork.Core\FrameWork.Core.csproj">
       <Project>{264AD558-A980-4E12-9AED-6558170C656E}</Project>
       <Name>FrameWork.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrameWork.Domain.Model\FrameWork.Domain.Model.csproj">
+      <Project>{6F929DCD-48D9-45ED-A9BD-AFAAF14E87E9}</Project>
+      <Name>FrameWork.Domain.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WorkSamples.DomainModel\WorkSamples.DomainModel.csproj">
+      <Project>{388B9C11-98E3-4B75-8153-A698C757D68E}</Project>
+      <Name>WorkSamples.DomainModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
