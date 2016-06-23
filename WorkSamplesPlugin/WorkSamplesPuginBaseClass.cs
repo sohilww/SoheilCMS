@@ -5,6 +5,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using PluginBase;
+using WorkSample.IOC.Bootstrap;
 
 namespace WorkSamplesPlugin
 {
@@ -65,6 +66,6 @@ namespace WorkSamplesPlugin
             throw new NotImplementedException();
         }
 
-
+       
     }
 }

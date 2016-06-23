@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{89A09A22-930E-4EC4-B7C6-653DC456540A}</ProjectGuid>
+    <ProjectGuid>{C21F2317-6624-4968-9DFA-99CBABFF1EB0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PluginManager</RootNamespace>
-    <AssemblyName>PluginManager</AssemblyName>
+    <RootNamespace>WorkSample.Application.Bussiness</RootNamespace>
+    <AssemblyName>WorkSample.Application.Bussiness</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,25 +40,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PluginMager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkCategory.cs" />
+    <Compile Include="WorkSampleService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PluginBase\PluginBase.csproj">
-      <Project>{202FFE0A-BC75-4E4D-87F6-37161108856B}</Project>
-      <Name>PluginBase</Name>
+    <ProjectReference Include="..\FrameWork.Application\FrameWork.Application.csproj">
+      <Project>{3BD8A41D-50A9-4624-9920-503924093AE4}</Project>
+      <Name>FrameWork.Application</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WorkSample.IOC.Bootstrap\WorkSample.IOC.Bootstrap.csproj">
-      <Project>{C83E2401-377E-4729-BFD3-73D87BB93F88}</Project>
-      <Name>WorkSample.IOC.Bootstrap</Name>
+    <ProjectReference Include="..\FrameWork.Core\FrameWork.Core.csproj">
+      <Project>{264AD558-A980-4E12-9AED-6558170C656E}</Project>
+      <Name>FrameWork.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WorkSamplesPlugin\WorkSamplesPlugin.csproj">
-      <Project>{8D7FD852-52FF-4439-BD59-02A4342E06EC}</Project>
-      <Name>WorkSamplesPlugin</Name>
+    <ProjectReference Include="..\FrameWork.Domain.Model\FrameWork.Domain.Model.csproj">
+      <Project>{6F929DCD-48D9-45ED-A9BD-AFAAF14E87E9}</Project>
+      <Name>FrameWork.Domain.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Menu.DomainModel\Menu.DomainModel.csproj">
+      <Project>{28783428-B18E-4867-B682-C6EA6A8852A3}</Project>
+      <Name>Menu.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WorkSample.Application.BussinessService\WorkSample.Application.BussinessService.csproj">
+      <Project>{57499510-2DC5-4C96-A731-A494AB044EC1}</Project>
+      <Name>WorkSample.Application.BussinessService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WorkSamples.Data.DataRepository\WorkSamples.Data.DataRepository.csproj">
+      <Project>{B635145B-8166-44A7-BA1A-060944ED329E}</Project>
+      <Name>WorkSamples.Data.DataRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WorkSamples.DomainModel\WorkSamples.DomainModel.csproj">
+      <Project>{388B9C11-98E3-4B75-8153-A698C757D68E}</Project>
+      <Name>WorkSamples.DomainModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
