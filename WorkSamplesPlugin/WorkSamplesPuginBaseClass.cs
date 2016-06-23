@@ -5,6 +5,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using PluginBase;
+using WorkSample.IOC.Bootstrap;
 
 namespace WorkSamplesPlugin
 {
@@ -65,6 +66,16 @@ namespace WorkSamplesPlugin
             throw new NotImplementedException();
         }
 
+        public object GetIoccBootstraper()
+        {
+            return new WorkSampleDataAccessModule();
+        }
 
+        public TIocc GetIoccBootstraper<TIocc>()
+        {
+            object value=new WorkSampleDataAccessModule();
+            return (TIocc) Convert.ChangeType(value, typeof (TIocc));
+            
+        }
     }
 }

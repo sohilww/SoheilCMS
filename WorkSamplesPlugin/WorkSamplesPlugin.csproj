@@ -211,6 +211,10 @@
       <Project>{57499510-2DC5-4C96-A731-A494AB044EC1}</Project>
       <Name>WorkSample.Application.BussinessService</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WorkSample.IOC.Bootstrap\WorkSample.IOC.Bootstrap.csproj">
+      <Project>{C83E2401-377E-4729-BFD3-73D87BB93F88}</Project>
+      <Name>WorkSample.IOC.Bootstrap</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

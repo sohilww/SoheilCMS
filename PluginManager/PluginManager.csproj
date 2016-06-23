@@ -56,6 +56,10 @@
       <Project>{202FFE0A-BC75-4E4D-87F6-37161108856B}</Project>
       <Name>PluginBase</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WorkSample.IOC.Bootstrap\WorkSample.IOC.Bootstrap.csproj">
+      <Project>{C83E2401-377E-4729-BFD3-73D87BB93F88}</Project>
+      <Name>WorkSample.IOC.Bootstrap</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WorkSamplesPlugin\WorkSamplesPlugin.csproj">
       <Project>{8D7FD852-52FF-4439-BD59-02A4342E06EC}</Project>
       <Name>WorkSamplesPlugin</Name>
