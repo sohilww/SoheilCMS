@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using PluginBase
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -24,11 +25,11 @@
                     <div id="contentBody">
                         <div class="row">
                             <div class="col-xs-12 col-md-12 ">
-                                @if (Model != null && (Model is SoheilCMS.Models.BaseViewModel))
+                                @if (Model != null && (Model is BaseViewModel))
                                 {
-                                    if (Model.State != SoheilCMS.Models.ActionState.None)
+                                    if (Model.State != ActionState.None)
                                     {
-                                        if (Model.State == SoheilCMS.Models.ActionState.Success)
+                                        if (Model.State == ActionState.Success)
                                         {
                                             <div class="alert alert-success text-center">@Model.Message</div>
                                         }
