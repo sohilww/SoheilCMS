@@ -37,8 +37,8 @@ namespace WorkSamplesPlugin
             var menus = new List<MenuItem>();
             menus.Add(new MenuItem()
             {
-                Name = "درج",
-                Url = new UrlHelper(context).Action("insert", "Home", area)
+                Name = "دسته بندی نمونه کار",
+                Url = new UrlHelper(context).Action("index", "WorkCategory", area)
             });
             menus.Add(new MenuItem()
             {

@@ -4,6 +4,7 @@ using Articles.Contracts;
 using System.ComponentModel.DataAnnotations;
 using Articles.DomainModel;
 using FrameWork.Application;
+using PluginBase;
 using SoheilCMS.Models;
 
 namespace SoheilCMS.Areas.Admin.Models

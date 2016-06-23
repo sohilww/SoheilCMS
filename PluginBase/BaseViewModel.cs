@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SoheilCMS.Models
+namespace PluginBase
 {
     public class BaseViewModel
     {
@@ -9,12 +9,5 @@ namespace SoheilCMS.Models
 
         [ScaffoldColumn(false)]
         public string Message { get; set; }
-    }
-
-    public enum ActionState
-    {
-        None,
-        Error,
-        Success
     }
 }

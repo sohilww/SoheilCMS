@@ -159,6 +159,7 @@
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="Areas\WorkSamples\Views\WorkCategory\Index.cshtml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
@@ -169,6 +170,7 @@
     <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\WorkSamples\Controllers\WorkCategoryController.cs" />
+    <Compile Include="Areas\WorkSamples\Models\WorkSampleCategoryViewModel.cs" />
     <Compile Include="Areas\WorkSamples\WorkSamplesAreaRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorkSamplesPuginBaseClass.cs" />
@@ -192,9 +194,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\WorkSamples\Models\" />
     <Folder Include="Areas\WorkSamples\Views\Shared\" />
-    <Folder Include="Areas\WorkSamples\Views\WorkCategory\" />
     <Folder Include="Areas\WorkSamples\Views\WorkSampleCategory\" />
     <Folder Include="Areas\WorkSamples\Views\WorkSample\" />
   </ItemGroup>
@@ -202,6 +202,10 @@
     <ProjectReference Include="..\FrameWork.Core\FrameWork.Core.csproj">
       <Project>{264AD558-A980-4E12-9AED-6558170C656E}</Project>
       <Name>FrameWork.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrameWork.Domain.Model\FrameWork.Domain.Model.csproj">
+      <Project>{6F929DCD-48D9-45ED-A9BD-AFAAF14E87E9}</Project>
+      <Name>FrameWork.Domain.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\PluginBase\PluginBase.csproj">
       <Project>{202ffe0a-bc75-4e4d-87f6-37161108856b}</Project>
@@ -214,6 +218,10 @@
     <ProjectReference Include="..\WorkSample.IOC.Bootstrap\WorkSample.IOC.Bootstrap.csproj">
       <Project>{C83E2401-377E-4729-BFD3-73D87BB93F88}</Project>
       <Name>WorkSample.IOC.Bootstrap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WorkSamples.DomainModel\WorkSamples.DomainModel.csproj">
+      <Project>{388B9C11-98E3-4B75-8153-A698C757D68E}</Project>
+      <Name>WorkSamples.DomainModel</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

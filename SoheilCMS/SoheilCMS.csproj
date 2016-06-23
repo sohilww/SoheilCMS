@@ -201,11 +201,15 @@
     <Compile Include="Areas\Admin\Models\PostCreateViewModel.cs" />
     <Compile Include="Areas\Admin\Models\PostListViewModel.cs" />
     <Compile Include="Areas\Admin\Models\TagViewModel.cs" />
+    <Compile Include="Areas\Admin\Views\Shared\_Admin_LayoutPage.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Admin_LayoutPage.cshtml</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\BaseViewModel.cs" />
     <Compile Include="Models\CustomPagerOptions.cs" />
     <Compile Include="Models\PagingAndBaseViewModel.cs" />
     <Compile Include="Models\UserManager.cs" />
@@ -594,6 +598,7 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_Admin_LayoutPage.cshtml">
       <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Admin_LayoutPage.generated.cs</LastGenOutput>
     </Content>
     <Content Include="Areas\Admin\Views\Home\Index.cshtml">
       <Generator>RazorGenerator</Generator>

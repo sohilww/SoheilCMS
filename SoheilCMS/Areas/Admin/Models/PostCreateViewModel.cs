@@ -7,6 +7,7 @@ using SoheilCMS.Models;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
+using PluginBase;
 
 namespace SoheilCMS.Areas.Admin.Models
 {

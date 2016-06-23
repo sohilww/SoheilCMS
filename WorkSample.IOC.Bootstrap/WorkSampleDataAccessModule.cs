@@ -9,6 +9,7 @@ namespace WorkSample.IOC.Bootstrap
     {
         public override void Load()
         {
+            LoadDbContext();
             Bind<IWorkSampleRepository>().To<WorkSampleRepository>();
             Bind<IWorkCategoryRepository>().To<WorkCategoryRepository>();
         }
