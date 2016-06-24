@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WorkCategory.cs" />
+    <Compile Include="WorkCategoryService.cs" />
     <Compile Include="WorkSampleService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +64,10 @@
     <ProjectReference Include="..\WorkSample.Application.BussinessService\WorkSample.Application.BussinessService.csproj">
       <Project>{57499510-2DC5-4C96-A731-A494AB044EC1}</Project>
       <Name>WorkSample.Application.BussinessService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WorkSample.Contracts\WorkSample.Contracts.csproj">
+      <Project>{01612586-3557-4AEF-8E26-A9F1C1608ED5}</Project>
+      <Name>WorkSample.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\WorkSamples.Data.DataRepository\WorkSamples.Data.DataRepository.csproj">
       <Project>{B635145B-8166-44A7-BA1A-060944ED329E}</Project>

@@ -26,7 +26,8 @@ namespace SoheilCMS
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/AdminStyle.css",
-                      "~/Content/themes/base/all.css"));
+                      "~/Content/themes/base/all.css",
+                      "~/Content/TagStyle/bootstrap-tagsinput.css"));
 
 
 
@@ -72,6 +73,9 @@ namespace SoheilCMS
             "~/Scripts/jquery-ui-1.11.4.min.js"
 
             ));
+
+            bundles.Add(new ScriptBundle("~/bundles/TagScript")
+                .Include("~/Scripts/TagScript/bootstrap-tagsinput.js"));
 
         }
     }

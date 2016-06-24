@@ -7,14 +7,14 @@ using WorkSamples.DomainModel;
 
 namespace WorkSample.Data.DataAccess
 {
-    public class WorkCategoryRepository:IWorkCategoryRepository
+    public class WorkCategoryRepository : IWorkCategoryRepository
     {
-        
+
         private readonly IWorkSampleUnitofWork unit;
-        
+
         public WorkCategoryRepository(IWorkSampleUnitofWork _unit)
         {
-            
+
             this.unit = _unit;
         }
 
@@ -62,7 +62,7 @@ namespace WorkSample.Data.DataAccess
 
         }
 
-        
+
 
         public int Count()
         {
@@ -85,6 +85,17 @@ namespace WorkSample.Data.DataAccess
         {
             var model = unit.Context.WorkCategories.ToList();
             return model;
+        }
+
+        public List<SelectList> SelectIdAndName()
+        {
+            var model = unit.Context.WorkCategories.Select(a => new SelectList()
+            {
+                Id = a.Id,
+                Name = a.Title
+            }).ToList();
+            return model;
+
         }
 
 

@@ -27,5 +27,10 @@ namespace FrameWork.Application
         {
             get { return "ویرایش با موفقیت انجام پذیرفت"; }
         }
+
+        public static string ParentIdAndIdCannotBeEquals
+        {
+            get { return "پدر نمی تواند خود المان باشد"; }
+        }
     }
 }
