@@ -21,5 +21,6 @@ namespace WorkSamples.Data.DataRepository
         List<WorkCategory> SelectAllParentWorkCategory();
         List<WorkCategory> SelectAllChildOfParentWorkCategory(int parentId);
         List<WorkCategory> Select();
+        List<SelectList> SelectIdAndName();
     }
 }

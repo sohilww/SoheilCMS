@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{57499510-2DC5-4C96-A731-A494AB044EC1}</ProjectGuid>
+    <ProjectGuid>{01612586-3557-4AEF-8E26-A9F1C1608ED5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WorkSample.Application.BussinessService</RootNamespace>
-    <AssemblyName>WorkSample.Application.BussinessService</AssemblyName>
+    <RootNamespace>WorkSample.Contracts</RootNamespace>
+    <AssemblyName>WorkSample.Contracts</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,26 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IWorkCategoryService.cs" />
-    <Compile Include="IWorkSampleService.cs" />
+    <Compile Include="WorkCategoryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FrameWork.Application\FrameWork.Application.csproj">
-      <Project>{3BD8A41D-50A9-4624-9920-503924093AE4}</Project>
-      <Name>FrameWork.Application</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FrameWork.Core\FrameWork.Core.csproj">
-      <Project>{264AD558-A980-4E12-9AED-6558170C656E}</Project>
-      <Name>FrameWork.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\FrameWork.Domain.Model\FrameWork.Domain.Model.csproj">
       <Project>{6F929DCD-48D9-45ED-A9BD-AFAAF14E87E9}</Project>
       <Name>FrameWork.Domain.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WorkSample.Contracts\WorkSample.Contracts.csproj">
-      <Project>{01612586-3557-4AEF-8E26-A9F1C1608ED5}</Project>
-      <Name>WorkSample.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\WorkSamples.DomainModel\WorkSamples.DomainModel.csproj">
       <Project>{388B9C11-98E3-4B75-8153-A698C757D68E}</Project>

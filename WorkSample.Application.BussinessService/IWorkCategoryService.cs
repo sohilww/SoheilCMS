@@ -1,16 +1,17 @@
 ﻿using System.Collections.Generic;
 using FrameWork.Application;
 using FrameWork.Core;
+using WorkSample.Contracts;
 using WorkSamples.DomainModel;
 
 namespace WorkSample.Application.BussinessService
 {
-    public interface IWorkCategoryService:IService
+    public interface IWorkCategoryService : IService
     {
-        WorkCategory Get(int id);
-        EntityAction Create(WorkCategory entity);
+        WorkCategoryModel Get(int id);
+        EntityAction Create(WorkCategoryModel entity);
 
-        EntityAction Update(WorkCategory entity);
+        EntityAction Update(WorkCategoryModel entity);
 
         EntityAction Delete(int id);
 
@@ -18,6 +19,7 @@ namespace WorkSample.Application.BussinessService
 
         int Count();
 
-        List<WorkCategory> Select();
+        List<WorkCategoryModel> Select();
+        List<SelectList> SelectIdAndName();
     }
 }

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<WorkSamplesPlugin.Areas.WorkSamples.Models.WorkCategoryViewModel>
+
+<table  class="table table-bordered table-responsive table-hover table-striped tdCenter">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.ParentId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+       
+        <td>
+            @item.ParentName
+        </td>
+        <td>
+            @*@Html.ActionLink("ویرایش", "Edit", new { id=item.Id ,Class="label label-success" })*@
+            <a href="@Url.Action("Edit","WorkCategory",new {id=item.Id})" class="label label-success">ویرایش</a>      |
+            @*@Html.ActionLink("حذف", "Delete", new { id=item.Id,Class="label label-danger deleteBtn" })*@
+            <a href="@Url.Action("Delete","WorkCategory",new {id=item.Id})" class="label label-danger deleteBtn">جذف</a>
+
+           
+        </td>
+    </tr>
+}
+
+</table>

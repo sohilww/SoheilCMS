@@ -154,12 +154,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
-    <Content Include="Areas\WorkSamples\Views\WorkCategory\Index.cshtml" />
+    <Content Include="Areas\WorkSamples\Views\WorkCategory\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\WorkSamples\Views\_ViewStart.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_ViewStart.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\WorkSamples\Views\Shared\_Layout.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Layout.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\WorkSamples\Views\WorkCategory\List.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>List.generated.cs</LastGenOutput>
+    </Content>
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
@@ -171,6 +187,27 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\WorkSamples\Controllers\WorkCategoryController.cs" />
     <Compile Include="Areas\WorkSamples\Models\WorkSampleCategoryViewModel.cs" />
+    <Compile Include="Areas\WorkSamples\Models\WorkCategoryViewModel.cs" />
+    <Compile Include="Areas\WorkSamples\Views\Shared\_Layout.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Layout.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\WorkSamples\Views\WorkCategory\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\WorkSamples\Views\WorkCategory\List.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>List.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\WorkSamples\Views\_ViewStart.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_ViewStart.cshtml</DependentUpon>
+    </Compile>
     <Compile Include="Areas\WorkSamples\WorkSamplesAreaRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorkSamplesPuginBaseClass.cs" />
@@ -194,11 +231,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\WorkSamples\Views\Shared\" />
     <Folder Include="Areas\WorkSamples\Views\WorkSampleCategory\" />
     <Folder Include="Areas\WorkSamples\Views\WorkSample\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FrameWork.Application\FrameWork.Application.csproj">
+      <Project>{3BD8A41D-50A9-4624-9920-503924093AE4}</Project>
+      <Name>FrameWork.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FrameWork.Core\FrameWork.Core.csproj">
       <Project>{264AD558-A980-4E12-9AED-6558170C656E}</Project>
       <Name>FrameWork.Core</Name>
@@ -214,6 +254,10 @@
     <ProjectReference Include="..\WorkSample.Application.BussinessService\WorkSample.Application.BussinessService.csproj">
       <Project>{57499510-2DC5-4C96-A731-A494AB044EC1}</Project>
       <Name>WorkSample.Application.BussinessService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WorkSample.Contracts\WorkSample.Contracts.csproj">
+      <Project>{01612586-3557-4aef-8e26-a9f1c1608ed5}</Project>
+      <Name>WorkSample.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\WorkSample.IOC.Bootstrap\WorkSample.IOC.Bootstrap.csproj">
       <Project>{C83E2401-377E-4729-BFD3-73D87BB93F88}</Project>
