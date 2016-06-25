@@ -6,7 +6,7 @@ namespace WorkSamples.DomainModel.Mapping
     {
         public WorkSampleMap()
         {
-            ToTable("WorkSamples");
+            ToTable("SampleWorks");
 
             HasKey(a => a.Id);
 

@@ -81,6 +81,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MvcAjaxPager, Version=1.0.2.41923, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvcAjaxPager.1.0.2\lib\net40\MvcAjaxPager.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -176,9 +180,29 @@
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>List.generated.cs</LastGenOutput>
     </Content>
+    <Content Include="Areas\WorkSamples\Views\WorkSample\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\WorkSamples\Views\WorkCategory\WorkCategoryRadioButton.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>WorkCategoryRadioButton.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\WorkSamples\Views\WorkSample\List.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>List.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\WorkSamples\Views\WorkSample\SampleWorkList.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>SampleWorkList.generated.cs</LastGenOutput>
+    </Content>
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
+    <Content Include="scripts\jquery.pager-1.0.2.js" />
+    <Content Include="scripts\jquery.pager-1.0.2.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="scripts\path.js" />
+    <Content Include="scripts\path.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -186,8 +210,11 @@
     <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\WorkSamples\Controllers\WorkCategoryController.cs" />
+    <Compile Include="Areas\WorkSamples\Controllers\WorkSampleController.cs" />
+    <Compile Include="Areas\WorkSamples\Models\SampleWorkListViewModel.cs" />
     <Compile Include="Areas\WorkSamples\Models\WorkSampleCategoryViewModel.cs" />
     <Compile Include="Areas\WorkSamples\Models\WorkCategoryViewModel.cs" />
+    <Compile Include="Areas\WorkSamples\Models\WorkSampleViewModel.cs" />
     <Compile Include="Areas\WorkSamples\Views\Shared\_Layout.generated.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -202,6 +229,26 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>List.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\WorkSamples\Views\WorkCategory\WorkCategoryRadioButton.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorkCategoryRadioButton.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\WorkSamples\Views\WorkSample\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\WorkSamples\Views\WorkSample\List.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>List.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\WorkSamples\Views\WorkSample\SampleWorkList.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SampleWorkList.cshtml</DependentUpon>
     </Compile>
     <Compile Include="Areas\WorkSamples\Views\_ViewStart.generated.cs">
       <AutoGen>True</AutoGen>
@@ -232,9 +279,12 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\WorkSamples\Views\WorkSampleCategory\" />
-    <Folder Include="Areas\WorkSamples\Views\WorkSample\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BaseMVC\BaseMVC.csproj">
+      <Project>{B6D7ADBA-827C-40D6-B4CF-D5BF838A2CEE}</Project>
+      <Name>BaseMVC</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FrameWork.Application\FrameWork.Application.csproj">
       <Project>{3BD8A41D-50A9-4624-9920-503924093AE4}</Project>
       <Name>FrameWork.Application</Name>

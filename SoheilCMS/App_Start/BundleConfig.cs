@@ -27,7 +27,8 @@ namespace SoheilCMS
                       "~/Content/bootstrap.css",
                       "~/Content/AdminStyle.css",
                       "~/Content/themes/base/all.css",
-                      "~/Content/TagStyle/bootstrap-tagsinput.css"));
+                      "~/Content/TagStyle/bootstrap-tagsinput.css",
+                      "~/Content/PersianDateTimePicker/PersianDatePicker.min.css"));
 
 
 
@@ -76,6 +77,12 @@ namespace SoheilCMS
 
             bundles.Add(new ScriptBundle("~/bundles/TagScript")
                 .Include("~/Scripts/TagScript/bootstrap-tagsinput.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/PersianDateTimePicker")
+            .Include("~/Scripts/PersianDateTimePicker/jquery-ui-datetimepicker.min.js")
+            .Include("~/Scripts/PersianDateTimePicker/InitPersianDatetime.js"));
+
+
 
         }
     }

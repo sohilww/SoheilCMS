@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using FrameWork.Application;
 using FrameWork.Domain.Model;
+using WorkSample.Contracts;
 using WorkSamples.DomainModel;
 
 namespace WorkSamples.Data.DataRepository
 {
-    public interface IWorkSampleRepository:IRepository
+    public interface IWorkSampleRepository : IRepository
     {
         SampleWork Get(int id);
         int GetNextId();
@@ -19,5 +20,6 @@ namespace WorkSamples.Data.DataRepository
         int Count();
 
         List<SampleWork> Select();
+        List<WorkSampleListDTO> SelectPaging(int skip, int take);
     }
 }

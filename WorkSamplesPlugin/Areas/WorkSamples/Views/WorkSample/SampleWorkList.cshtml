@@ -1,0 +1,54 @@
+﻿@using BaseMVC
+@using MvcAjaxPager
+@model WorkSamplesPlugin.Areas.WorkSamples.Models.SampleWorkListViewModel
+
+<div id="divtarget">
+    <table class="table table-bordered table-hover table-responsive table-striped tdCenter">
+        <tr>
+            <th>
+                نام
+            </th>
+            <th>
+                دسته ی
+            </th>
+            <th>
+                تصویر
+            </th>
+            <th>نمایش</th>
+            <th>ویرایش</th>
+
+            <th>حذف</th>
+        </tr>
+
+        @foreach (var item in Model.WorkSamples)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Slug)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ParentName)
+                </td>
+                <td >
+                    <div class="img">
+                        <img class="img-responsive" src="@Url.Content(item.Image)" />
+                    </div>
+                </td>
+                <td>
+                    <a class="label label-success" href="@Url.Action("Show", "WorkSample", new {id = item.Id})">نمایش</a>
+                </td>
+                <td>
+                    <a class="label label-primary" href="@Url.Action("Edit", "WorkSample", new {id = item.Id})">ویرایش</a>
+                </td>
+                <td>
+                    <a class="label label-danger deleteBtn" href="@Url.Action("Delete", "WorkSample", new {id = item.Id})">حذف</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+    <div id="pager">
+        @Html.AjaxPager(Model.TotalItemCount, Model.PageSize, Model.CurrentPage, "SampleWorkList", "WorkSample", null,
+        CustomePagerOptions.CustomePageOptions(), null, null)
+    </div>
+</div>

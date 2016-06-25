@@ -214,6 +214,16 @@
     <Compile Include="Models\PagingAndBaseViewModel.cs" />
     <Compile Include="Models\UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Shared\EditorTemplates\Uplod.generated.cs">
+      <DependentUpon>Uplod.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Shared\EditorTemplates\PersianDateTime.generated.cs">
+      <DependentUpon>PersianDateTime.cshtml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Views\Shared\EditorTemplates\TagSeprator.generated.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -226,6 +236,7 @@
     <Content Include="Content\Menu\accordion-menu.css" />
     <Content Include="Content\Menu\page.css" />
     <Content Include="Content\Menu\super-panel.css" />
+    <Content Include="Content\PersianDateTimePicker\PersianDatePicker.min.css" />
     <Content Include="Content\TagStyle\bootstrap-tagsinput.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
@@ -593,6 +604,8 @@
     <Content Include="Scripts\jquery.pager-1.0.2.min.js" />
     <Content Include="Scripts\path.js" />
     <Content Include="Scripts\path.min.js" />
+    <Content Include="Scripts\PersianDateTimePicker\InitPersianDatetime.js" />
+    <Content Include="Scripts\PersianDateTimePicker\jquery-ui-datetimepicker.min.js" />
     <Content Include="Scripts\sendAjaxScript.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
@@ -701,10 +714,19 @@
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>TagSeprator.generated.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\Shared\EditorTemplates\PersianDateTime.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>PersianDateTime.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\EditorTemplates\Uplod.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Uplod.generated.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Articles\" />
+    <Folder Include="Upload\WorkSample\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

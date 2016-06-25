@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="WorkCategoryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkSampleListDTO.cs" />
+    <Compile Include="WorkSampleModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FrameWork.Domain.Model\FrameWork.Domain.Model.csproj">

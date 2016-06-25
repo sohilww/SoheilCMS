@@ -42,13 +42,13 @@ namespace WorkSamplesPlugin
             });
             menus.Add(new MenuItem()
             {
-                Name = "ویرایش",
-                Url = new UrlHelper(context).Action("Edit", "Home", area)
+                Name = "درج نمونه کار",
+                Url = new UrlHelper(context).Action("Index", "WorkSample", area)
             });
             menus.Add(new MenuItem()
             {
-                Name = "حذف",
-                Url = new UrlHelper(context).Action("Delete", "Home", area)
+                Name = "نمونه کار ها",
+                Url = new UrlHelper(context).Action("List", "WorkSample", area)
             });
             return menus;
 

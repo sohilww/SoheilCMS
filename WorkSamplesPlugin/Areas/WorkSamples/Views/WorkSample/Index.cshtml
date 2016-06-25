@@ -1,0 +1,114 @@
+﻿@model WorkSamplesPlugin.Areas.WorkSamples.Models.SampleWorkViewModel
+
+@{
+    ViewBag.Title = "نمونه کار";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin_LayoutPage.cshtml";
+}
+
+@using (Html.BeginForm("", "", FormMethod.Post,
+                            new { enctype = "multipart/form-data"}))
+{
+    <div class="col-md-3">
+        <div style="padding:25px">
+            <div class="panel panel-primary">
+                <div class="panel-heading text-right">دسته بندی</div>
+                <div class="panel-body">
+                    <div id="CategoryList">
+
+
+                        @{ Html.RenderAction("WorkCategoryRadioButton", "WorkCategory");}
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="tags">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div style="padding: 25px">
+            <div class="panel panel-primary">
+                <div class="panel-heading text-right">نوشته</div>
+                <div class="panel-body">
+                    <div>
+
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-group">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            @Html.HiddenFor(model => model.Id)
+                            @if (Model != null)
+                            {
+                                <input type="hidden" value="@Model.WorkCategoryId" id="category"/>
+                            }
+                            <div class="form-group">
+                                <div>
+                                    @Html.LabelFor(model => model.Slug)
+                                    @Html.EditorFor(model => model.Slug, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Slug, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Content)
+                                @Html.EditorFor(model => model.Content, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+                                <div class="col-md-10">
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Description)
+                                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Image)
+                                <input type="file" id="Image" name="Image" />
+                                @Html.ValidationMessageFor(model => model.Image, "", new {@class = "text-danger"})
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.DoTime)
+                                @Html.EditorFor(model => model.DoTime, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.DoTime, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="ذخیره" class="btn btn-success" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+                            }
+
+
+
+@section script{
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/PersianDateTimePicker")
+    
+    <script>
+        $(function () {
+            var cat = $("#category").val();
+
+            var elem = $("input[value=" + cat + "]").prop("checked", true);
+            console.log(elem);
+        });
+    </script>
+}
+
+

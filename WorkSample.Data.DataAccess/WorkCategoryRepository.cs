@@ -66,7 +66,7 @@ namespace WorkSample.Data.DataAccess
 
         public int Count()
         {
-            return unit.Context.WorkSamples.Count();
+            return unit.Context.SampleWork.Count();
         }
 
         public List<WorkCategory> SelectAllParentWorkCategory()

@@ -14,6 +14,9 @@ namespace WorkSamplesPlugin.Areas.WorkSamples
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
+         
+               
+           
             context.MapRoute(
                 "WorkSamples_default",
                 "WorkSamples/{controller}/{action}/{id}",

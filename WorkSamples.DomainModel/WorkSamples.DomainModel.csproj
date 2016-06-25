@@ -55,10 +55,14 @@
     <Compile Include="Migrations\201606201939478_AddWorkSamplesAndCategory.Designer.cs">
       <DependentUpon>201606201939478_AddWorkSamplesAndCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606251055159_WorkSampleChangedToSampleWork.cs" />
+    <Compile Include="Migrations\201606251055159_WorkSampleChangedToSampleWork.Designer.cs">
+      <DependentUpon>201606251055159_WorkSampleChangedToSampleWork.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorkCategory.cs" />
-    <Compile Include="WorkSample.cs" />
+    <Compile Include="SampleWork.cs" />
     <Compile Include="WorkSamplesDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +78,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201606201939478_AddWorkSamplesAndCategory.resx">
       <DependentUpon>201606201939478_AddWorkSamplesAndCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606251055159_WorkSampleChangedToSampleWork.resx">
+      <DependentUpon>201606251055159_WorkSampleChangedToSampleWork.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
