@@ -30,10 +30,10 @@ namespace ASP
     using SoheilCMS;
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
-    [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/_Layout.cshtml")]
-    public partial class _Views_Shared__Layout_cshtml : System.Web.Mvc.WebViewPage<dynamic>
+    [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/Header.cshtml")]
+    public partial class _Views_Shared_Header_cshtml : System.Web.Mvc.WebViewPage<PluginBase.SeoModel>
     {
-        public _Views_Shared__Layout_cshtml()
+        public _Views_Shared_Header_cshtml()
         {
         }
         public override void Execute()
@@ -54,8 +54,8 @@ WriteLiteral(" charset=\"utf-8\"");
 WriteLiteral(">\r\n\r\n    <title>");
 
             
-            #line 11 "..\..\Views\Shared\_Layout.cshtml"
-      Write(Model.SeoModel.Title);
+            #line 12 "..\..\Views\Shared\Header.cshtml"
+      Write(Model.Title);
 
             
             #line default
@@ -64,28 +64,28 @@ WriteLiteral("</title>\r\n    <meta");
 
 WriteLiteral(" name=\"keywords\"");
 
-WriteAttribute("content", Tuple.Create(" content=\"", 402), Tuple.Create("\"", 436)
+WriteAttribute("content", Tuple.Create(" content=\"", 421), Tuple.Create("\"", 446)
             
-            #line 12 "..\..\Views\Shared\_Layout.cshtml"
-, Tuple.Create(Tuple.Create("", 412), Tuple.Create<System.Object, System.Int32>(Model.SeoModel.KeyWords
+            #line 13 "..\..\Views\Shared\Header.cshtml"
+, Tuple.Create(Tuple.Create("", 431), Tuple.Create<System.Object, System.Int32>(Model.KeyWords
             
             #line default
             #line hidden
-, 412), false)
+, 431), false)
 );
 
 WriteLiteral(" />\r\n    <meta");
 
 WriteLiteral(" name=\"description\"");
 
-WriteAttribute("content", Tuple.Create(" content=\"", 470), Tuple.Create("\"", 507)
+WriteAttribute("content", Tuple.Create(" content=\"", 480), Tuple.Create("\"", 508)
             
-            #line 13 "..\..\Views\Shared\_Layout.cshtml"
-, Tuple.Create(Tuple.Create("", 480), Tuple.Create<System.Object, System.Int32>(Model.SeoModel.Description
+            #line 14 "..\..\Views\Shared\Header.cshtml"
+, Tuple.Create(Tuple.Create("", 490), Tuple.Create<System.Object, System.Int32>(Model.Description
             
             #line default
             #line hidden
-, 480), false)
+, 490), false)
 );
 
 WriteLiteral(">\r\n    <meta");
@@ -99,42 +99,42 @@ WriteLiteral(">\r\n\r\n    <!-- Place favicon.ico and apple-touch-icon.png in th
 
 WriteLiteral(" rel=\"stylesheet\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 696), Tuple.Create("\"", 738)
+WriteAttribute("href", Tuple.Create(" href=\"", 697), Tuple.Create("\"", 739)
             
-            #line 18 "..\..\Views\Shared\_Layout.cshtml"
-, Tuple.Create(Tuple.Create("", 703), Tuple.Create<System.Object, System.Int32>(Url.Content("~/css/bootstrap.css")
+            #line 19 "..\..\Views\Shared\Header.cshtml"
+, Tuple.Create(Tuple.Create("", 704), Tuple.Create<System.Object, System.Int32>(Url.Content("~/css/bootstrap.css")
             
             #line default
             #line hidden
-, 703), false)
+, 704), false)
 );
 
 WriteLiteral(">\r\n    <link");
 
 WriteLiteral(" rel=\"stylesheet\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 768), Tuple.Create("\"", 811)
+WriteAttribute("href", Tuple.Create(" href=\"", 769), Tuple.Create("\"", 812)
             
-            #line 19 "..\..\Views\Shared\_Layout.cshtml"
-, Tuple.Create(Tuple.Create("", 775), Tuple.Create<System.Object, System.Int32>(Url.Content("~/css/animations.css")
+            #line 20 "..\..\Views\Shared\Header.cshtml"
+, Tuple.Create(Tuple.Create("", 776), Tuple.Create<System.Object, System.Int32>(Url.Content("~/css/animations.css")
             
             #line default
             #line hidden
-, 775), false)
+, 776), false)
 );
 
 WriteLiteral(">\r\n    <link");
 
 WriteLiteral(" rel=\"stylesheet\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 841), Tuple.Create("\"", 878)
+WriteAttribute("href", Tuple.Create(" href=\"", 842), Tuple.Create("\"", 879)
             
-            #line 20 "..\..\Views\Shared\_Layout.cshtml"
-, Tuple.Create(Tuple.Create("", 848), Tuple.Create<System.Object, System.Int32>(Url.Content("~/css/main.css")
+            #line 21 "..\..\Views\Shared\Header.cshtml"
+, Tuple.Create(Tuple.Create("", 849), Tuple.Create<System.Object, System.Int32>(Url.Content("~/css/main.css")
             
             #line default
             #line hidden
-, 848), false)
+, 849), false)
 );
 
 WriteLiteral(">\r\n");
@@ -142,7 +142,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("    ");
 
             
-            #line 21 "..\..\Views\Shared\_Layout.cshtml"
+            #line 22 "..\..\Views\Shared\Header.cshtml"
 Write(Scripts.Render("~/bundles/modernizr"));
 
             
@@ -160,43 +160,18 @@ WriteLiteral(@"></div>
 ");
 
             
-            #line 29 "..\..\Views\Shared\_Layout.cshtml"
+            #line 30 "..\..\Views\Shared\Header.cshtml"
     
             
             #line default
             #line hidden
             
-            #line 29 "..\..\Views\Shared\_Layout.cshtml"
-       Html.RenderAction("Menu", "Home"); 
+            #line 30 "..\..\Views\Shared\Header.cshtml"
+       Html.RenderAction("Menu","Home"); 
             
             #line default
             #line hidden
-WriteLiteral("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n");
-
-WriteLiteral("    ");
-
-            
-            #line 40 "..\..\Views\Shared\_Layout.cshtml"
-Write(RenderBody());
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n\r\n\r\n\r\n\r\n");
-
-            
-            #line 45 "..\..\Views\Shared\_Layout.cshtml"
-    
-            
-            #line default
-            #line hidden
-            
-            #line 45 "..\..\Views\Shared\_Layout.cshtml"
-       Html.RenderAction("Footer", "Home");
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n");
+WriteLiteral("\r\n\r\n   \r\n\r\n");
 
         }
     }

@@ -1,8 +1,45 @@
-﻿        @{ Html.RenderPartial("Header",Model.SeoModel); }
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
 
-        @RenderBody()
+    <title>@Model.SeoModel.Title</title>
+    <meta name="keywords" content="@Model.SeoModel.KeyWords" />
+    <meta name="description" content="@Model.SeoModel.Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="@Url.Content("~/css/bootstrap.css")">
+    <link rel="stylesheet" href="@Url.Content("~/css/animations.css")">
+    <link rel="stylesheet" href="@Url.Content("~/css/main.css")">
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div id="top"></div>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    @{ Html.RenderAction("Menu", "Home"); }
 
 
 
 
-        @{ Html.RenderAction("Footer", "Home");}
+
+
+
+
+
+
+    @RenderBody()
+
+
+
+
+    @{ Html.RenderAction("Footer", "Home");}

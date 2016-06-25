@@ -19,7 +19,8 @@ namespace SoheilCMS.Controllers
         public ActionResult Index()
         {
 
-            LoadModel model = new LoadModel();
+            IndexViewModel model = new IndexViewModel();
+            model.SeoModel = new SeoModel();
             model.SeoModel.Description = "Test";
             model.SeoModel.KeyWords = "Test";
             model.SeoModel.Title = "Test";
@@ -44,7 +45,10 @@ namespace SoheilCMS.Controllers
         {
             return PartialView();
         }
+        public ActionResult Footer()
+        {
+            return PartialView();
+        }
 
-        
     }
 }

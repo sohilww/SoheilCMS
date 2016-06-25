@@ -27,10 +27,7 @@ namespace SoheilCMS.Areas.Admin.Controllers
             return PartialView(plugins);
         }
 
-        public ActionResult Footer()
-        {
-            return PartialView();
-        }
+        
     }
 
  

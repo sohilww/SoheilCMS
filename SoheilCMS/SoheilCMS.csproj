@@ -211,10 +211,16 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CustomPagerOptions.cs" />
+    <Compile Include="Models\IndexViewModel.cs" />
     <Compile Include="Models\LoadModel.cs" />
     <Compile Include="Models\PagingAndBaseViewModel.cs" />
     <Compile Include="Models\UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Home\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Shared\EditorTemplates\Uplod.generated.cs">
       <DependentUpon>Uplod.cshtml</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -229,6 +235,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TagSeprator.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Footer.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Footer.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Header.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Header.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Menu.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Menu.cshtml</DependentUpon>
     </Compile>
     <Compile Include="Views\Shared\_Layout.generated.cs">
       <AutoGen>True</AutoGen>
@@ -832,6 +853,7 @@
     </Content>
     <Content Include="Views\Home\Index.cshtml">
       <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
     </Content>
     <Content Include="Views\Shared\EditorTemplates\CkEditor.cshtml">
       <Generator>RazorGenerator</Generator>
@@ -848,9 +870,18 @@
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>Uplod.generated.cs</LastGenOutput>
     </Content>
-    <Content Include="Views\Shared\Header.cshtml" />
-    <Content Include="Views\Shared\Menu.cshtml" />
-    <Content Include="Views\Shared\Footer.cshtml" />
+    <Content Include="Views\Shared\Header.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Header.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\Menu.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Menu.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\Footer.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Footer.generated.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
