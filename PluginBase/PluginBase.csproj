@@ -93,6 +93,7 @@
     <Compile Include="MenuItem.cs" />
     <Compile Include="IPluginBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeoModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
