@@ -49,15 +49,15 @@ namespace ASP
             #line hidden
 WriteLiteral("\r\n\r\n\r\n\r\n<div");
 
-WriteLiteral(" class=\"container\"");
+WriteLiteral(" class=\"\"");
 
 WriteLiteral(">\r\n    <div");
 
-WriteLiteral(" class=\"row\"");
+WriteLiteral(" class=\"\"");
 
 WriteLiteral(">\r\n        <div");
 
-WriteLiteral(" class=\"col-xs-12\"");
+WriteLiteral(" class=\"\"");
 
 WriteLiteral(">\r\n            <div");
 
@@ -73,7 +73,15 @@ WriteLiteral(" class=\"fullwidthimage\"");
 
 WriteLiteral(" alt=\"Full width image\"");
 
-WriteLiteral(" src=\"example/intro_img6.jpg\"");
+WriteAttribute("src", Tuple.Create("\r\n                              src=\"", 343), Tuple.Create("\"", 420)
+            
+            #line 17 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 380), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img6.jpg")
+            
+            #line default
+            #line hidden
+, 380), false)
+);
 
 WriteLiteral(">\r\n                    </li>\r\n                    <li>\r\n                        <" +
 "img");
@@ -82,7 +90,15 @@ WriteLiteral(" class=\"fullwidthimage\"");
 
 WriteLiteral(" alt=\"Full width image\"");
 
-WriteLiteral(" src=\"example/intro_img2.jpg\"");
+WriteAttribute("src", Tuple.Create(" \r\n                             src=\"", 551), Tuple.Create("\"", 628)
+            
+            #line 21 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 588), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img2.jpg")
+            
+            #line default
+            #line hidden
+, 588), false)
+);
 
 WriteLiteral(">\r\n                    </li>\r\n                    <li>\r\n                        <" +
 "img");
@@ -91,7 +107,15 @@ WriteLiteral(" class=\"fullwidthimage\"");
 
 WriteLiteral(" alt=\"Full width image\"");
 
-WriteLiteral(" src=\"example/intro_img10.jpg\"");
+WriteAttribute("src", Tuple.Create(" \r\n                             src=\"", 759), Tuple.Create("\"", 837)
+            
+            #line 25 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 796), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img10.jpg")
+            
+            #line default
+            #line hidden
+, 796), false)
+);
 
 WriteLiteral(">\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n        " +
 "</div>\r\n    </div>\r\n</div>\r\n\r\n<section");
@@ -122,7 +146,15 @@ WriteLiteral(" class=\"introimg\"");
 
 WriteLiteral(">\r\n                        <img");
 
-WriteLiteral(" src=\"example/land_services.jpg\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 1220), Tuple.Create("\"", 1269)
+            
+            #line 39 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 1226), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/land_services.jpg")
+            
+            #line default
+            #line hidden
+, 1226), false)
+);
 
 WriteLiteral(" alt=\"\"");
 
@@ -144,7 +176,15 @@ WriteLiteral(" class=\"introimg\"");
 
 WriteLiteral(">\r\n                        <img");
 
-WriteLiteral(" src=\"example/land_portfolio.jpg\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 1584), Tuple.Create("\"", 1634)
+            
+            #line 47 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 1590), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/land_portfolio.jpg")
+            
+            #line default
+            #line hidden
+, 1590), false)
+);
 
 WriteLiteral(" alt=\"\"");
 
@@ -167,7 +207,15 @@ WriteLiteral(" class=\"introimg\"");
 
 WriteLiteral(">\r\n                        <img");
 
-WriteLiteral(" src=\"example/land_about.jpg\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 1956), Tuple.Create("\"", 2002)
+            
+            #line 55 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 1962), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/land_about.jpg")
+            
+            #line default
+            #line hidden
+, 1962), false)
+);
 
 WriteLiteral(" alt=\"\"");
 
@@ -190,7 +238,15 @@ WriteLiteral(" class=\"introimg\"");
 
 WriteLiteral(">\r\n                        <img");
 
-WriteLiteral(" src=\"example/land_contact.jpg\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 2318), Tuple.Create("\"", 2366)
+            
+            #line 63 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 2324), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/land_contact.jpg")
+            
+            #line default
+            #line hidden
+, 2324), false)
+);
 
 WriteLiteral(" alt=\"\"");
 
@@ -610,7 +666,15 @@ WriteLiteral(">\r\n                            <img");
 
 WriteLiteral(" alt=\"\"");
 
-WriteLiteral(" src=\"example/intro_img1.jpg\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 9214), Tuple.Create("\"", 9260)
+            
+            #line 264 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 9220), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img1.jpg")
+            
+            #line default
+            #line hidden
+, 9220), false)
+);
 
 WriteLiteral(">\r\n                            <div");
 
@@ -624,7 +688,15 @@ WriteLiteral(" title=\"\"");
 
 WriteLiteral(" rel=\"prettyPhoto[pp_gal]\"");
 
-WriteLiteral(" href=\"example/intro_img1.jpg\"");
+WriteAttribute("href", Tuple.Create(" href=\"", 9419), Tuple.Create("\"", 9466)
+            
+            #line 266 "..\..\Views\Home\Index.cshtml"
+                       , Tuple.Create(Tuple.Create("", 9426), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img1.jpg")
+            
+            #line default
+            #line hidden
+, 9426), false)
+);
 
 WriteLiteral("></a>\r\n                                <a");
 
@@ -657,7 +729,15 @@ WriteLiteral(">\r\n                            <img");
 
 WriteLiteral(" alt=\"\"");
 
-WriteLiteral(" src=\"example/intro_img2.jpg\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 10202), Tuple.Create("\"", 10248)
+            
+            #line 285 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 10208), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img2.jpg")
+            
+            #line default
+            #line hidden
+, 10208), false)
+);
 
 WriteLiteral(">\r\n                            <div");
 
@@ -671,7 +751,15 @@ WriteLiteral(" title=\"\"");
 
 WriteLiteral(" rel=\"prettyPhoto[pp_gal]\"");
 
-WriteLiteral(" href=\"example/intro_img12.jpg\"");
+WriteAttribute("href", Tuple.Create(" href=\"", 10407), Tuple.Create("\"", 10455)
+            
+            #line 287 "..\..\Views\Home\Index.cshtml"
+                      , Tuple.Create(Tuple.Create("", 10414), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img12.jpg")
+            
+            #line default
+            #line hidden
+, 10414), false)
+);
 
 WriteLiteral("></a>\r\n                                <a");
 
@@ -704,7 +792,15 @@ WriteLiteral(">\r\n                            <img");
 
 WriteLiteral(" alt=\"\"");
 
-WriteLiteral(" src=\"example/intro_img3.jpg\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 11192), Tuple.Create("\"", 11238)
+            
+            #line 306 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 11198), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img3.jpg")
+            
+            #line default
+            #line hidden
+, 11198), false)
+);
 
 WriteLiteral(">\r\n                            <div");
 
@@ -718,7 +814,15 @@ WriteLiteral(" title=\"\"");
 
 WriteLiteral(" rel=\"prettyPhoto[pp_gal]\"");
 
-WriteLiteral(" href=\"example/intro_img3.jpg\"");
+WriteAttribute("href", Tuple.Create(" href=\"", 11397), Tuple.Create("\"", 11444)
+            
+            #line 308 "..\..\Views\Home\Index.cshtml"
+                      , Tuple.Create(Tuple.Create("", 11404), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img3.jpg")
+            
+            #line default
+            #line hidden
+, 11404), false)
+);
 
 WriteLiteral("></a>\r\n                                <a");
 
@@ -751,7 +855,15 @@ WriteLiteral(">\r\n                            <img");
 
 WriteLiteral(" alt=\"\"");
 
-WriteLiteral(" src=\"example/intro_img4.jpg\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 12161), Tuple.Create("\"", 12207)
+            
+            #line 327 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 12167), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img4.jpg")
+            
+            #line default
+            #line hidden
+, 12167), false)
+);
 
 WriteLiteral(">\r\n                            <div");
 
@@ -765,7 +877,15 @@ WriteLiteral(" title=\"\"");
 
 WriteLiteral(" rel=\"prettyPhoto[pp_gal]\"");
 
-WriteLiteral(" href=\"example/intro_img4.jpg\"");
+WriteAttribute("href", Tuple.Create(" href=\"", 12366), Tuple.Create("\"", 12413)
+            
+            #line 329 "..\..\Views\Home\Index.cshtml"
+                      , Tuple.Create(Tuple.Create("", 12373), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img4.jpg")
+            
+            #line default
+            #line hidden
+, 12373), false)
+);
 
 WriteLiteral("></a>\r\n                                <a");
 
@@ -798,7 +918,15 @@ WriteLiteral(">\r\n                            <img");
 
 WriteLiteral(" alt=\"\"");
 
-WriteLiteral(" src=\"example/intro_img5.jpg\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 13155), Tuple.Create("\"", 13201)
+            
+            #line 348 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 13161), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img5.jpg")
+            
+            #line default
+            #line hidden
+, 13161), false)
+);
 
 WriteLiteral(">\r\n                            <div");
 
@@ -812,7 +940,15 @@ WriteLiteral(" title=\"\"");
 
 WriteLiteral(" rel=\"prettyPhoto[pp_gal]\"");
 
-WriteLiteral(" href=\"example/intro_img5.jpg\"");
+WriteAttribute("href", Tuple.Create(" href=\"", 13360), Tuple.Create("\"", 13407)
+            
+            #line 350 "..\..\Views\Home\Index.cshtml"
+                      , Tuple.Create(Tuple.Create("", 13367), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img5.jpg")
+            
+            #line default
+            #line hidden
+, 13367), false)
+);
 
 WriteLiteral("></a>\r\n                                <a");
 
@@ -845,7 +981,15 @@ WriteLiteral(">\r\n                            <img");
 
 WriteLiteral(" alt=\"\"");
 
-WriteLiteral(" src=\"example/intro_img6.jpg\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 14124), Tuple.Create("\"", 14170)
+            
+            #line 369 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 14130), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img6.jpg")
+            
+            #line default
+            #line hidden
+, 14130), false)
+);
 
 WriteLiteral(">\r\n                            <div");
 
@@ -859,7 +1003,15 @@ WriteLiteral(" title=\"\"");
 
 WriteLiteral(" rel=\"prettyPhoto[pp_gal]\"");
 
-WriteLiteral(" href=\"example/intro_img6.jpg\"");
+WriteAttribute("href", Tuple.Create(" href=\"", 14329), Tuple.Create("\"", 14376)
+            
+            #line 371 "..\..\Views\Home\Index.cshtml"
+                      , Tuple.Create(Tuple.Create("", 14336), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img6.jpg")
+            
+            #line default
+            #line hidden
+, 14336), false)
+);
 
 WriteLiteral("></a>\r\n                                <a");
 
@@ -892,7 +1044,15 @@ WriteLiteral(">\r\n                            <img");
 
 WriteLiteral(" alt=\"\"");
 
-WriteLiteral(" src=\"example/intro_img7.jpg\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 15114), Tuple.Create("\"", 15160)
+            
+            #line 390 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 15120), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img7.jpg")
+            
+            #line default
+            #line hidden
+, 15120), false)
+);
 
 WriteLiteral(">\r\n                            <div");
 
@@ -906,7 +1066,15 @@ WriteLiteral(" title=\"\"");
 
 WriteLiteral(" rel=\"prettyPhoto[pp_gal]\"");
 
-WriteLiteral(" href=\"example/intro_img11.jpg\"");
+WriteAttribute("href", Tuple.Create(" href=\"", 15319), Tuple.Create("\"", 15367)
+            
+            #line 392 "..\..\Views\Home\Index.cshtml"
+                      , Tuple.Create(Tuple.Create("", 15326), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img11.jpg")
+            
+            #line default
+            #line hidden
+, 15326), false)
+);
 
 WriteLiteral("></a>\r\n                                <a");
 
@@ -939,7 +1107,15 @@ WriteLiteral(">\r\n                            <img");
 
 WriteLiteral(" alt=\"\"");
 
-WriteLiteral(" src=\"example/intro_img8.jpg\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 16112), Tuple.Create("\"", 16158)
+            
+            #line 411 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 16118), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img8.jpg")
+            
+            #line default
+            #line hidden
+, 16118), false)
+);
 
 WriteLiteral(">\r\n                            <div");
 
@@ -953,7 +1129,15 @@ WriteLiteral(" title=\"\"");
 
 WriteLiteral(" rel=\"prettyPhoto[pp_gal]\"");
 
-WriteLiteral(" href=\"example/intro_img8.jpg\"");
+WriteAttribute("href", Tuple.Create(" href=\"", 16317), Tuple.Create("\"", 16364)
+            
+            #line 413 "..\..\Views\Home\Index.cshtml"
+                      , Tuple.Create(Tuple.Create("", 16324), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img8.jpg")
+            
+            #line default
+            #line hidden
+, 16324), false)
+);
 
 WriteLiteral("></a>\r\n                                <a");
 
@@ -986,7 +1170,15 @@ WriteLiteral(">\r\n                            <img");
 
 WriteLiteral(" alt=\"\"");
 
-WriteLiteral(" src=\"example/intro_img9.jpg\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 17106), Tuple.Create("\"", 17152)
+            
+            #line 432 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 17112), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img9.jpg")
+            
+            #line default
+            #line hidden
+, 17112), false)
+);
 
 WriteLiteral(">\r\n                            <div");
 
@@ -1000,7 +1192,15 @@ WriteLiteral(" title=\"\"");
 
 WriteLiteral(" rel=\"prettyPhoto[pp_gal]\"");
 
-WriteLiteral(" href=\"example/intro_img9.jpg\"");
+WriteAttribute("href", Tuple.Create(" href=\"", 17311), Tuple.Create("\"", 17358)
+            
+            #line 434 "..\..\Views\Home\Index.cshtml"
+                      , Tuple.Create(Tuple.Create("", 17318), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img9.jpg")
+            
+            #line default
+            #line hidden
+, 17318), false)
+);
 
 WriteLiteral("></a>\r\n                                <a");
 
@@ -1112,7 +1312,15 @@ WriteLiteral(" class=\"entry-thumbnail\"");
 
 WriteLiteral(">\r\n                                                <img");
 
-WriteLiteral(" src=\"example/intro_img1.jpg\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 19402), Tuple.Create("\"", 19448)
+            
+            #line 487 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 19408), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img1.jpg")
+            
+            #line default
+            #line hidden
+, 19408), false)
+);
 
 WriteLiteral(" class=\"post-image\"");
 
@@ -1192,7 +1400,15 @@ WriteLiteral(" class=\"entry-thumbnail\"");
 
 WriteLiteral(">\r\n                                                <img");
 
-WriteLiteral(" src=\"example/intro_img2.jpg\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 21128), Tuple.Create("\"", 21174)
+            
+            #line 518 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 21134), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img2.jpg")
+            
+            #line default
+            #line hidden
+, 21134), false)
+);
 
 WriteLiteral(" class=\"post-image\"");
 
@@ -1271,7 +1487,15 @@ WriteLiteral(" class=\"entry-thumbnail\"");
 
 WriteLiteral(">\r\n                                                <img");
 
-WriteLiteral(" src=\"example/intro_img3.jpg\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 22858), Tuple.Create("\"", 22904)
+            
+            #line 548 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 22864), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img3.jpg")
+            
+            #line default
+            #line hidden
+, 22864), false)
+);
 
 WriteLiteral(" class=\"post-image\"");
 
@@ -1350,7 +1574,15 @@ WriteLiteral(" class=\"entry-thumbnail\"");
 
 WriteLiteral(">\r\n                                                <img");
 
-WriteLiteral(" src=\"example/intro_img4.jpg\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 24582), Tuple.Create("\"", 24628)
+            
+            #line 578 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 24588), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img4.jpg")
+            
+            #line default
+            #line hidden
+, 24588), false)
+);
 
 WriteLiteral(" class=\"post-image\"");
 
@@ -1429,7 +1661,15 @@ WriteLiteral(" class=\"entry-thumbnail\"");
 
 WriteLiteral(">\r\n                                                <img");
 
-WriteLiteral(" src=\"example/intro_img5.jpg\"");
+WriteAttribute("src", Tuple.Create(" src=\"", 26317), Tuple.Create("\"", 26363)
+            
+            #line 608 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 26323), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img5.jpg")
+            
+            #line default
+            #line hidden
+, 26323), false)
+);
 
 WriteLiteral(" class=\"post-image\"");
 

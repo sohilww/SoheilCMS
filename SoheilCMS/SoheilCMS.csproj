@@ -916,6 +916,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Articles\" />
     <Folder Include="Upload\WorkSample\" />
+    <Folder Include="Views\Post\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
