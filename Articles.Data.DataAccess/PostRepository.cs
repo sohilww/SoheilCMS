@@ -9,7 +9,7 @@ using Articles.Contracts;
 
 namespace Articles.Data.DataAccess
 {
-    public class PostRepository:IPostRepository
+    public class PostRepository : IPostRepository
     {
         private readonly IPostRepository rep;
         private readonly IArticlesUnitofWork unit;   //No Variable Should Refrence To a Concrete class
@@ -106,7 +106,9 @@ namespace Articles.Data.DataAccess
                     SendDate = a.SendDate,
                     Tag = a.PostTag.Select(b => b.Tag.Name),
                     Title = a.Title,
-                    VisitCount = a.VisitCount
+                    VisitCount = a.VisitCount,
+                    Slug = a.Slug,
+                    Summary = a.Content.Substring(0, 250)
 
                 }).ToList();
 

@@ -1,74 +1,39 @@
 ﻿@model IEnumerable<Articles.Contracts.PostShowHomePage>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.PostId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SendDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VisitCount)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PostImage)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CategoryName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AuthorName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AuthorId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TagId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CategoryId)
-        </th>
-        <th></th>
-    </tr>
+<div class="container">
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.PostId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SendDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VisitCount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PostImage)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CategoryName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AuthorName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AuthorId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TagId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CategoryId)
-        </td>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="alert alert-dismissable">
+                            <a href="@Url.Action("Post", "Blog", new {Id = item.PostId, Name = item.Slug})">@item.Title</a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="label label-default">
+                            <span>نام نویسنده</span>
+                            <a href="@Url.Action("Name", "Autor", new {Id = item.AuthorId, Name = item.AuthorName})">@item.AuthorName</a>
+                        </div>
+                        <div class="label label-success">
+                            <span>دسته بندی</span>
+                            <a href="@Url.Action("Name","UserCategory",new {Id=item.CategoryId,Name=item.CategoryName})">@item.AuthorName</a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        @Html.Raw(item.Summary)
+                    </div>
+                    <div class="continueBtn">
+                        <a class="btn btn-success" 
+                           href="@Url.Action("Post", "Blog", new {Id = item.PostId, Name = item.Slug})">@item.Title</a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    </tr>
-}
 
-</table>
+    </div>
+</div>
+

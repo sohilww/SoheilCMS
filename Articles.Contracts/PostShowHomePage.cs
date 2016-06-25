@@ -27,9 +27,7 @@ namespace Articles.Contracts
         public int TagId { get; set; }
 
         public int CategoryId { get; set; }
-
-
-
-
+        public string Slug { get; set; }
+        public string Summary { get; set; }
     }
 }

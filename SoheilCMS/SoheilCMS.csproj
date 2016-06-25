@@ -206,8 +206,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_Admin_LayoutPage.cshtml</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AutorController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserCategoryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -900,12 +902,15 @@
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>Uplod.generated.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\Blog\ShowLastPostinHomePage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Articles\" />
     <Folder Include="Upload\WorkSample\" />
+    <Folder Include="Views\Autor\" />
     <Folder Include="Views\Post\" />
+    <Folder Include="Views\UserCategory\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
