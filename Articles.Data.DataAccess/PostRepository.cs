@@ -9,7 +9,7 @@ using Articles.Contracts;
 
 namespace Articles.Data.DataAccess
 {
-    public class PostRepository : IPostRepository
+    public class PostRepository:IPostRepository
     {
         private readonly IPostRepository rep;
         private readonly IArticlesUnitofWork unit;   //No Variable Should Refrence To a Concrete class
