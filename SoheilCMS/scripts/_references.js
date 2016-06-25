@@ -1,4 +1,5 @@
 ﻿/// <autosync enabled="true" />
+/// <reference path="../js/jquery.tweet.min.js" />
 /// <reference path="../js/main.js" />
 /// <reference path="../js/plugins.js" />
 /// <reference path="../js/vendor/bootstrap.js" />

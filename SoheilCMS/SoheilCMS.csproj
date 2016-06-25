@@ -343,6 +343,7 @@
     <Content Include="img\search.png" />
     <Content Include="img\slider_arrows.png" />
     <Content Include="img\ui.totop.png" />
+    <Content Include="js\jquery.tweet.min.js" />
     <Content Include="js\main.js" />
     <Content Include="js\plugins.js" />
     <Content Include="js\vendor\bootstrap.js" />
