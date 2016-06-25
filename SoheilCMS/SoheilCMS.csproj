@@ -272,7 +272,10 @@
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontello.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\rt-icons.svg" />
+    <Content Include="fonts\socialico-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\AdminStyle.css" />
     <Content Include="Scripts\AdminPager.js" />
@@ -665,6 +668,23 @@
     <Content Include="Areas\Admin\Views\Menu\Index.cshtml">
       <Generator>RazorGenerator</Generator>
     </Content>
+    <Content Include="fonts\bbc-nassim-regular.ttf" />
+    <Content Include="fonts\BBCNassim.eot" />
+    <Content Include="fonts\BBCNassim.ttf" />
+    <Content Include="fonts\BBCNassim.woff" />
+    <Content Include="fonts\fontello.eot" />
+    <Content Include="fonts\fontello.ttf" />
+    <Content Include="fonts\fontello.woff" />
+    <Content Include="fonts\rt-icons.eot" />
+    <Content Include="fonts\rt-icons.ttf" />
+    <Content Include="fonts\rt-icons.woff" />
+    <Content Include="fonts\socialico-webfont.eot" />
+    <Content Include="fonts\socialico-webfont.ttf" />
+    <Content Include="fonts\socialico-webfont.woff" />
+    <Content Include="fonts\W_YEKAN_0.TTF" />
+    <Content Include="fonts\yekan.eot" />
+    <Content Include="fonts\yekan.ttf" />
+    <Content Include="fonts\yekan.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
