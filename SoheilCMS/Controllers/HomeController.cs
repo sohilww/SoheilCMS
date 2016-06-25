@@ -34,6 +34,11 @@ namespace SoheilCMS.Controllers
             return View();
         }
 
+        public PartialViewResult Menu()
+        {
+            return PartialView();
+        }
+
         
     }
 }

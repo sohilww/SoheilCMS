@@ -229,6 +229,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TagSeprator.cshtml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Shared\_Layout.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Layout.cshtml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -816,6 +821,7 @@
     </Content>
     <Content Include="Views\Shared\_Layout.cshtml">
       <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Layout.generated.cs</LastGenOutput>
     </Content>
     <Content Include="Views\Home\About.cshtml">
       <Generator>RazorGenerator</Generator>
@@ -842,6 +848,7 @@
       <LastGenOutput>Uplod.generated.cs</LastGenOutput>
     </Content>
     <Content Include="Views\Shared\Header.cshtml" />
+    <Content Include="Views\Shared\Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
