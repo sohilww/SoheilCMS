@@ -138,5 +138,11 @@ namespace WorkSamplesPlugin.Areas.WorkSamples.Controllers
             }
             return View("Index", model);
         }
+
+        public ActionResult WorkCategoryRadioButton()
+        {
+            var model = service.SelectIdAndName();
+            return PartialView(model);
+        }
     }
 }

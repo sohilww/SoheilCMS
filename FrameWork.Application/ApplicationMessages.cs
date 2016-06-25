@@ -32,5 +32,12 @@ namespace FrameWork.Application
         {
             get { return "پدر نمی تواند خود المان باشد"; }
         }
+
+        public static string DefualtPath
+        {
+            get { return "~/Upload/"; }
+        }
+
+        public static string FileDoseNotExsits { get { return "فایل را آپلود نمایید"; } }
     }
 }

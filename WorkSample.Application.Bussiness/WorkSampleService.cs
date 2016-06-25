@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using FrameWork.Application;
 using Menu.DomainModel;
 using WorkSample.Application.BussinessService;
+using WorkSample.Contracts;
 using WorkSamples.Data.DataRepository;
 using WorkSamples.DomainModel;
 
@@ -23,22 +24,30 @@ namespace WorkSample.Application.Bussiness
             // throw new NotImplementedException();
         }
 
-        public SampleWork Get(int id)
+        public SampleWorkModel Get(int id)
         {
-            var result = rep.Get(id);
+            var model = rep.Get(id);
+
+            SampleWorkModel result = new SampleWorkModel(model);
             return result;
         }
 
-        public EntityAction Create(SampleWork entity)
+        public EntityAction Create(SampleWorkModel entity)
         {
-            entity.Id = rep.GetNextId();
-            EntityAction result = rep.Create(entity);
+
+            var model = entity.ToSampleWork();
+            model.Id = rep.GetNextId();
+
+            EntityAction result = rep.Create(model);
             return result;
         }
 
-        public EntityAction Update(SampleWork entity)
+        public EntityAction Update(SampleWorkModel entity)
         {
-            EntityAction result = rep.Update(entity);
+            var model = rep.Get(entity.Id);
+            model=entity.ToSampleWork(model);
+            model.Id = entity.Id;
+            EntityAction result = rep.Update(model);
             return result;
         }
 
