@@ -55,6 +55,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Articles.Contracts\Articles.Contracts.csproj">
+      <Project>{E60949A9-B014-40D7-B89C-35B9F9E4F89E}</Project>
+      <Name>Articles.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Articles.Data.DataRepository\Articles.Data.DataRepository.csproj">
       <Project>{e33fbb74-e026-444d-965f-75d888a5d5dd}</Project>
       <Name>Articles.Data.DataRepository</Name>

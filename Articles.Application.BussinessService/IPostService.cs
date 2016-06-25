@@ -23,5 +23,6 @@ namespace Articles.Application.BussinessService
         List<PostListModel> SelectAll();
 
         int Count();
+        List<PostShowHomePage> HomePagePost(int count);
     }
 }

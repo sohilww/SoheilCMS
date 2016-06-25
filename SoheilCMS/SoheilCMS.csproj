@@ -206,6 +206,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_Admin_LayoutPage.cshtml</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -898,18 +899,6 @@
     <Content Include="Views\Shared\EditorTemplates\Uplod.cshtml">
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>Uplod.generated.cs</LastGenOutput>
-    </Content>
-    <Content Include="Views\Shared\Header.cshtml">
-      <Generator>RazorGenerator</Generator>
-      <LastGenOutput>Header.generated.cs</LastGenOutput>
-    </Content>
-    <Content Include="Views\Shared\Menu.cshtml">
-      <Generator>RazorGenerator</Generator>
-      <LastGenOutput>Menu.generated.cs</LastGenOutput>
-    </Content>
-    <Content Include="Views\Shared\Footer.cshtml">
-      <Generator>RazorGenerator</Generator>
-      <LastGenOutput>Footer.generated.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
