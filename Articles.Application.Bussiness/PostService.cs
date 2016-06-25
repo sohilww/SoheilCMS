@@ -133,6 +133,12 @@ namespace Articles.Application.Bussiness
             return rep.Count();
         }
 
+        public List<PostShowHomePage> HomePagePost(int count)
+        {
+            var model = rep.HomePagePost(count);
+            return model;
+        }
+
         public List<PostListModel> Where(Expression<Func<Post, bool>> perdicate)
         {
             var result = rep.Where(perdicate).Select(a => new PostListModel()

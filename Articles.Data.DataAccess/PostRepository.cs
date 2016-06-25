@@ -5,17 +5,18 @@ using Articles.Data.DataRepository;
 using Articles.DomainModel;
 using FrameWork.Application;
 using System.Linq;
+using Articles.Contracts;
 
 namespace Articles.Data.DataAccess
 {
-    public class PostRepository:IPostRepository
+    public class PostRepository : IPostRepository
     {
         private readonly IPostRepository rep;
         private readonly IArticlesUnitofWork unit;   //No Variable Should Refrence To a Concrete class
-        
+
         public PostRepository(IArticlesUnitofWork _unit)
         {
-            
+
             this.unit = _unit;
         }
 
@@ -89,6 +90,27 @@ namespace Articles.Data.DataAccess
         public bool SlugExsist(string slug)
         {
             return unit.Context.Posts.Any(a => a.Slug == slug);
+        }
+
+        public List<PostShowHomePage> HomePagePost(int count)
+        {
+            var model = unit.Context.Posts.OrderByDescending(a => a.Id).Take(count)
+                .Select(a => new PostShowHomePage()
+                {
+                    AuthorId = a.AuthorId,
+                    AuthorName = a.Author.GetNameAndLastName(),
+                    CategoryId = a.CategoryId,
+                    CategoryName = a.Category.Name,
+                    PostId = a.Id,
+                    PostImage = a.PostImage,
+                    SendDate = a.SendDate,
+                    Tag = a.PostTag.Select(b => b.Tag.Name),
+                    Title = a.Title,
+                    VisitCount = a.VisitCount
+
+                }).ToList();
+
+            return model;
         }
 
         public void Dispose()

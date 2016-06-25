@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="PostCreateModel.cs" />
     <Compile Include="PostListModel.cs" />
+    <Compile Include="PostShowHomePage.cs" />
     <Compile Include="TagModel.cs" />
     <Compile Include="CategoryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
