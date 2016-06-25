@@ -31,7 +31,7 @@ namespace ASP
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
     [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/EditorTemplates/PersianDateTime.cshtml")]
-    public partial class _Views_Shared_EditorTemplates_PersianDateTime_cshtml_ : System.Web.Mvc.WebViewPage<DateTime>
+    public partial class _Views_Shared_EditorTemplates_PersianDateTime_cshtml_ : System.Web.Mvc.WebViewPage<Nullable<DateTime>>
     {
         public _Views_Shared_EditorTemplates_PersianDateTime_cshtml_()
         {

@@ -29,7 +29,7 @@ namespace WorkSamplesPlugin.Areas.WorkSamples.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [AllowUploadSafeFiles]
-        public ActionResult Index([Bind(Exclude ="Id")]SampleWorkViewModel current, HttpPostedFileBase Image)
+        public ActionResult Index([Bind(Exclude = "Id")]SampleWorkViewModel current, HttpPostedFileBase Image)
         {
             if (ModelState.IsValid)
             {
@@ -40,10 +40,10 @@ namespace WorkSamplesPlugin.Areas.WorkSamples.Controllers
                 }
                 else
                 {
-                    string defualtPath = Server.MapPath(ApplicationMessages.DefualtPath + "WorkSample");
+                    string defualtPath = ApplicationMessages.DefualtPath + "WorkSample";
                     var filename = Guid.NewGuid().ToString() + Image.FileName;
-                    string path = Path.Combine(defualtPath, filename);
-                    Image.SaveAs(path);
+                    string path = defualtPath + filename;
+                    Image.SaveAs(Server.MapPath(path));
                     current.Image = path;
                     SampleWorkModel model = current.ToSampleWorkModel();
                     var result = service.Create(model);
@@ -69,14 +69,17 @@ namespace WorkSamplesPlugin.Areas.WorkSamples.Controllers
 
         public ActionResult List()
         {
-            throw new NotImplementedException();
+
+
+            return View();
         }
+
 
         public ActionResult Edit(int id)
         {
             var tmp = service.Get(id);
             SampleWorkViewModel model = new SampleWorkViewModel(tmp);
-            return View("Index",model);
+            return View("Index", model);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -85,7 +88,7 @@ namespace WorkSamplesPlugin.Areas.WorkSamples.Controllers
         {
             if (ModelState.IsValid)
             {
-                
+
                 if (Image != null)
                 {
                     string defualtPath = Server.MapPath(ApplicationMessages.DefualtPath + "WorkSample");
@@ -93,13 +96,13 @@ namespace WorkSamplesPlugin.Areas.WorkSamples.Controllers
                     string path = Path.Combine(defualtPath, filename);
                     Image.SaveAs(path);
                     current.Image = path;
-                    
+
                 }
                 SampleWorkModel model = current.ToSampleWorkModel();
                 var result = service.Update(model);
                 if (result == EntityAction.Updated)
                 {
-                    current.Message = ApplicationMessages.InsertSuccess;
+                    current.Message = ApplicationMessages.UpdateSuccess;
                     current.State = ActionState.Success;
                 }
                 else {
@@ -112,7 +115,30 @@ namespace WorkSamplesPlugin.Areas.WorkSamples.Controllers
                 current.Message = ApplicationMessages.ErrorHasBeen;
                 current.State = ActionState.Error;
             }
-            return View(current);
+            return View("index",current);
+        }
+
+        [Route(Name = "Admin_Pagger")]
+        public ActionResult SampleWorkList(int page = 1)
+        {
+            int skip = (page - 1) * 10;
+            int take = 10;
+            var list = service.SelectPaging(skip, take);
+            int count = service.Count();
+            var model = new SampleWorkListViewModel()
+            {
+                WorkSamples = list,
+                CurrentPage = page,
+                PageSize = take,
+                TotalItemCount = count
+            };
+            return PartialView(model);
+        }
+
+        public ActionResult Delete(int id)
+        {
+            var result = service.Delete(id);
+            return RedirectToAction("List");
         }
     }
 }

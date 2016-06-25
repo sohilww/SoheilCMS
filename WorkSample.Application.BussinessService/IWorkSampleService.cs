@@ -20,5 +20,7 @@ namespace WorkSample.Application.BussinessService
         int Count();
 
         List<SampleWork> Select();
+
+        List<WorkSampleListDTO> SelectPaging(int skip,int take);
     }
 }

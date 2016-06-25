@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using FrameWork.Application;
+using WorkSample.Contracts;
 using WorkSamples.Data.DataRepository;
 using WorkSamples.DomainModel;
 
 namespace WorkSample.Data.DataAccess
 {
-    public class WorkSampleRepository:IWorkSampleRepository
+    public class WorkSampleRepository : IWorkSampleRepository
     {
-        
+
         private readonly IWorkSampleUnitofWork unit;
-        
+
         public WorkSampleRepository(IWorkSampleUnitofWork _unit)
         {
-            
+
             this.unit = _unit;
         }
 
@@ -62,18 +63,31 @@ namespace WorkSample.Data.DataAccess
 
         }
 
-        
+
 
         public int Count()
         {
             return unit.Context.SampleWork.Count();
         }
 
-        
+
         public List<SampleWork> Select()
         {
             var model = unit.Context.SampleWork.ToList();
             return model;
+        }
+
+        public List<WorkSampleListDTO> SelectPaging(int skip, int take)
+        {
+
+            var model = unit.Context.SampleWork.OrderByDescending(a => a.Id).Skip(skip).Take(take).Select(a => new WorkSampleListDTO()
+            {
+                Id = a.Id,
+                Image = a.Image,
+                ParentName = a.WorkCategory.Title,
+                Slug = a.Slug
+            });
+            return model.ToList();
         }
 
 
@@ -85,7 +99,7 @@ namespace WorkSample.Data.DataAccess
             //    unit.Dispose();
         }
 
-       
+
     }
 
 }

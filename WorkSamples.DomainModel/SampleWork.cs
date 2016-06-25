@@ -5,6 +5,10 @@ namespace WorkSamples.DomainModel
 {
     public class SampleWork : EntityBase<int>, IAggregateRoot
     {
+        protected SampleWork()
+        {
+            
+        }
         public SampleWork(DateTime? doTime, string image, string content, string description, string slug, int workCategoryId)
         {
             SetProperty(doTime, image, content, description, slug, workCategoryId);

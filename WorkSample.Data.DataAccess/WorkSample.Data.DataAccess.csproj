@@ -62,6 +62,10 @@
       <Project>{6F929DCD-48D9-45ED-A9BD-AFAAF14E87E9}</Project>
       <Name>FrameWork.Domain.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WorkSample.Contracts\WorkSample.Contracts.csproj">
+      <Project>{01612586-3557-4AEF-8E26-A9F1C1608ED5}</Project>
+      <Name>WorkSample.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WorkSamples.Data.DataRepository\WorkSamples.Data.DataRepository.csproj">
       <Project>{B635145B-8166-44A7-BA1A-060944ED329E}</Project>
       <Name>WorkSamples.Data.DataRepository</Name>

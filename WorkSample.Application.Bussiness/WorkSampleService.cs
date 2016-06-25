@@ -69,6 +69,11 @@ namespace WorkSample.Application.Bussiness
             var model = rep.Select();
             return model;
         }
-        
+
+        public List<WorkSampleListDTO> SelectPaging(int skip, int take)
+        {
+            var model = rep.SelectPaging(skip, take);
+            return model;
+        }
     }
 }

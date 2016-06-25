@@ -34,6 +34,10 @@
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MvcAjaxPager, Version=1.0.2.41923, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvcAjaxPager.1.0.2\lib\net40\MvcAjaxPager.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -70,10 +74,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AllowUploadSafeFilesAttribute.cs" />
+    <Compile Include="CustomePagerOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-1.7.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.2.js" />
+    <Content Include="Scripts\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\jquery.pager-1.0.2.js" />
+    <Content Include="Scripts\jquery.pager-1.0.2.min.js" />
+    <Content Include="Scripts\path.js" />
+    <Content Include="Scripts\path.min.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
