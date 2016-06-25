@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Articles.DomainModel;
+using System.Collections.Generic;
 using Articles.Contracts;
-using Articles.DomainModel;
 using FrameWork.Domain.Model;
 
 namespace Articles.Data.DataRepository
