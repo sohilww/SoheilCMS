@@ -211,6 +211,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CustomPagerOptions.cs" />
+    <Compile Include="Models\LoadModel.cs" />
     <Compile Include="Models\PagingAndBaseViewModel.cs" />
     <Compile Include="Models\UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -849,6 +850,7 @@
     </Content>
     <Content Include="Views\Shared\Header.cshtml" />
     <Content Include="Views\Shared\Menu.cshtml" />
+    <Content Include="Views\Shared\Footer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -42,7 +42,7 @@ WriteLiteral("        ");
 
             
             #line 1 "..\..\Views\Shared\_Layout.cshtml"
-           Html.RenderPartial("Header",Model.SeoViewModel); 
+           Html.RenderPartial("Header",Model.SeoModel); 
             
             #line default
             #line hidden
@@ -57,50 +57,20 @@ WriteLiteral("        ");
             
             #line default
             #line hidden
-WriteLiteral("\r\n        <hr />\r\n        <footer>\r\n            <p>&copy; ");
+WriteLiteral("\r\n\r\n\r\n\r\n\r\n");
 
             
-            #line 6 "..\..\Views\Shared\_Layout.cshtml"
-                 Write(DateTime.Now.Year);
-
-            
-            #line default
-            #line hidden
-WriteLiteral(" - My ASP.NET Application</p>\r\n        </footer>\r\n    </div>\r\n\r\n");
-
-WriteLiteral("    ");
-
-            
-            #line 10 "..\..\Views\Shared\_Layout.cshtml"
-Write(Scripts.Render("~/bundles/jquery"));
-
+            #line 8 "..\..\Views\Shared\_Layout.cshtml"
+        
             
             #line default
             #line hidden
-WriteLiteral("\r\n");
-
-WriteLiteral("    ");
-
             
-            #line 11 "..\..\Views\Shared\_Layout.cshtml"
-Write(Scripts.Render("~/bundles/bootstrap"));
-
+            #line 8 "..\..\Views\Shared\_Layout.cshtml"
+           Html.RenderAction("Footer", "Home");
             
             #line default
             #line hidden
-WriteLiteral("\r\n");
-
-WriteLiteral("    ");
-
-            
-            #line 12 "..\..\Views\Shared\_Layout.cshtml"
-Write(RenderSection("scripts", required: false));
-
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n</body>\r\n</html>\r\n");
-
         }
     }
 }

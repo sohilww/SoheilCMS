@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PluginBase;
+using SoheilCMS.Models;
 
 namespace SoheilCMS.Controllers
 {
@@ -17,8 +18,12 @@ namespace SoheilCMS.Controllers
 
         public ActionResult Index()
         {
-            
-            return View();
+
+            LoadModel model = new LoadModel();
+            model.SeoModel.Description = "Test";
+            model.SeoModel.KeyWords = "Test";
+            model.SeoModel.Title = "Test";
+            return View(model);
         }
 
         public ActionResult About()
