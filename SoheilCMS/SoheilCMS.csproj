@@ -841,6 +841,7 @@
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>Uplod.generated.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\Shared\Header.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
