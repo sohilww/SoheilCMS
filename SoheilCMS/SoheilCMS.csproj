@@ -212,9 +212,16 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CustomPagerOptions.cs" />
+    <Compile Include="Models\IndexViewModel.cs" />
+    <Compile Include="Models\LoadModel.cs" />
     <Compile Include="Models\PagingAndBaseViewModel.cs" />
     <Compile Include="Models\UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Home\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Shared\EditorTemplates\Uplod.generated.cs">
       <DependentUpon>Uplod.cshtml</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -229,6 +236,26 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TagSeprator.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Footer.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Footer.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Header.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Header.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Menu.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Menu.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Layout.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Layout.cshtml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -272,10 +299,139 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="css\animations.css" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\jquery.bxslider.css" />
+    <Content Include="css\main.css" />
+    <Content Include="example\client_1.png" />
+    <Content Include="example\client_2.png" />
+    <Content Include="example\client_3.png" />
+    <Content Include="example\client_4.png" />
+    <Content Include="example\client_5.png" />
+    <Content Include="example\client_6.png" />
+    <Content Include="example\client_8.png" />
+    <Content Include="example\client_9.png" />
+    <Content Include="example\intro_img1.jpg" />
+    <Content Include="example\intro_img10.jpg" />
+    <Content Include="example\intro_img11.jpg" />
+    <Content Include="example\intro_img12.jpg" />
+    <Content Include="example\intro_img2.jpg" />
+    <Content Include="example\intro_img3.jpg" />
+    <Content Include="example\intro_img4.jpg" />
+    <Content Include="example\intro_img5.jpg" />
+    <Content Include="example\intro_img6.jpg" />
+    <Content Include="example\intro_img7.jpg" />
+    <Content Include="example\intro_img8.jpg" />
+    <Content Include="example\intro_img9.jpg" />
+    <Content Include="example\land_about.jpg" />
+    <Content Include="example\land_contact.jpg" />
+    <Content Include="example\land_portfolio.jpg" />
+    <Content Include="example\land_services.jpg" />
+    <Content Include="example\land_services.png" />
+    <Content Include="example\logo.png" />
+    <Content Include="example\team_man5.jpg" />
+    <Content Include="example\team_man6.jpg" />
+    <Content Include="example\team_woman1.jpg" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontello.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\rt-icons.svg" />
+    <Content Include="fonts\socialico-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\AdminStyle.css" />
+    <Content Include="img\AjaxLoader.gif" />
+    <Content Include="img\arrows-horizontal.png" />
+    <Content Include="img\arrows-slider-big.png" />
+    <Content Include="img\arrows-slider-small.png" />
+    <Content Include="img\arrows-slider.png" />
+    <Content Include="img\bg_block-header.png" />
+    <Content Include="img\bg_li.png" />
+    <Content Include="img\grabbing.png" />
+    <Content Include="img\icon-desktop.png" />
+    <Content Include="img\icon-phone.png" />
+    <Content Include="img\icon-tablet.png" />
+    <Content Include="img\parallax\info.jpg" />
+    <Content Include="img\parallax\partners.jpg" />
+    <Content Include="img\parallax\progress.jpg" />
+    <Content Include="img\parallax\slogan.jpg" />
+    <Content Include="img\parallax\top1.jpg" />
+    <Content Include="img\preloader.gif" />
+    <Content Include="img\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="img\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="img\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="img\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="img\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="img\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="img\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="img\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="img\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="img\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="img\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="img\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="img\prettyPhoto\default\default_thumb.png" />
+    <Content Include="img\prettyPhoto\default\loader.gif" />
+    <Content Include="img\prettyPhoto\default\sprite.png" />
+    <Content Include="img\prettyPhoto\default\sprite_next.png" />
+    <Content Include="img\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="img\prettyPhoto\default\sprite_x.png" />
+    <Content Include="img\prettyPhoto\default\sprite_y.png" />
+    <Content Include="img\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="img\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="img\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="img\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="img\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="img\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="img\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="img\prettyPhoto\facebook\loader.gif" />
+    <Content Include="img\prettyPhoto\facebook\sprite.png" />
+    <Content Include="img\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="img\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="img\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="img\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="img\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="img\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="img\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="img\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="img\prettyPhoto\light_square\loader.gif" />
+    <Content Include="img\prettyPhoto\light_square\sprite.png" />
+    <Content Include="img\search.png" />
+    <Content Include="img\slider_arrows.png" />
+    <Content Include="img\ui.totop.png" />
+    <Content Include="js\jquery.tweet.min.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\plugins.js" />
+    <Content Include="js\vendor\bootstrap.js" />
+    <Content Include="js\vendor\bootstrap.min.js" />
+    <Content Include="js\vendor\hoverIntent.js" />
+    <Content Include="js\vendor\jflickrfeed.min.js" />
+    <Content Include="js\vendor\jquery-1.10.2.min.js" />
+    <Content Include="js\vendor\jquery.actual.min.js" />
+    <Content Include="js\vendor\jquery.bxslider.min.js" />
+    <Content Include="js\vendor\jquery.cookie.js" />
+    <Content Include="js\vendor\jquery.easing.1.3.js" />
+    <Content Include="js\vendor\jquery.easypiechart.min.js" />
+    <Content Include="js\vendor\jquery.elastislide.js" />
+    <Content Include="js\vendor\jquery.fitvids.js" />
+    <Content Include="js\vendor\jquery.flexslider-min.js" />
+    <Content Include="js\vendor\jquery.fractionslider.min.js" />
+    <Content Include="js\vendor\jquery.funnyText.min.js" />
+    <Content Include="js\vendor\jquery.isotope.min.js" />
+    <Content Include="js\vendor\jquery.localscroll-min.js" />
+    <Content Include="js\vendor\jquery.nicescroll.min.js" />
+    <Content Include="js\vendor\jquery.parallax-1.1.3.js" />
+    <Content Include="js\vendor\jquery.prettyPhoto.js" />
+    <Content Include="js\vendor\jquery.scrollTo-min.js" />
+    <Content Include="js\vendor\jquery.sticky.js" />
+    <Content Include="js\vendor\jquery.timelinr-0.9.54.js" />
+    <Content Include="js\vendor\jquery.ui.totop.js" />
+    <Content Include="js\vendor\modernizr-2.6.2.min.js" />
+    <Content Include="js\vendor\owl.carousel.min.js" />
+    <Content Include="js\vendor\placeholders.min.js" />
+    <Content Include="js\vendor\respond.min.js" />
+    <Content Include="js\vendor\superfish.js" />
     <Content Include="Scripts\AdminPager.js" />
     <Content Include="Scripts\Admin\AdminScript.js" />
     <Content Include="Scripts\ckeditor\adapters\jquery.js" />
@@ -666,6 +822,25 @@
     <Content Include="Areas\Admin\Views\Menu\Index.cshtml">
       <Generator>RazorGenerator</Generator>
     </Content>
+    <Content Include="fonts\bbc-nassim-regular.ttf" />
+    <Content Include="fonts\BBCNassim.eot" />
+    <Content Include="fonts\BBCNassim.ttf" />
+    <Content Include="fonts\BBCNassim.woff" />
+    <Content Include="fonts\fontello.eot" />
+    <Content Include="fonts\fontello.ttf" />
+    <Content Include="fonts\fontello.woff" />
+    <Content Include="fonts\rt-icons.eot" />
+    <Content Include="fonts\rt-icons.ttf" />
+    <Content Include="fonts\rt-icons.woff" />
+    <Content Include="fonts\socialico-webfont.eot" />
+    <Content Include="fonts\socialico-webfont.ttf" />
+    <Content Include="fonts\socialico-webfont.woff" />
+    <Content Include="fonts\W_YEKAN_0.TTF" />
+    <Content Include="fonts\yekan.eot" />
+    <Content Include="fonts\yekan.ttf" />
+    <Content Include="fonts\yekan.woff" />
+    <Content Include="css\bootstrap-theme.css.map" />
+    <Content Include="css\bootstrap.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -698,6 +873,7 @@
     </Content>
     <Content Include="Views\Shared\_Layout.cshtml">
       <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Layout.generated.cs</LastGenOutput>
     </Content>
     <Content Include="Views\Home\About.cshtml">
       <Generator>RazorGenerator</Generator>
@@ -707,6 +883,7 @@
     </Content>
     <Content Include="Views\Home\Index.cshtml">
       <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
     </Content>
     <Content Include="Views\Shared\EditorTemplates\CkEditor.cshtml">
       <Generator>RazorGenerator</Generator>
@@ -723,12 +900,12 @@
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>Uplod.generated.cs</LastGenOutput>
     </Content>
-    <Content Include="Views\Blog\ShowLastPostinHomePage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Articles\" />
     <Folder Include="Upload\WorkSample\" />
+    <Folder Include="Views\Post\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

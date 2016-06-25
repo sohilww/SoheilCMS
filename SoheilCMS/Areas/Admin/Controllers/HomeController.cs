@@ -26,6 +26,8 @@ namespace SoheilCMS.Areas.Admin.Controllers
             
             return PartialView(plugins);
         }
+
+        
     }
 
  
