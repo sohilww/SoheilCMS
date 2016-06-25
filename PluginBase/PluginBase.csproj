@@ -89,6 +89,7 @@
   <ItemGroup>
     <Compile Include="BaseViewModel.cs" />
     <Compile Include="ActionState.cs" />
+    <Compile Include="IBaseViewModel.cs" />
     <Compile Include="IPageViewModel.cs" />
     <Compile Include="MenuItem.cs" />
     <Compile Include="IPluginBase.cs" />
