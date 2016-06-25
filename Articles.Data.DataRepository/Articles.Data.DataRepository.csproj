@@ -57,6 +57,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Articles.Contracts\Articles.Contracts.csproj">
+      <Project>{E60949A9-B014-40D7-B89C-35B9F9E4F89E}</Project>
+      <Name>Articles.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FrameWork.Application\FrameWork.Application.csproj">
       <Project>{3BD8A41D-50A9-4624-9920-503924093AE4}</Project>
       <Name>FrameWork.Application</Name>
