@@ -268,7 +268,7 @@
     </Compile>
     <Compile Include="Areas\WorkSamples\WorkSamplesAreaRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WorkSamplesPuginBaseClass.cs" />
+    <Compile Include="WorkSamplesPuginBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

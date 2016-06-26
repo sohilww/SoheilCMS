@@ -52,6 +52,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Author.Appliction.Bootstraper\Author.Appliction.Bootstraper.csproj">
+      <Project>{F9C593AA-3CBF-4A3E-ABB3-EC65AD46B3DD}</Project>
+      <Name>Author.Appliction.Bootstraper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AuthorPlugin\AuthorPlugin.csproj">
+      <Project>{759B3226-72F7-4040-BF1B-CC8A7DDFC779}</Project>
+      <Name>AuthorPlugin</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PluginBase\PluginBase.csproj">
       <Project>{202FFE0A-BC75-4E4D-87F6-37161108856B}</Project>
       <Name>PluginBase</Name>
