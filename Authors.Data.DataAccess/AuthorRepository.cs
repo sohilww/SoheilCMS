@@ -1,19 +1,20 @@
 ﻿using System.Collections.Generic;
 using Authors.Data.DataRepository;
 using System.Linq;
+using Authors.Contracts;
 using Authors.DomainModel;
 using FrameWork.Application;
 
 namespace Authors.Data.DataAccess
 {
-    public class AuthorRepository:IAuthorRepository
+    public class AuthorRepository : IAuthorRepository
     {
-        
+
         private readonly IAuthorUnitofWork unit;
-        
+
         public AuthorRepository(IAuthorUnitofWork _unit)
         {
-            
+
             this.unit = _unit;
         }
 
@@ -61,19 +62,29 @@ namespace Authors.Data.DataAccess
 
         }
 
-        
+
 
         public int Count()
         {
             return unit.Context.Authors.Count();
         }
 
-     
-        public List<Author> Select()
+        public List<AuthorAdminListDTO> Select(int take, int skip)
         {
-            var model = unit.Context.Authors.ToList();
+            var model = unit.Context.Authors.OrderByDescending(a=>a.Id).Skip(skip).Take(take)
+                .Select(a => new AuthorAdminListDTO()
+                {
+                    Email = a.Email,
+                    LastName = a.LastName,
+                    Name = a.Name,
+                    UserName = a.UserName,
+                    PostCount = a.Posts.Count,
+                    Id = a.Id
+                }).ToList();
             return model;
         }
+
+
 
 
         public void Dispose()

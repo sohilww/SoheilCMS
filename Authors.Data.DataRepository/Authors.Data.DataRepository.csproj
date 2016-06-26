@@ -55,6 +55,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Authors.Contracts\Authors.Contracts.csproj">
+      <Project>{55C37300-B0A0-436A-9C59-CE56DB00E3C0}</Project>
+      <Name>Authors.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Authors.DomainModel\Authors.DomainModel.csproj">
       <Project>{49C9F3B1-402E-4089-896C-DC5231F23703}</Project>
       <Name>Authors.DomainModel</Name>

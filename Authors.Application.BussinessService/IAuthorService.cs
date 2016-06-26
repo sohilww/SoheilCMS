@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Authors.Contracts;
 using Authors.DomainModel;
 using FrameWork.Application;
 using FrameWork.Core;
@@ -18,6 +19,6 @@ namespace Authors.Application.BussinessService
 
         int Count();
 
-        List<Author> Select();
+        List<AuthorAdminListDTO> Select(int take,int skip);
     }
 }

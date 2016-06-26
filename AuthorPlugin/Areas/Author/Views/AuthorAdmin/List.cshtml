@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "List";
+    Layout = "~/Areas/Admin/Views/Shared/_Admin_LayoutPage.cshtml";
+}
+
+<div class="col-xs-12">
+    @{ Html.RenderAction("ListPaging"); }
+</div>
+
+@section script{
+    @Scripts.Render("~/bundles/Pager")
+    @Scripts.Render("~/bundles/Admin")
+}
+

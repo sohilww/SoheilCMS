@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Authors.Contracts;
 using Authors.DomainModel;
 using FrameWork.Application;
 using FrameWork.Domain.Model;
@@ -17,6 +18,6 @@ namespace Authors.Data.DataRepository
         EntityAction Delete(int id);
 
         int Count();
-        List<Author> Select();
+        List<AuthorAdminListDTO> Select(int take,int skip);
     }
 }

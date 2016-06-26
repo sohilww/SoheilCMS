@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Authors.Application.BussinessService;
+using Authors.Contracts;
 using Authors.Data.DataRepository;
 using Authors.DomainModel;
 using FrameWork.Application;
@@ -51,10 +52,12 @@ namespace Authors.Application.Bussiness
             return rep.Count();
         }
 
-        public List<Author> Select()
+        public List<AuthorAdminListDTO> Select(int take, int skip)
         {
-            var model = rep.Select();
+            var model = rep.Select(take, skip);
             return model;
         }
+
+
     }
 }

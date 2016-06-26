@@ -48,6 +48,10 @@
       <Project>{0351786D-6ED7-4E17-B18C-D8316F272063}</Project>
       <Name>Authors.Application.BussinessService</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Authors.Contracts\Authors.Contracts.csproj">
+      <Project>{55C37300-B0A0-436A-9C59-CE56DB00E3C0}</Project>
+      <Name>Authors.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Authors.Data.DataRepository\Authors.Data.DataRepository.csproj">
       <Project>{E122CC52-C248-4304-B52A-EF6BE483FB1F}</Project>
       <Name>Authors.Data.DataRepository</Name>

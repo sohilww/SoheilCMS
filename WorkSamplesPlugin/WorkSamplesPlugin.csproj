@@ -164,42 +164,13 @@
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
-    <Content Include="Areas\WorkSamples\Views\WorkCategory\Index.cshtml">
-      <Generator>RazorGenerator</Generator>
-      <LastGenOutput>Index.generated.cs</LastGenOutput>
-    </Content>
-    <Content Include="Areas\WorkSamples\Views\_ViewStart.cshtml">
-      <Generator>RazorGenerator</Generator>
-      <LastGenOutput>_ViewStart.generated.cs</LastGenOutput>
-    </Content>
-    <Content Include="Areas\WorkSamples\Views\Shared\_Layout.cshtml">
-      <Generator>RazorGenerator</Generator>
-      <LastGenOutput>_Layout.generated.cs</LastGenOutput>
-    </Content>
-    <Content Include="Areas\WorkSamples\Views\WorkCategory\List.cshtml">
-      <Generator>RazorGenerator</Generator>
-      <LastGenOutput>List.generated.cs</LastGenOutput>
-    </Content>
-    <Content Include="Areas\WorkSamples\Views\WorkSample\Index.cshtml">
-      <Generator>RazorGenerator</Generator>
-      <LastGenOutput>Index.generated.cs</LastGenOutput>
-    </Content>
-    <Content Include="Areas\WorkSamples\Views\WorkCategory\WorkCategoryRadioButton.cshtml">
-      <Generator>RazorGenerator</Generator>
-      <LastGenOutput>WorkCategoryRadioButton.generated.cs</LastGenOutput>
-    </Content>
-    <Content Include="Areas\WorkSamples\Views\WorkSample\List.cshtml">
-      <Generator>RazorGenerator</Generator>
-      <LastGenOutput>List.generated.cs</LastGenOutput>
-    </Content>
-    <Content Include="Areas\WorkSamples\Views\WorkSample\SampleWorkList.cshtml">
-      <Generator>RazorGenerator</Generator>
-      <LastGenOutput>SampleWorkList.generated.cs</LastGenOutput>
-    </Content>
-    <Content Include="Areas\WorkSamples\Views\UserWorkCategory\GetBaseCategory.cshtml">
-      <Generator>RazorGenerator</Generator>
-      <LastGenOutput>GetBaseCategory.generated.cs</LastGenOutput>
-    </Content>
+    <Content Include="Areas\WorkSamples\Views\WorkCategory\Index.cshtml" />
+    <Content Include="Areas\WorkSamples\Views\WorkCategory\List.cshtml" />
+    <Content Include="Areas\WorkSamples\Views\WorkSample\Index.cshtml" />
+    <Content Include="Areas\WorkSamples\Views\WorkCategory\WorkCategoryRadioButton.cshtml" />
+    <Content Include="Areas\WorkSamples\Views\WorkSample\List.cshtml" />
+    <Content Include="Areas\WorkSamples\Views\WorkSample\SampleWorkList.cshtml" />
+    <Content Include="Areas\WorkSamples\Views\UserWorkCategory\GetBaseCategory.cshtml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\jquery.pager-1.0.2.js" />
@@ -221,51 +192,6 @@
     <Compile Include="Areas\WorkSamples\Models\WorkSampleCategoryViewModel.cs" />
     <Compile Include="Areas\WorkSamples\Models\WorkCategoryViewModel.cs" />
     <Compile Include="Areas\WorkSamples\Models\WorkSampleViewModel.cs" />
-    <Compile Include="Areas\WorkSamples\Views\Shared\_Layout.generated.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_Layout.cshtml</DependentUpon>
-    </Compile>
-    <Compile Include="Areas\WorkSamples\Views\UserWorkCategory\GetBaseCategory.generated.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GetBaseCategory.cshtml</DependentUpon>
-    </Compile>
-    <Compile Include="Areas\WorkSamples\Views\WorkCategory\Index.generated.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Index.cshtml</DependentUpon>
-    </Compile>
-    <Compile Include="Areas\WorkSamples\Views\WorkCategory\List.generated.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>List.cshtml</DependentUpon>
-    </Compile>
-    <Compile Include="Areas\WorkSamples\Views\WorkCategory\WorkCategoryRadioButton.generated.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>WorkCategoryRadioButton.cshtml</DependentUpon>
-    </Compile>
-    <Compile Include="Areas\WorkSamples\Views\WorkSample\Index.generated.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Index.cshtml</DependentUpon>
-    </Compile>
-    <Compile Include="Areas\WorkSamples\Views\WorkSample\List.generated.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>List.cshtml</DependentUpon>
-    </Compile>
-    <Compile Include="Areas\WorkSamples\Views\WorkSample\SampleWorkList.generated.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SampleWorkList.cshtml</DependentUpon>
-    </Compile>
-    <Compile Include="Areas\WorkSamples\Views\_ViewStart.generated.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_ViewStart.cshtml</DependentUpon>
-    </Compile>
     <Compile Include="Areas\WorkSamples\WorkSamplesAreaRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorkSamplesPuginBase.cs" />
@@ -289,6 +215,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\WorkSamples\Views\Shared\" />
     <Folder Include="Areas\WorkSamples\Views\UserWorkSample\" />
     <Folder Include="Areas\WorkSamples\Views\WorkSampleCategory\" />
   </ItemGroup>
@@ -364,6 +291,9 @@
   </Target>
   <PropertyGroup>
     <PostBuildEvent>Copy "$(ProjectDir)$(OutDir)$(TargetName).*" "$(SolutionDir)SoheilCMS\bin\"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>xcopy "$(SolutionDir)$(ProjectName)\Areas\worksamples\views" "$(SolutionDir)SoheilCMS\Views\" /s /y</PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
