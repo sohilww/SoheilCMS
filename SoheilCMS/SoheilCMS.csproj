@@ -900,12 +900,15 @@
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>Uplod.generated.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\Blog\ShowLastPostinHomePage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Articles\" />
     <Folder Include="Upload\WorkSample\" />
+    <Folder Include="Views\Autor\" />
     <Folder Include="Views\Post\" />
+    <Folder Include="Views\UserCategory\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
