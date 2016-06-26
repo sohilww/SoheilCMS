@@ -115,6 +115,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Author.Data", "Author.Data"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authors.Data.DataRepository", "Authors.Data.DataRepository\Authors.Data.DataRepository.csproj", "{E122CC52-C248-4304-B52A-EF6BE483FB1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authors.Data.DataAccess", "Authors.Data.DataAccess\Authors.Data.DataAccess.csproj", "{F69124E2-9281-4DAD-9677-BFAE507E811D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -261,6 +263,10 @@ Global
 		{E122CC52-C248-4304-B52A-EF6BE483FB1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E122CC52-C248-4304-B52A-EF6BE483FB1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E122CC52-C248-4304-B52A-EF6BE483FB1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F69124E2-9281-4DAD-9677-BFAE507E811D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F69124E2-9281-4DAD-9677-BFAE507E811D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F69124E2-9281-4DAD-9677-BFAE507E811D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F69124E2-9281-4DAD-9677-BFAE507E811D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -314,5 +320,6 @@ Global
 		{49C9F3B1-402E-4089-896C-DC5231F23703} = {27764C78-6DD1-4763-8C80-4C64AA886E73}
 		{6649F74F-D0C4-4ADD-9F62-7F53DBF71CB3} = {27764C78-6DD1-4763-8C80-4C64AA886E73}
 		{E122CC52-C248-4304-B52A-EF6BE483FB1F} = {6649F74F-D0C4-4ADD-9F62-7F53DBF71CB3}
+		{F69124E2-9281-4DAD-9677-BFAE507E811D} = {6649F74F-D0C4-4ADD-9F62-7F53DBF71CB3}
 	EndGlobalSection
 EndGlobal
