@@ -1,31 +1,685 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model SoheilCMS.Models.IndexViewModel
+
+@{
+    
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+
+
+<div class="">
+    <div class="">
+        <div class="">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <img class="fullwidthimage" alt="Full width image"
+                              src="@Url.Content("~/example/intro_img6.jpg")">
+                    </li>
+                    <li>
+                        <img class="fullwidthimage" alt="Full width image" 
+                             src="@Url.Content("~/example/intro_img2.jpg")">
+                    </li>
+                    <li>
+                        <img class="fullwidthimage" alt="Full width image" 
+                             src="@Url.Content("~/example/intro_img10.jpg")">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<section id="land" class="title_section">
+    <div class="container">
+        <div class="row">
+            <div class="block col-sm-3">
+                <div class="single_teaser intro_images">
+                    <div class="introimg">
+                        <img src="@Url.Content("~/example/land_services.jpg")" alt="">
+                    </div>
+                    <h3><a href="#services">خدمات</a></h3>
+                </div>
+            </div>
+            <div class="block col-sm-3">
+                <div class="single_teaser intro_images">
+                    <div class="introimg">
+                        <img src="@Url.Content("~/example/land_portfolio.jpg")" alt="">
+                    </div>
+                    <h3><a href="#portfolio">نمونه کارها</a></h3>
+                </div>
+            </div>
+            <div class="block col-sm-3">
+                <div class="single_teaser intro_images">
+                    <div class="introimg">
+                        <img src="@Url.Content("~/example/land_about.jpg")" alt="">
+                    </div>
+                    <h3><a href="#about">درباره ما</a></h3>
+                </div>
+            </div>
+            <div class="block col-sm-3">
+                <div class="single_teaser intro_images">
+                    <div class="introimg">
+                        <img src="@Url.Content("~/example/land_contact.jpg")" alt="">
+                    </div>
+                    <h3><a href="#contact">تماس با ما</a></h3>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+</section>
+
+
+
+
+<div id="box_wrap">
+
+    <section id="about" class="">
+       @{ Html.RenderAction("ShowLastPostinHomePage","Blog"); }
+    </section>
+
+
+
+    <section id="testimonials" class="parallax">
+        <div class="container">
+            <div class="row to_fade">
+                <div class="col-sm-12">
+                    <div class="carousel slide widget_testimonials block" id="carousel-testimonials">
+                        <a data-slide="prev" href="#carousel-testimonials" class="carousel-control right"></a>
+                        <a data-slide="next" href="#carousel-testimonials" class="carousel-control left"></a>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <p class="carousel-introtext">
+                                    <span>
+                                        تمام کار ها فقط با یک تماس
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="item">
+                                <p class="carousel-introtext">
+                                    <span>
+                                        مجرب ترین متخصص ها
+                                    </span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section id="progress" class="parallax color_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2 class="block-header">
+                        پیشینه ما
+                    </h2>
+                    <h3>پیشینه درخشان ما نشان از آینده ی درخشان ماست</h3>
+                </div>
+            </div>
+            <div class="row to_fade">
+                <div class="block col-sm-3">
+                    <div class="arctcle to_fade">
+                        <div class="single_teaser icons style2">
+                            <div class="icons_introimg image-icon">
+                                <i class="rt-icon-user"></i>
+                            </div>
+                            <h2>500+</h2>
+                            <h3>
+
+                                متخصص
+                            </h3>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block col-sm-3">
+                    <div class="arctcle">
+                        <div class="single_teaser icons style2">
+                            <div class="icons_introimg image-icon">
+                                <i class="rt-icon-shopping-cart"></i>
+                            </div>
+                            <h2>233</h2>
+                            <h3>
+                                خدمات انجام گرفته
+                            </h3>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="block col-sm-3">
+                    <div class="arctcle">
+                        <div class="single_teaser icons style2">
+                            <div class="icons_introimg image-icon">
+                                <i class="rt-icon-image"></i>
+                            </div>
+                            <h2>350+</h2>
+                            <h3>
+                                نقاشی ساختمان
+                            </h3>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="block col-sm-3">
+                    <div class="arctcle">
+                        <div class="single_teaser icons style2">
+                            <div class="icons_introimg image-icon">
+                                <i class="rt-icon-chat"></i>
+                            </div>
+                            <h2>5000+</h2>
+                            <h3>
+
+                                تماس با ما
+                            </h3>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section id="partners" class="parallax color_section">
+        <div class="container">
+            <div class="row to_fade">
+                <div class="col-sm-12 text-center">
+                    <h2 class="block-header">مشتریان ما</h2>
+                    <p>فعلا مشتری نداریم اما انشالا در آینده مشتری زیاد داریم </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="owl-carousel">
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2 class="block-header">
+                        نمونه کارهای ما
+                    </h2>
+                    <h3>فعلا نمونه کاری نداریم این تصاویر فعلا الکیه</h3>
+                </div>
+            </div>
+            <div id="portfolio_wrapper" class="row">
+                <div class="text-center filters col-sm-12">
+                    <ul id="firtlable">
+                        <li><a class="selected" data-filter="*" href="#">همه</a></li>
+                        <li><a data-filter=".graphicdesign" href="#" class="">کابینت</a></li>
+                        <li><a data-filter=".photography" href="#" class="">برق کاری</a></li>
+                        <li><a data-filter=".webdesign" href="#" class=""> لوله کشی</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- Items -->
+
+                <ul class="items-row row cols-3 portfolio firtlable clearfix isotope" id="portfolioContainer">
+                    <li class="item col-sm-6 col-md-4 isotope-item graphicdesign webdesign">
+
+                        <!-- Image  -->
+
+                        <div class="portfolio_item_image">
+                            <img alt="" src="@Url.Content("~/example/intro_img1.jpg")">
+                            <div class="portfolio_links">
+                                <a class="p-view prettyPhoto" title="" rel="prettyPhoto[pp_gal]" href="@Url.Content("~/example/intro_img1.jpg")"></a>
+                                <a class="p-link" title="" href="./gallery-single1.html"></a>
+                            </div>
+                        </div>
+                        <div class="item_title">
+                            <h4>
+                                <a href="/gallery-single1.html">
+
+                                    نقاشی
+                                </a>
+                            </h4>
+                        </div>
+                    </li>
+
+                    <li class="item col-sm-6 col-md-4 isotope-item photography webdesign">
+
+                        <!-- Image  -->
+
+                        <div class="portfolio_item_image">
+                            <img alt="" src="@Url.Content("~/example/intro_img2.jpg")">
+                            <div class="portfolio_links">
+                                <a class="p-view prettyPhoto" title="" rel="prettyPhoto[pp_gal]" href="@Url.Content("~/example/intro_img12.jpg")"></a>
+                                <a class="p-link" title="" href="./gallery-single2.html"></a>
+                            </div>
+                        </div>
+                        <div class="item_title">
+                            <h4>
+                                <a href="./gallery-single2.html">
+
+                                    بنایی
+                                </a>
+                            </h4>
+                        </div>
+                    </li>
+
+                    <li class="item col-sm-6 col-md-4 isotope-item photography webdesign">
+
+                        <!-- Image  -->
+
+                        <div class="portfolio_item_image">
+                            <img alt="" src="@Url.Content("~/example/intro_img3.jpg")">
+                            <div class="portfolio_links">
+                                <a class="p-view prettyPhoto" title="" rel="prettyPhoto[pp_gal]" href="@Url.Content("~/example/intro_img3.jpg")"></a>
+                                <a class="p-link" title="" href="./gallery-single3.html"></a>
+                            </div>
+                        </div>
+                        <div class="item_title">
+                            <h4>
+                                <a href="./gallery-single3.html">
+
+                                    برق کشی
+                                </a>
+                            </h4>
+                        </div>
+                    </li>
+
+                    <li class="item col-sm-6 col-md-4 isotope-item">
+
+                        <!-- Image  -->
+
+                        <div class="portfolio_item_image">
+                            <img alt="" src="@Url.Content("~/example/intro_img4.jpg")">
+                            <div class="portfolio_links">
+                                <a class="p-view prettyPhoto" title="" rel="prettyPhoto[pp_gal]" href="@Url.Content("~/example/intro_img4.jpg")"></a>
+                                <a class="p-link" title="" href="./gallery-single4.html"></a>
+                            </div>
+                        </div>
+                        <div class="item_title">
+                            <h4>
+                                <a href="./gallery-single4.html">
+
+                                    لوله کشی
+                                </a>
+                            </h4>
+                        </div>
+                    </li>
+
+                    <li class="item col-sm-6 col-md-4 isotope-item graphicdesign webdesign">
+
+                        <!-- Image  -->
+
+                        <div class="portfolio_item_image">
+                            <img alt="" src="@Url.Content("~/example/intro_img5.jpg")">
+                            <div class="portfolio_links">
+                                <a class="p-view prettyPhoto" title="" rel="prettyPhoto[pp_gal]" href="@Url.Content("~/example/intro_img5.jpg")"></a>
+                                <a class="p-link" title="" href="./gallery-single5.html"></a>
+                            </div>
+                        </div>
+                        <div class="item_title">
+                            <h4>
+                                <a href="./gallery-single5.html">
+
+                                    تاسیسات
+                                </a>
+                            </h4>
+                        </div>
+                    </li>
+
+                    <li class="item col-sm-6 col-md-4 isotope-item">
+
+                        <!-- Image  -->
+
+                        <div class="portfolio_item_image">
+                            <img alt="" src="@Url.Content("~/example/intro_img6.jpg")">
+                            <div class="portfolio_links">
+                                <a class="p-view prettyPhoto" title="" rel="prettyPhoto[pp_gal]" href="@Url.Content("~/example/intro_img6.jpg")"></a>
+                                <a class="p-link" title="" href="./gallery-single6.html"></a>
+                            </div>
+                        </div>
+                        <div class="item_title">
+                            <h4>
+                                <a href="./gallery-single6.html">
+
+                                    کابینت
+                                </a>
+                            </h4>
+                        </div>
+                    </li>
+
+                    <li class="item col-sm-6 col-md-4 isotope-item photography webdesign">
+
+                        <!-- Image  -->
+
+                        <div class="portfolio_item_image">
+                            <img alt="" src="@Url.Content("~/example/intro_img7.jpg")">
+                            <div class="portfolio_links">
+                                <a class="p-view prettyPhoto" title="" rel="prettyPhoto[pp_gal]" href="@Url.Content("~/example/intro_img11.jpg")"></a>
+                                <a class="p-link" title="" href="./gallery-single7.html"></a>
+                            </div>
+                        </div>
+                        <div class="item_title">
+                            <h4>
+                                <a href="./gallery-single7.html">
+
+                                    طراحی داخلی
+                                </a>
+                            </h4>
+                        </div>
+                    </li>
+
+                    <li class="item col-sm-6 col-md-4 isotope-item graphicdesign webdesign">
+
+                        <!-- Image  -->
+
+                        <div class="portfolio_item_image">
+                            <img alt="" src="@Url.Content("~/example/intro_img8.jpg")">
+                            <div class="portfolio_links">
+                                <a class="p-view prettyPhoto" title="" rel="prettyPhoto[pp_gal]" href="@Url.Content("~/example/intro_img8.jpg")"></a>
+                                <a class="p-link" title="" href="./gallery-single8.html"></a>
+                            </div>
+                        </div>
+                        <div class="item_title">
+                            <h4>
+                                <a href="./gallery-single8.html">
+
+                                    آث میلان
+                                </a>
+                            </h4>
+                        </div>
+                    </li>
+
+                    <li class="item col-sm-6 col-md-4 isotope-item graphicdesign webdesign">
+
+                        <!-- Image  -->
+
+                        <div class="portfolio_item_image">
+                            <img alt="" src="@Url.Content("~/example/intro_img9.jpg")">
+                            <div class="portfolio_links">
+                                <a class="p-view prettyPhoto" title="" rel="prettyPhoto[pp_gal]" href="@Url.Content("~/example/intro_img9.jpg")"></a>
+                                <a class="p-link" title="" href="./gallery-single9.html"></a>
+                            </div>
+                        </div>
+                        <div class="item_title">
+                            <h4>
+                                <a href="./gallery-single9.html">
+
+                                    ایتالیا
+                                </a>
+                            </h4>
+                        </div>
+                    </li>
+
+                </ul>
+            </div> <!--eof portfolio_wrapper-->
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="text-center loadmore">
+                        <a href="./gallery.html" class="theme_btn inverse">
+                            مشاهده بیشتر
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="sale" class="grey_section">
+        <div class="container">
+            <div class="row to_fade">
+                <div class="col-sm-12 text-center">
+                    <h2 class="block-header">خدمات فوری</h2>
+                    <p>خدماتی که در کمترین زمان به شما ارائه می دهیم </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>
+                        پیشنهاد جدید
+                    </h3>
+
+                    <!-- Horizontal Slider -->
+
+                    <div class="horizontal_slider_list_wrapper related-posts">
+                        <div id="horizontal_slider" dir=ltr>
+                            <ul class="horizontal_slider_list">
+                                <li>
+                                    <article class="post format-standard">
+                                        <header class="entry-header">
+                                            <div class="entry-thumbnail">
+                                                <img src="@Url.Content("~/example/intro_img1.jpg")" class="post-image" alt="">
+                                            </div>
+                                        </header>
+                                        <!-- .entry-header -->
+
+                                        <div class="entry-content">
+                                            <h2 class="entry-title">
+
+                                                نمای ساختمان
+                                            </h2>
+
+                                            <p>نمای ساختمان شما</p>
+
+                                        </div>
+                                        <!-- .entry-content -->
+                                        <div class="entry-share">
+                                            <p class="text-center">
+                                                <a class="socialico-facebook" href="#" title="Facebook">#</a>
+                                                <a class="socialico-twitter" href="#" title="Twitter">#</a>
+                                                <a class="socialico-google" href="#" title="Google">#</a>
+                                            </p>
+                                        </div>
+                                        <!-- .entry-share -->
+                                    </article>
+
+                                </li>
+
+                                <li>
+                                    <article class="post format-standard border-color2">
+                                        <header class="entry-header">
+                                            <div class="entry-thumbnail">
+                                                <img src="@Url.Content("~/example/intro_img2.jpg")" class="post-image" alt="">
+                                            </div>
+                                        </header>
+                                        <!-- .entry-header -->
+
+                                        <div class="entry-content">
+                                            <h2 class="entry-title">
+                                                برق کشی ساختمان
+                                            </h2>
+
+                                            <p>برق کشی ساختمان شما</p>
+
+                                        </div>
+                                        <!-- .entry-content -->
+                                        <div class="entry-share">
+                                            <p class="text-center">
+                                                <a class="socialico-facebook" href="#" title="Facebook">#</a>
+                                                <a class="socialico-twitter" href="#" title="Twitter">#</a>
+                                                <a class="socialico-google" href="#" title="Google">#</a>
+                                            </p>
+                                        </div>
+                                        <!-- .entry-share -->
+                                    </article>
+
+                                </li>
+
+                                <li>
+                                    <article class="post format-standard border-color3">
+                                        <header class="entry-header">
+                                            <div class="entry-thumbnail">
+                                                <img src="@Url.Content("~/example/intro_img3.jpg")" class="post-image" alt="">
+                                            </div>
+                                        </header>
+                                        <!-- .entry-header -->
+
+                                        <div class="entry-content">
+                                            <h2 class="entry-title">
+                                                لوله کشی
+                                            </h2>
+
+                                            <p>لوله هاتون ترکیده؟ به ما زنگ بزنید</p>
+
+                                        </div>
+                                        <!-- .entry-content -->
+                                        <div class="entry-share">
+                                            <p class="text-center">
+                                                <a class="socialico-facebook" href="#" title="Facebook">#</a>
+                                                <a class="socialico-twitter" href="#" title="Twitter">#</a>
+                                                <a class="socialico-google" href="#" title="Google">#</a>
+                                            </p>
+                                        </div>
+                                        <!-- .entry-share -->
+                                    </article>
+
+                                </li>
+
+                                <li>
+                                    <article class="post format-standard">
+                                        <header class="entry-header">
+                                            <div class="entry-thumbnail">
+                                                <img src="@Url.Content("~/example/intro_img4.jpg")" class="post-image" alt="">
+                                            </div>
+                                        </header>
+                                        <!-- .entry-header -->
+
+                                        <div class="entry-content">
+                                            <h2 class="entry-title">
+                                                تاسیسات ساختمان
+                                            </h2>
+
+                                            <p>تاسیسات؟ به ما زنگ بزنید</p>
+
+                                        </div>
+                                        <!-- .entry-content -->
+                                        <div class="entry-share">
+                                            <p class="text-center">
+                                                <a class="socialico-facebook" href="#" title="Facebook">#</a>
+                                                <a class="socialico-twitter" href="#" title="Twitter">#</a>
+                                                <a class="socialico-google" href="#" title="Google">#</a>
+                                            </p>
+                                        </div>
+                                        <!-- .entry-share -->
+                                    </article>
+
+                                </li>
+
+                                <li>
+                                    <article class="post format-standard border-color2">
+                                        <header class="entry-header">
+                                            <div class="entry-thumbnail">
+                                                <img src="@Url.Content("~/example/intro_img5.jpg")" class="post-image" alt="">
+                                            </div>
+                                        </header>
+                                        <!-- .entry-header -->
+
+                                        <div class="entry-content">
+                                            <h2 class="entry-title">
+                                                تعمیرات منزل
+                                            </h2>
+
+                                            <p>انجام هر نوع تعمیرات منزل</p>
+
+                                        </div>
+                                        <!-- .entry-content -->
+                                        <div class="entry-share">
+                                            <p class="text-center">
+                                                <a class="socialico-facebook" href="#" title="Facebook">#</a>
+                                                <a class="socialico-twitter" href="#" title="Twitter">#</a>
+                                                <a class="socialico-google" href="#" title="Google">#</a>
+                                            </p>
+                                        </div>
+                                        <!-- .entry-share -->
+                                    </article>
+
+                                </li>
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--EOF Horizontal Slider -->
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="info" class="color_section parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h5 class="contact-phone to_fade">09901149011</h5>
+                    <h2 class="contact-email to_fade"><span><a href="Grayco.ir">Grayco.ir</a></span></h2>
+                    <p class="contact-address to_fade">تهران</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="dark_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2 class="block-header">تماس با ما</h2>
+                    <h3>در کمترین زمان ممکن با شما تماس میگیریم</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="contact-form">
+                        <form class="contact-form" method="post" action="/">
+                            <p class="contact-form-name">
+                                <label for="name">نام<span class="required">*</span></label>
+                                <input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="نام">
+                            </p>
+                            <p class="contact-form-email">
+                                <label for="email">ایمیل<span class="required">*</span></label>
+                                <input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" placeholder="ایمیل">
+                            </p>
+                            <p class="contact-form-message">
+                                <label for="message">پیام</label>
+                                <textarea aria-required="true" rows="8" cols="45" name="message" id="message" class="form-control" placeholder="پیام"></textarea>
+                            </p>
+                            <p class="contact-form-submit text-center vertical-margin-60">
+                                <input type="submit" value="ارسال" id="contact_form_submit" name="contact_submit" class="theme_btn inverse">
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
