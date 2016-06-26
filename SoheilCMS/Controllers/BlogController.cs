@@ -28,5 +28,10 @@ namespace SoheilCMS.Controllers
             List<PostShowHomePage> model = service.HomePagePost(count);
             return PartialView(model);
         }
+
+        public ActionResult Post(int id, string name)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
