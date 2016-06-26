@@ -870,6 +870,9 @@
     <Content Include="Scripts\TagScript\bootstrap-tagsinput-angular.js" />
     <Content Include="Scripts\TagScript\bootstrap-tagsinput.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Upload\Slider\1.jpg" />
+    <Content Include="Upload\Slider\2.jpg" />
+    <Content Include="Upload\Slider\3.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
