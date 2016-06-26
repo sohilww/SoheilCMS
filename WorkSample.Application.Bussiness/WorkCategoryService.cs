@@ -92,5 +92,6 @@ namespace WorkSample.Application.Bussiness
             var model = rep.GetBaseCategory(take);
             return model;
         }
+
     }
 }

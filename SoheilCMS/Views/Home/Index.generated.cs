@@ -564,660 +564,25 @@ WriteLiteral(">\r\n                    <div");
 WriteLiteral(" class=\"owl-carousel\"");
 
 WriteLiteral(">\r\n\r\n\r\n\r\n                    </div>\r\n\r\n\r\n                </div>\r\n            </di" +
-"v>\r\n\r\n        </div>\r\n    </section>\r\n\r\n\r\n    <section");
+"v>\r\n\r\n        </div>\r\n    </section>\r\n\r\n\r\n<section");
 
 WriteLiteral(" id=\"portfolio\"");
-
-WriteLiteral(">\r\n        <div");
-
-WriteLiteral(" class=\"container\"");
-
-WriteLiteral(">\r\n            <div");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n                <div");
-
-WriteLiteral(" class=\"col-sm-12 text-center\"");
-
-WriteLiteral(">\r\n                    <h2");
-
-WriteLiteral(" class=\"block-header\"");
-
-WriteLiteral(">\r\n                        نمونه کارهای ما\r\n                    </h2>\r\n          " +
-"          <h3>فعلا نمونه کاری نداریم این تصاویر فعلا الکیه</h3>\r\n               " +
-" </div>\r\n            </div>\r\n            <div");
-
-WriteLiteral(" id=\"portfolio_wrapper\"");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n                <div");
-
-WriteLiteral(" class=\"text-center filters col-sm-12\"");
 
 WriteLiteral(">\r\n");
 
             
-            #line 237 "..\..\Views\Home\Index.cshtml"
-                      
+            #line 226 "..\..\Views\Home\Index.cshtml"
+    
             
             #line default
             #line hidden
             
-            #line 237 "..\..\Views\Home\Index.cshtml"
-                         Html.RenderAction("GetBaseCategory", "UserWorkCategory", new {take = 4}); 
+            #line 226 "..\..\Views\Home\Index.cshtml"
+       Html.RenderAction("GetBaseCategory", "UserWorkCategory", new { take = 4, Area = "WorkSamples" }); 
             
             #line default
             #line hidden
-WriteLiteral("\r\n                    <div");
-
-WriteLiteral(" class=\"clearfix\"");
-
-WriteLiteral("></div>\r\n                </div>\r\n                <!-- Items -->\r\n\r\n              " +
-"  <ul");
-
-WriteLiteral(" class=\"items-row row cols-3 portfolio firtlable clearfix isotope\"");
-
-WriteLiteral(" id=\"portfolioContainer\"");
-
-WriteLiteral(">\r\n                    <li");
-
-WriteLiteral(" class=\"item col-sm-6 col-md-4 isotope-item graphicdesign webdesign\"");
-
-WriteLiteral(">\r\n\r\n                        <!-- Image  -->\r\n\r\n                        <div");
-
-WriteLiteral(" class=\"portfolio_item_image\"");
-
-WriteLiteral(">\r\n                            <img");
-
-WriteLiteral(" alt=\"\"");
-
-WriteAttribute("src", Tuple.Create(" src=\"", 8556), Tuple.Create("\"", 8602)
-            
-            #line 248 "..\..\Views\Home\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 8562), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img1.jpg")
-            
-            #line default
-            #line hidden
-, 8562), false)
-);
-
-WriteLiteral(">\r\n                            <div");
-
-WriteLiteral(" class=\"portfolio_links\"");
-
-WriteLiteral(">\r\n                                <a");
-
-WriteLiteral(" class=\"p-view prettyPhoto\"");
-
-WriteLiteral(" title=\"\"");
-
-WriteLiteral(" rel=\"prettyPhoto[pp_gal]\"");
-
-WriteAttribute("href", Tuple.Create(" href=\"", 8761), Tuple.Create("\"", 8808)
-            
-            #line 250 "..\..\Views\Home\Index.cshtml"
-                       , Tuple.Create(Tuple.Create("", 8768), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img1.jpg")
-            
-            #line default
-            #line hidden
-, 8768), false)
-);
-
-WriteLiteral("></a>\r\n                                <a");
-
-WriteLiteral(" class=\"p-link\"");
-
-WriteLiteral(" title=\"\"");
-
-WriteLiteral(" href=\"./gallery-single1.html\"");
-
-WriteLiteral("></a>\r\n                            </div>\r\n                        </div>\r\n      " +
-"                  <div");
-
-WriteLiteral(" class=\"item_title\"");
-
-WriteLiteral(">\r\n                            <h4>\r\n                                <a");
-
-WriteLiteral(" href=\"/gallery-single1.html\"");
-
-WriteLiteral(">\r\n\r\n                                    نقاشی\r\n                                <" +
-"/a>\r\n                            </h4>\r\n                        </div>\r\n        " +
-"            </li>\r\n\r\n                    <li");
-
-WriteLiteral(" class=\"item col-sm-6 col-md-4 isotope-item photography webdesign\"");
-
-WriteLiteral(">\r\n\r\n                        <!-- Image  -->\r\n\r\n                        <div");
-
-WriteLiteral(" class=\"portfolio_item_image\"");
-
-WriteLiteral(">\r\n                            <img");
-
-WriteLiteral(" alt=\"\"");
-
-WriteAttribute("src", Tuple.Create(" src=\"", 9544), Tuple.Create("\"", 9590)
-            
-            #line 269 "..\..\Views\Home\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 9550), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img2.jpg")
-            
-            #line default
-            #line hidden
-, 9550), false)
-);
-
-WriteLiteral(">\r\n                            <div");
-
-WriteLiteral(" class=\"portfolio_links\"");
-
-WriteLiteral(">\r\n                                <a");
-
-WriteLiteral(" class=\"p-view prettyPhoto\"");
-
-WriteLiteral(" title=\"\"");
-
-WriteLiteral(" rel=\"prettyPhoto[pp_gal]\"");
-
-WriteAttribute("href", Tuple.Create(" href=\"", 9749), Tuple.Create("\"", 9797)
-            
-            #line 271 "..\..\Views\Home\Index.cshtml"
-                       , Tuple.Create(Tuple.Create("", 9756), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img12.jpg")
-            
-            #line default
-            #line hidden
-, 9756), false)
-);
-
-WriteLiteral("></a>\r\n                                <a");
-
-WriteLiteral(" class=\"p-link\"");
-
-WriteLiteral(" title=\"\"");
-
-WriteLiteral(" href=\"./gallery-single2.html\"");
-
-WriteLiteral("></a>\r\n                            </div>\r\n                        </div>\r\n      " +
-"                  <div");
-
-WriteLiteral(" class=\"item_title\"");
-
-WriteLiteral(">\r\n                            <h4>\r\n                                <a");
-
-WriteLiteral(" href=\"./gallery-single2.html\"");
-
-WriteLiteral(">\r\n\r\n                                    بنایی\r\n                                <" +
-"/a>\r\n                            </h4>\r\n                        </div>\r\n        " +
-"            </li>\r\n\r\n                    <li");
-
-WriteLiteral(" class=\"item col-sm-6 col-md-4 isotope-item photography webdesign\"");
-
-WriteLiteral(">\r\n\r\n                        <!-- Image  -->\r\n\r\n                        <div");
-
-WriteLiteral(" class=\"portfolio_item_image\"");
-
-WriteLiteral(">\r\n                            <img");
-
-WriteLiteral(" alt=\"\"");
-
-WriteAttribute("src", Tuple.Create(" src=\"", 10534), Tuple.Create("\"", 10580)
-            
-            #line 290 "..\..\Views\Home\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 10540), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img3.jpg")
-            
-            #line default
-            #line hidden
-, 10540), false)
-);
-
-WriteLiteral(">\r\n                            <div");
-
-WriteLiteral(" class=\"portfolio_links\"");
-
-WriteLiteral(">\r\n                                <a");
-
-WriteLiteral(" class=\"p-view prettyPhoto\"");
-
-WriteLiteral(" title=\"\"");
-
-WriteLiteral(" rel=\"prettyPhoto[pp_gal]\"");
-
-WriteAttribute("href", Tuple.Create(" href=\"", 10739), Tuple.Create("\"", 10786)
-            
-            #line 292 "..\..\Views\Home\Index.cshtml"
-                      , Tuple.Create(Tuple.Create("", 10746), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img3.jpg")
-            
-            #line default
-            #line hidden
-, 10746), false)
-);
-
-WriteLiteral("></a>\r\n                                <a");
-
-WriteLiteral(" class=\"p-link\"");
-
-WriteLiteral(" title=\"\"");
-
-WriteLiteral(" href=\"./gallery-single3.html\"");
-
-WriteLiteral("></a>\r\n                            </div>\r\n                        </div>\r\n      " +
-"                  <div");
-
-WriteLiteral(" class=\"item_title\"");
-
-WriteLiteral(">\r\n                            <h4>\r\n                                <a");
-
-WriteLiteral(" href=\"./gallery-single3.html\"");
-
-WriteLiteral(">\r\n\r\n                                    برق کشی\r\n                               " +
-" </a>\r\n                            </h4>\r\n                        </div>\r\n      " +
-"              </li>\r\n\r\n                    <li");
-
-WriteLiteral(" class=\"item col-sm-6 col-md-4 isotope-item\"");
-
-WriteLiteral(">\r\n\r\n                        <!-- Image  -->\r\n\r\n                        <div");
-
-WriteLiteral(" class=\"portfolio_item_image\"");
-
-WriteLiteral(">\r\n                            <img");
-
-WriteLiteral(" alt=\"\"");
-
-WriteAttribute("src", Tuple.Create(" src=\"", 11503), Tuple.Create("\"", 11549)
-            
-            #line 311 "..\..\Views\Home\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 11509), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img4.jpg")
-            
-            #line default
-            #line hidden
-, 11509), false)
-);
-
-WriteLiteral(">\r\n                            <div");
-
-WriteLiteral(" class=\"portfolio_links\"");
-
-WriteLiteral(">\r\n                                <a");
-
-WriteLiteral(" class=\"p-view prettyPhoto\"");
-
-WriteLiteral(" title=\"\"");
-
-WriteLiteral(" rel=\"prettyPhoto[pp_gal]\"");
-
-WriteAttribute("href", Tuple.Create(" href=\"", 11708), Tuple.Create("\"", 11755)
-            
-            #line 313 "..\..\Views\Home\Index.cshtml"
-                      , Tuple.Create(Tuple.Create("", 11715), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img4.jpg")
-            
-            #line default
-            #line hidden
-, 11715), false)
-);
-
-WriteLiteral("></a>\r\n                                <a");
-
-WriteLiteral(" class=\"p-link\"");
-
-WriteLiteral(" title=\"\"");
-
-WriteLiteral(" href=\"./gallery-single4.html\"");
-
-WriteLiteral("></a>\r\n                            </div>\r\n                        </div>\r\n      " +
-"                  <div");
-
-WriteLiteral(" class=\"item_title\"");
-
-WriteLiteral(">\r\n                            <h4>\r\n                                <a");
-
-WriteLiteral(" href=\"./gallery-single4.html\"");
-
-WriteLiteral(">\r\n\r\n                                    لوله کشی\r\n                              " +
-"  </a>\r\n                            </h4>\r\n                        </div>\r\n     " +
-"               </li>\r\n\r\n                    <li");
-
-WriteLiteral(" class=\"item col-sm-6 col-md-4 isotope-item graphicdesign webdesign\"");
-
-WriteLiteral(">\r\n\r\n                        <!-- Image  -->\r\n\r\n                        <div");
-
-WriteLiteral(" class=\"portfolio_item_image\"");
-
-WriteLiteral(">\r\n                            <img");
-
-WriteLiteral(" alt=\"\"");
-
-WriteAttribute("src", Tuple.Create(" src=\"", 12497), Tuple.Create("\"", 12543)
-            
-            #line 332 "..\..\Views\Home\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 12503), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img5.jpg")
-            
-            #line default
-            #line hidden
-, 12503), false)
-);
-
-WriteLiteral(">\r\n                            <div");
-
-WriteLiteral(" class=\"portfolio_links\"");
-
-WriteLiteral(">\r\n                                <a");
-
-WriteLiteral(" class=\"p-view prettyPhoto\"");
-
-WriteLiteral(" title=\"\"");
-
-WriteLiteral(" rel=\"prettyPhoto[pp_gal]\"");
-
-WriteAttribute("href", Tuple.Create(" href=\"", 12702), Tuple.Create("\"", 12749)
-            
-            #line 334 "..\..\Views\Home\Index.cshtml"
-                      , Tuple.Create(Tuple.Create("", 12709), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img5.jpg")
-            
-            #line default
-            #line hidden
-, 12709), false)
-);
-
-WriteLiteral("></a>\r\n                                <a");
-
-WriteLiteral(" class=\"p-link\"");
-
-WriteLiteral(" title=\"\"");
-
-WriteLiteral(" href=\"./gallery-single5.html\"");
-
-WriteLiteral("></a>\r\n                            </div>\r\n                        </div>\r\n      " +
-"                  <div");
-
-WriteLiteral(" class=\"item_title\"");
-
-WriteLiteral(">\r\n                            <h4>\r\n                                <a");
-
-WriteLiteral(" href=\"./gallery-single5.html\"");
-
-WriteLiteral(">\r\n\r\n                                    تاسیسات\r\n                               " +
-" </a>\r\n                            </h4>\r\n                        </div>\r\n      " +
-"              </li>\r\n\r\n                    <li");
-
-WriteLiteral(" class=\"item col-sm-6 col-md-4 isotope-item\"");
-
-WriteLiteral(">\r\n\r\n                        <!-- Image  -->\r\n\r\n                        <div");
-
-WriteLiteral(" class=\"portfolio_item_image\"");
-
-WriteLiteral(">\r\n                            <img");
-
-WriteLiteral(" alt=\"\"");
-
-WriteAttribute("src", Tuple.Create(" src=\"", 13466), Tuple.Create("\"", 13512)
-            
-            #line 353 "..\..\Views\Home\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 13472), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img6.jpg")
-            
-            #line default
-            #line hidden
-, 13472), false)
-);
-
-WriteLiteral(">\r\n                            <div");
-
-WriteLiteral(" class=\"portfolio_links\"");
-
-WriteLiteral(">\r\n                                <a");
-
-WriteLiteral(" class=\"p-view prettyPhoto\"");
-
-WriteLiteral(" title=\"\"");
-
-WriteLiteral(" rel=\"prettyPhoto[pp_gal]\"");
-
-WriteAttribute("href", Tuple.Create(" href=\"", 13671), Tuple.Create("\"", 13718)
-            
-            #line 355 "..\..\Views\Home\Index.cshtml"
-                      , Tuple.Create(Tuple.Create("", 13678), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img6.jpg")
-            
-            #line default
-            #line hidden
-, 13678), false)
-);
-
-WriteLiteral("></a>\r\n                                <a");
-
-WriteLiteral(" class=\"p-link\"");
-
-WriteLiteral(" title=\"\"");
-
-WriteLiteral(" href=\"./gallery-single6.html\"");
-
-WriteLiteral("></a>\r\n                            </div>\r\n                        </div>\r\n      " +
-"                  <div");
-
-WriteLiteral(" class=\"item_title\"");
-
-WriteLiteral(">\r\n                            <h4>\r\n                                <a");
-
-WriteLiteral(" href=\"./gallery-single6.html\"");
-
-WriteLiteral(">\r\n\r\n                                    کابینت\r\n                                " +
-"</a>\r\n                            </h4>\r\n                        </div>\r\n       " +
-"             </li>\r\n\r\n                    <li");
-
-WriteLiteral(" class=\"item col-sm-6 col-md-4 isotope-item photography webdesign\"");
-
-WriteLiteral(">\r\n\r\n                        <!-- Image  -->\r\n\r\n                        <div");
-
-WriteLiteral(" class=\"portfolio_item_image\"");
-
-WriteLiteral(">\r\n                            <img");
-
-WriteLiteral(" alt=\"\"");
-
-WriteAttribute("src", Tuple.Create(" src=\"", 14456), Tuple.Create("\"", 14502)
-            
-            #line 374 "..\..\Views\Home\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 14462), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img7.jpg")
-            
-            #line default
-            #line hidden
-, 14462), false)
-);
-
-WriteLiteral(">\r\n                            <div");
-
-WriteLiteral(" class=\"portfolio_links\"");
-
-WriteLiteral(">\r\n                                <a");
-
-WriteLiteral(" class=\"p-view prettyPhoto\"");
-
-WriteLiteral(" title=\"\"");
-
-WriteLiteral(" rel=\"prettyPhoto[pp_gal]\"");
-
-WriteAttribute("href", Tuple.Create(" href=\"", 14661), Tuple.Create("\"", 14709)
-            
-            #line 376 "..\..\Views\Home\Index.cshtml"
-                      , Tuple.Create(Tuple.Create("", 14668), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img11.jpg")
-            
-            #line default
-            #line hidden
-, 14668), false)
-);
-
-WriteLiteral("></a>\r\n                                <a");
-
-WriteLiteral(" class=\"p-link\"");
-
-WriteLiteral(" title=\"\"");
-
-WriteLiteral(" href=\"./gallery-single7.html\"");
-
-WriteLiteral("></a>\r\n                            </div>\r\n                        </div>\r\n      " +
-"                  <div");
-
-WriteLiteral(" class=\"item_title\"");
-
-WriteLiteral(">\r\n                            <h4>\r\n                                <a");
-
-WriteLiteral(" href=\"./gallery-single7.html\"");
-
-WriteLiteral(">\r\n\r\n                                    طراحی داخلی\r\n                           " +
-"     </a>\r\n                            </h4>\r\n                        </div>\r\n  " +
-"                  </li>\r\n\r\n                    <li");
-
-WriteLiteral(" class=\"item col-sm-6 col-md-4 isotope-item graphicdesign webdesign\"");
-
-WriteLiteral(">\r\n\r\n                        <!-- Image  -->\r\n\r\n                        <div");
-
-WriteLiteral(" class=\"portfolio_item_image\"");
-
-WriteLiteral(">\r\n                            <img");
-
-WriteLiteral(" alt=\"\"");
-
-WriteAttribute("src", Tuple.Create(" src=\"", 15454), Tuple.Create("\"", 15500)
-            
-            #line 395 "..\..\Views\Home\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 15460), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img8.jpg")
-            
-            #line default
-            #line hidden
-, 15460), false)
-);
-
-WriteLiteral(">\r\n                            <div");
-
-WriteLiteral(" class=\"portfolio_links\"");
-
-WriteLiteral(">\r\n                                <a");
-
-WriteLiteral(" class=\"p-view prettyPhoto\"");
-
-WriteLiteral(" title=\"\"");
-
-WriteLiteral(" rel=\"prettyPhoto[pp_gal]\"");
-
-WriteAttribute("href", Tuple.Create(" href=\"", 15659), Tuple.Create("\"", 15706)
-            
-            #line 397 "..\..\Views\Home\Index.cshtml"
-                      , Tuple.Create(Tuple.Create("", 15666), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img8.jpg")
-            
-            #line default
-            #line hidden
-, 15666), false)
-);
-
-WriteLiteral("></a>\r\n                                <a");
-
-WriteLiteral(" class=\"p-link\"");
-
-WriteLiteral(" title=\"\"");
-
-WriteLiteral(" href=\"./gallery-single8.html\"");
-
-WriteLiteral("></a>\r\n                            </div>\r\n                        </div>\r\n      " +
-"                  <div");
-
-WriteLiteral(" class=\"item_title\"");
-
-WriteLiteral(">\r\n                            <h4>\r\n                                <a");
-
-WriteLiteral(" href=\"./gallery-single8.html\"");
-
-WriteLiteral(">\r\n\r\n                                    آث میلان\r\n                              " +
-"  </a>\r\n                            </h4>\r\n                        </div>\r\n     " +
-"               </li>\r\n\r\n                    <li");
-
-WriteLiteral(" class=\"item col-sm-6 col-md-4 isotope-item graphicdesign webdesign\"");
-
-WriteLiteral(">\r\n\r\n                        <!-- Image  -->\r\n\r\n                        <div");
-
-WriteLiteral(" class=\"portfolio_item_image\"");
-
-WriteLiteral(">\r\n                            <img");
-
-WriteLiteral(" alt=\"\"");
-
-WriteAttribute("src", Tuple.Create(" src=\"", 16448), Tuple.Create("\"", 16494)
-            
-            #line 416 "..\..\Views\Home\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 16454), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img9.jpg")
-            
-            #line default
-            #line hidden
-, 16454), false)
-);
-
-WriteLiteral(">\r\n                            <div");
-
-WriteLiteral(" class=\"portfolio_links\"");
-
-WriteLiteral(">\r\n                                <a");
-
-WriteLiteral(" class=\"p-view prettyPhoto\"");
-
-WriteLiteral(" title=\"\"");
-
-WriteLiteral(" rel=\"prettyPhoto[pp_gal]\"");
-
-WriteAttribute("href", Tuple.Create(" href=\"", 16653), Tuple.Create("\"", 16700)
-            
-            #line 418 "..\..\Views\Home\Index.cshtml"
-                      , Tuple.Create(Tuple.Create("", 16660), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img9.jpg")
-            
-            #line default
-            #line hidden
-, 16660), false)
-);
-
-WriteLiteral("></a>\r\n                                <a");
-
-WriteLiteral(" class=\"p-link\"");
-
-WriteLiteral(" title=\"\"");
-
-WriteLiteral(" href=\"./gallery-single9.html\"");
-
-WriteLiteral("></a>\r\n                            </div>\r\n                        </div>\r\n      " +
-"                  <div");
-
-WriteLiteral(" class=\"item_title\"");
-
-WriteLiteral(">\r\n                            <h4>\r\n                                <a");
-
-WriteLiteral(" href=\"./gallery-single9.html\"");
-
-WriteLiteral(@">
-
-                                    ایتالیا
-                                </a>
-                            </h4>
-                        </div>
-                    </li>
-
-                </ul>
-            </div> <!--eof portfolio_wrapper-->
-
-            <div");
-
-WriteLiteral(" class=\"row\"");
-
-WriteLiteral(">\r\n                <div");
-
-WriteLiteral(" class=\"col-sm-12\"");
-
-WriteLiteral(">\r\n                    <p");
-
-WriteLiteral(" class=\"text-center loadmore\"");
-
-WriteLiteral(">\r\n                        <a");
-
-WriteLiteral(" href=\"./gallery.html\"");
-
-WriteLiteral(" class=\"theme_btn inverse\"");
-
-WriteLiteral(">\r\n                            مشاهده بیشتر\r\n                        </a>\r\n      " +
-"              </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n" +
-"    </section>\r\n\r\n\r\n    <section");
+WriteLiteral("\r\n\r\n</section>\r\n\r\n\r\n    <section");
 
 WriteLiteral(" id=\"sale\"");
 
@@ -1279,14 +644,14 @@ WriteLiteral(" class=\"entry-thumbnail\"");
 
 WriteLiteral(">\r\n                                                <img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 18744), Tuple.Create("\"", 18790)
+WriteAttribute("src", Tuple.Create(" src=\"", 8738), Tuple.Create("\"", 8784)
             
-            #line 471 "..\..\Views\Home\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 18750), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img1.jpg")
+            #line 254 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 8744), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img1.jpg")
             
             #line default
             #line hidden
-, 18750), false)
+, 8744), false)
 );
 
 WriteLiteral(" class=\"post-image\"");
@@ -1367,14 +732,14 @@ WriteLiteral(" class=\"entry-thumbnail\"");
 
 WriteLiteral(">\r\n                                                <img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 20470), Tuple.Create("\"", 20516)
+WriteAttribute("src", Tuple.Create(" src=\"", 10464), Tuple.Create("\"", 10510)
             
-            #line 502 "..\..\Views\Home\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 20476), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img2.jpg")
+            #line 285 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 10470), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img2.jpg")
             
             #line default
             #line hidden
-, 20476), false)
+, 10470), false)
 );
 
 WriteLiteral(" class=\"post-image\"");
@@ -1454,14 +819,14 @@ WriteLiteral(" class=\"entry-thumbnail\"");
 
 WriteLiteral(">\r\n                                                <img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 22200), Tuple.Create("\"", 22246)
+WriteAttribute("src", Tuple.Create(" src=\"", 12194), Tuple.Create("\"", 12240)
             
-            #line 532 "..\..\Views\Home\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 22206), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img3.jpg")
+            #line 315 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 12200), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img3.jpg")
             
             #line default
             #line hidden
-, 22206), false)
+, 12200), false)
 );
 
 WriteLiteral(" class=\"post-image\"");
@@ -1541,14 +906,14 @@ WriteLiteral(" class=\"entry-thumbnail\"");
 
 WriteLiteral(">\r\n                                                <img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 23924), Tuple.Create("\"", 23970)
+WriteAttribute("src", Tuple.Create(" src=\"", 13918), Tuple.Create("\"", 13964)
             
-            #line 562 "..\..\Views\Home\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 23930), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img4.jpg")
+            #line 345 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 13924), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img4.jpg")
             
             #line default
             #line hidden
-, 23930), false)
+, 13924), false)
 );
 
 WriteLiteral(" class=\"post-image\"");
@@ -1628,14 +993,14 @@ WriteLiteral(" class=\"entry-thumbnail\"");
 
 WriteLiteral(">\r\n                                                <img");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 25659), Tuple.Create("\"", 25705)
+WriteAttribute("src", Tuple.Create(" src=\"", 15653), Tuple.Create("\"", 15699)
             
-            #line 592 "..\..\Views\Home\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 25665), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img5.jpg")
+            #line 375 "..\..\Views\Home\Index.cshtml"
+, Tuple.Create(Tuple.Create("", 15659), Tuple.Create<System.Object, System.Int32>(Url.Content("~/example/intro_img5.jpg")
             
             #line default
             #line hidden
-, 25665), false)
+, 15659), false)
 );
 
 WriteLiteral(" class=\"post-image\"");

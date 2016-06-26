@@ -111,7 +111,7 @@ WriteLiteral(">\r\n                    <nav >\r\n");
             #line hidden
             
             #line 21 "..\..\Areas\Admin\Views\Shared\_Admin_LayoutPage.cshtml"
-                           Html.RenderAction("Menu","Home",new {Area="Admin"}); 
+                           Html.RenderAction("AdminMenu","Home",new {Area="Admin"}); 
             
             #line default
             #line hidden

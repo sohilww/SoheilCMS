@@ -21,7 +21,7 @@ namespace SoheilCMS.Areas.Admin.Controllers
             return View();
         }
 
-        public PartialViewResult Menu()
+        public PartialViewResult AdminMenu()
         {
             
             return PartialView(plugins);

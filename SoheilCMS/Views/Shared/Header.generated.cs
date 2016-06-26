@@ -167,7 +167,7 @@ WriteLiteral(@"></div>
             #line hidden
             
             #line 30 "..\..\Views\Shared\Header.cshtml"
-       Html.RenderAction("Menu","Home"); 
+       Html.RenderAction("AdminMenu","Home"); 
             
             #line default
             #line hidden

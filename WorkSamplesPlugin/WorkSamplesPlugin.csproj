@@ -214,6 +214,7 @@
     <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\WorkSamples\Controllers\UserWorkCategoryController.cs" />
+    <Compile Include="Areas\WorkSamples\Controllers\UserWorkSampleController.cs" />
     <Compile Include="Areas\WorkSamples\Controllers\WorkCategoryController.cs" />
     <Compile Include="Areas\WorkSamples\Controllers\WorkSampleController.cs" />
     <Compile Include="Areas\WorkSamples\Models\SampleWorkListViewModel.cs" />
@@ -288,6 +289,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\WorkSamples\Views\UserWorkSample\" />
     <Folder Include="Areas\WorkSamples\Views\WorkSampleCategory\" />
   </ItemGroup>
   <ItemGroup>

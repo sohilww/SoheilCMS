@@ -201,6 +201,11 @@
     <Compile Include="Areas\Admin\Models\PostCreateViewModel.cs" />
     <Compile Include="Areas\Admin\Models\PostListViewModel.cs" />
     <Compile Include="Areas\Admin\Models\TagViewModel.cs" />
+    <Compile Include="Areas\Admin\Views\Home\AdminMenu1.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdminMenu.cshtml</DependentUpon>
+    </Compile>
     <Compile Include="Areas\Admin\Views\Shared\_Admin_LayoutPage.generated.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -786,8 +791,9 @@
     <Content Include="Areas\Admin\Views\Home\Index.cshtml">
       <Generator>RazorGenerator</Generator>
     </Content>
-    <Content Include="Areas\Admin\Views\Home\Menu.cshtml">
+    <Content Include="Areas\Admin\Views\Home\AdminMenu.cshtml">
       <Generator>RazorGenerator</Generator>
+      <LastGenOutput>AdminMenu1.generated.cs</LastGenOutput>
     </Content>
     <Content Include="Areas\Admin\Views\Category\Index.cshtml">
       <Generator>RazorGenerator</Generator>

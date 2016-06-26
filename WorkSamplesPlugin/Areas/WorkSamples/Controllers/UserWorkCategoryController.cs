@@ -25,7 +25,10 @@ namespace WorkSamplesPlugin.Areas.WorkSamples.Controllers
         public PartialViewResult GetBaseCategory(int take)
         {
             var model = service.GetBaseCategory(take);
+
             return PartialView(model);
         }
+
+       
     }
 }

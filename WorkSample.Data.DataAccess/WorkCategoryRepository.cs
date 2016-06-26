@@ -106,7 +106,8 @@ namespace WorkSample.Data.DataAccess
                 {
                     Id = a.Id,
                     Name = a.Title,
-                    Slug = a.Slug
+                    Slug = a.Slug,
+                    Samples = a.WorkSamples.Take(3)
 
                 }).ToList();
 
