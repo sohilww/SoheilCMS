@@ -2,6 +2,8 @@
 using Articles.Data.DataRepository;
 using Articles.DomainModel;
 using Ninject.Modules;
+using Ninject.Web.Common;
+
 namespace Articles.IOC.Bootstraper
 {
     public class DataAccessModule:NinjectModule
@@ -24,7 +26,7 @@ namespace Articles.IOC.Bootstraper
         private void LoadDbContext()
         {
             Bind<IArticlesUnitofWork>().To<ArticlesUnitofWork>()
-                .InSingletonScope()
+                .InRequestScope()
                 .WithConstructorArgument("ArticlesDbContext", new ArticlesDbContext());
 
         }
