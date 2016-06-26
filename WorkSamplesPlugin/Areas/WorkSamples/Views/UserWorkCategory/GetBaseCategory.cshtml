@@ -1,0 +1,11 @@
+﻿@model IEnumerable<WorkSample.Contracts.WorkCategoryBaseDTO>
+<ul id="firtlable">
+    <li><a class="selected" data-filter="*" href="#">همه</a></li>
+    @foreach (var item in Model)
+    {
+        <li><a data-filter=".@item.Name" href="#" class="">@item.Name</a></li>
+    }
+
+
+
+</ul>

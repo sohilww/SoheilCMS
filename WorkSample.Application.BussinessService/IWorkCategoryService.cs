@@ -21,5 +21,6 @@ namespace WorkSample.Application.BussinessService
 
         List<WorkCategoryModel> Select();
         List<SelectList> SelectIdAndName();
+        List<WorkCategoryBaseDTO> GetBaseCategory(int take);
     }
 }

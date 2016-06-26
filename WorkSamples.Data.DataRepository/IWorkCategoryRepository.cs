@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using FrameWork.Application;
 using FrameWork.Domain.Model;
+using WorkSample.Contracts;
 using WorkSamples.DomainModel;
 
 namespace WorkSamples.Data.DataRepository
@@ -22,5 +23,6 @@ namespace WorkSamples.Data.DataRepository
         List<WorkCategory> SelectAllChildOfParentWorkCategory(int parentId);
         List<WorkCategory> Select();
         List<SelectList> SelectIdAndName();
+        List<WorkCategoryBaseDTO> GetBaseCategory(int take);
     }
 }

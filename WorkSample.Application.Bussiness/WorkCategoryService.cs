@@ -86,5 +86,11 @@ namespace WorkSample.Application.Bussiness
             var model = rep.SelectIdAndName();
             return model;
         }
+
+        public List<WorkCategoryBaseDTO> GetBaseCategory(int take)
+        {
+            var model = rep.GetBaseCategory(take);
+            return model;
+        }
     }
 }

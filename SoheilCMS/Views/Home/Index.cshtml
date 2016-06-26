@@ -234,12 +234,7 @@
             </div>
             <div id="portfolio_wrapper" class="row">
                 <div class="text-center filters col-sm-12">
-                    <ul id="firtlable">
-                        <li><a class="selected" data-filter="*" href="#">همه</a></li>
-                        <li><a data-filter=".graphicdesign" href="#" class="">کابینت</a></li>
-                        <li><a data-filter=".photography" href="#" class="">برق کاری</a></li>
-                        <li><a data-filter=".webdesign" href="#" class=""> لوله کشی</a></li>
-                    </ul>
+                      @{ Html.RenderAction("GetBaseCategory", "UserWorkCategory", new {take = 4}); }
                     <div class="clearfix"></div>
                 </div>
                 <!-- Items -->

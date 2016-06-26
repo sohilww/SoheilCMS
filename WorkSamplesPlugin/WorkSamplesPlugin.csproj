@@ -196,6 +196,10 @@
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>SampleWorkList.generated.cs</LastGenOutput>
     </Content>
+    <Content Include="Areas\WorkSamples\Views\UserWorkCategory\GetBaseCategory.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>GetBaseCategory.generated.cs</LastGenOutput>
+    </Content>
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\jquery.pager-1.0.2.js" />
@@ -209,6 +213,7 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\WorkSamples\Controllers\UserWorkCategoryController.cs" />
     <Compile Include="Areas\WorkSamples\Controllers\WorkCategoryController.cs" />
     <Compile Include="Areas\WorkSamples\Controllers\WorkSampleController.cs" />
     <Compile Include="Areas\WorkSamples\Models\SampleWorkListViewModel.cs" />
@@ -219,6 +224,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_Layout.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\WorkSamples\Views\UserWorkCategory\GetBaseCategory.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetBaseCategory.cshtml</DependentUpon>
     </Compile>
     <Compile Include="Areas\WorkSamples\Views\WorkCategory\Index.generated.cs">
       <AutoGen>True</AutoGen>

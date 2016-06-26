@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using FrameWork.Application;
+using WorkSample.Contracts;
 using WorkSamples.Data.DataRepository;
 using WorkSamples.DomainModel;
 
@@ -94,6 +95,21 @@ namespace WorkSample.Data.DataAccess
                 Id = a.Id,
                 Name = a.Title
             }).ToList();
+            return model;
+
+        }
+
+        public List<WorkCategoryBaseDTO> GetBaseCategory(int take)
+        {
+            var model = unit.Context.WorkCategories.Take(take)
+                .Select(a => new WorkCategoryBaseDTO()
+                {
+                    Id = a.Id,
+                    Name = a.Title,
+                    Slug = a.Slug
+
+                }).ToList();
+
             return model;
 
         }
