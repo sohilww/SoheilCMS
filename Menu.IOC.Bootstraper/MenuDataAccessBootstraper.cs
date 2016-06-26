@@ -2,6 +2,7 @@
 using Menu.Data.DataRepository;
 using Menu.DomainModel;
 using Ninject.Modules;
+using Ninject.Web.Common;
 
 namespace Menu.IOC.Bootstraper
 {
@@ -15,7 +16,7 @@ namespace Menu.IOC.Bootstraper
         private void LoadDbContext()
         {
             Bind<IMenuUnitofWork>().To<MenuUnitofWork>()
-                .InSingletonScope()
+                .InRequestScope()
                 .WithConstructorArgument("MenuDbContext", new MenuDbContext());
 
         }
