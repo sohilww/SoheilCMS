@@ -201,6 +201,11 @@
     <Compile Include="Areas\Admin\Models\PostCreateViewModel.cs" />
     <Compile Include="Areas\Admin\Models\PostListViewModel.cs" />
     <Compile Include="Areas\Admin\Models\TagViewModel.cs" />
+    <Compile Include="Areas\Admin\Views\Home\Menu.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Menu.cshtml</DependentUpon>
+    </Compile>
     <Compile Include="Areas\Admin\Views\Shared\_Admin_LayoutPage.generated.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -219,6 +224,11 @@
     <Compile Include="Models\PagingAndBaseViewModel.cs" />
     <Compile Include="Models\UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Blog\ShowLastPostinHomePage.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowLastPostinHomePage.cshtml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Home\Index.generated.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -783,6 +793,7 @@
     </Content>
     <Content Include="Areas\Admin\Views\Home\Menu.cshtml">
       <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Menu.generated.cs</LastGenOutput>
     </Content>
     <Content Include="Areas\Admin\Views\Category\Index.cshtml">
       <Generator>RazorGenerator</Generator>
@@ -902,7 +913,10 @@
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>Uplod.generated.cs</LastGenOutput>
     </Content>
-    <Content Include="Views\Blog\ShowLastPostinHomePage.cshtml" />
+    <Content Include="Views\Blog\ShowLastPostinHomePage.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>ShowLastPostinHomePage.generated.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

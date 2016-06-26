@@ -98,7 +98,7 @@ namespace Articles.Data.DataAccess
                 .Select(a => new PostShowHomePage()
                 {
                     AuthorId = a.AuthorId,
-                    AuthorName = a.Author.GetNameAndLastName(),
+                    AuthorName = a.Author.Name + " " + a.Author.LastName,
                     CategoryId = a.CategoryId,
                     CategoryName = a.Category.Name,
                     PostId = a.Id,
