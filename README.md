@@ -1,4 +1,6 @@
 # SoheilCMS
+
+**DEPRECATED AND NO LONGER MAINTAINED**
 This Is My CMS 
 
 <a href='http://www.grayco.ir'>My Company</a>
